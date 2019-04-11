@@ -1,0 +1,219 @@
+$headercolor: #ffffff !default;
+$headertextcolor: #00bada !default;
+$leftmenuheadercolor: #fff !default;
+$leftmenuheadertextcolor: #00bada !default;
+$leftmenumainitemcolor: #ffffff !default;
+$leftmenuitemhovercolor: #f4f4f4 !default;
+$leftmenuitemstextcolor: #060100 !default;
+$leftmenusubitemcolor: #00bada !default; 
+$sectionheadercolor: #00bada !default;
+$coursebtncolor: #00bada !default; 
+$footercolor: #00bada !default;
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .path-calendar .maincalendar .calendar-controls .current, .h3, .h4, .h5, .h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+  
+h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
+    font-size: 2rem;
+}
+
+.navbar {
+    max-height: 70px;
+    &.navbar-full {
+        background: $footercolor;
+    }
+    &.navbar {
+        .logo img {
+            max-height: 65px;
+        }
+        .site-name {
+            display: none !important;
+        }
+        .icon, .usertext, .dropdown-toggle {
+            color: $headertextcolor !important;
+        } 
+    }
+}
+
+.pagelayout-login {
+    .card {
+      background: none;
+    }
+    .card-body {
+      background: #fff;
+    }
+    form {
+      input {
+        border-radius: unset;
+        border: none;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: medium;
+        border-bottom: 1px solid #d0d0d0;
+      }
+      .rememberpass input {
+        margin-bottom: 0;
+      }
+    }
+    .btn {
+      border-radius: 1rem;
+      border: none;
+    }
+}
+  
+.login-input-fa-icons {
+    position: relative;
+    float: right;
+    top: 22px;
+    color: #6e6e6e;
+    font-size: 15px;
+}
+  
+.btn-primary {
+    background-color: $sectionheadercolor;
+    border-color: $sectionheadercolor;
+}
+
+.enter-course-btn{
+    background-color: $coursebtncolor !important;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    width: 110px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.category-color{
+    height: 5px;
+    background-color: $sectionheadercolor !important;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+
+  
+#page {
+    margin-top: 70px !important;
+}
+  
+[data-region="drawer"] {
+    padding: 0 !important;
+    top: 70px;
+    background-color: #eceeef;
+}
+  
+footer#page-footer {
+    background-color: $footercolor !important;
+}
+
+body {
+    &#page-login-index:not(.drawer-open-left), &#page-login, &#page-login-signup {
+        margin: 0 !important;
+    }
+    &:not(.drawer-open-left) {
+        margin-left: 60px;
+    }
+}
+
+#page.container-fluid {
+    padding: 0 2rem;
+}
+
+.admin_buttons {
+    padding: none !important;
+}
+
+.block_admin_buttons {
+    #accordion {
+        .card-header {
+            background-color: $sectionheadercolor !important; 
+        }
+        .card-block button.btn.btn-primary {
+            border: 1px solid $sectionheadercolor !important;
+            color: $sectionheadercolor !important;
+
+            &:hover {
+                background-color: $sectionheadercolor !important;
+                color: #FFF !important;  
+            }
+        }   
+    }
+}
+
+.block_userscoursecompletion {
+    .sectionheadercolor, .paginationActive {
+        background-color: $sectionheadercolor !important;
+        color: #fff;
+    }
+}
+
+.block_lw_courses .sectionheadercolor, .block_lbmyteam .sectionheadercolor, .sectionheadercolor-class, .ticket-btn  {
+    background-color: $sectionheadercolor !important;
+    color: #fff;
+}
+
+.page-link {
+    color: $sectionheadercolor; 
+}
+
+#nav-drawer {
+    &.closed{
+        left: 0 !important;
+        width: 60px;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+        webkit-transition: .4s;
+        -moz-transition: .4s;
+        -o-transition: .4s;
+        -webkit-transition: .4s;
+        transition: .4s;       
+    }
+    .list-group .media-left {
+        display: none !important;
+    }
+    .list-group-item {
+        &[data-key="learnbookpanel"] {
+            background-color: $leftmenuheadercolor !important;
+            color: $leftmenuheadertextcolor !important;
+        }
+        &[data-isexpandable="1"]{
+            &:hover {
+                background-color: $leftmenuitemhovercolor !important;
+                font-weight: bold !important;                
+            }
+            &:focus {
+                background-color: $leftmenumainitemcolor !important;
+                color: $leftmenuitemstextcolor !important;               
+            }
+        } 
+        &:hover {
+            background-color: $leftmenuitemhovercolor !important;
+            font-weight: bold !important;
+        }
+        &:not([data-parent-key="myhome"]), &[data-key="sitesettings"] {
+            background-color:$leftmenusubitemcolor !important;
+            color: $leftmenuitemstextcolor !important;
+        }
+    }
+    .list-group-item-action {
+        background-color: $leftmenumainitemcolor !important;
+        color: $leftmenuitemstextcolor !important;
+        &:hover {
+            background-color: $leftmenuitemhovercolor !important;
+            font-weight: bold !important;        
+        }
+    }
+}
