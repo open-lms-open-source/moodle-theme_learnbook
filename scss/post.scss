@@ -5,9 +5,12 @@ $leftmenuheadertextcolor: #00bada !default;
 $leftmenumainitemcolor: #ffffff !default;
 $leftmenuitemhovercolor: #f4f4f4 !default;
 $leftmenuitemstextcolor: #060100 !default;
-$leftmenusubitemcolor: #00bada !default; 
+$leftmenusubitemcolor: #ffffff !default;
 $sectionheadercolor: #00bada !default;
 $coursebtncolor: #00bada !default; 
+$coursebtnhovercolor: #2a6a97 !default;
+$coursetilecolor: #e1ecf5 !default;
+$coursetiletextcolor: #727477 !default;
 $footercolor: #00bada !default;
 
 body {
@@ -29,6 +32,7 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
 
 .navbar {
     max-height: 70px;
+    background-color: $headercolor !important;
     &.navbar-full {
         background: $footercolor;
     }
@@ -42,6 +46,23 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
         .icon, .usertext, .dropdown-toggle {
             color: $headertextcolor !important;
         } 
+    }
+    div[data-region="drawer-toggle"] {
+        button[data-action="toggle-drawer"] {
+            background-color: transparent !important;
+            border-color: transparent !important;
+            i {
+                font-size: 26px !important;
+            }
+        }
+    }
+}
+
+.navbar-expand {
+    .navbar-nav {
+        .dropdown-menu {
+            left: 26px;
+        }
     }
 }
 
@@ -70,7 +91,7 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
       border: none;
     }
 }
-  
+
 .login-input-fa-icons {
     position: relative;
     float: right;
@@ -78,13 +99,20 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     color: #6e6e6e;
     font-size: 15px;
 }
-  
+
 .btn-primary {
     background-color: $sectionheadercolor;
     border-color: $sectionheadercolor;
 }
 
-.enter-course-btn{
+.lw_courses_list_item {
+    background-color: $coursetilecolor !important;
+    .course-description {
+        color: $coursetiletextcolor !important;
+    }
+}
+
+.enter-course-btn {
     background-color: $coursebtncolor !important;
     border-radius: 5px;
     color: white;
@@ -93,6 +121,10 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     height: 30px;
     font-size: 13px;
     font-weight: 100;
+    &:hover {
+        background-color: $coursebtnhovercolor !important;
+        cursor: pointer;
+    }
 }
 
 .category-color{
@@ -103,20 +135,26 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
 }
 
 
-  
+
 #page {
     margin-top: 70px !important;
 }
-  
+
 [data-region="drawer"] {
     padding: 0 !important;
     top: 70px;
     background-color: #eceeef;
 }
-  
+
 footer#page-footer {
     background-color: $footercolor !important;
+    .helplink, .logininfo, .tool_usertours-resettourcontainer, .homelink, .tool_dataprivacy, a, .policiesfooter {
+        display: inline-block;
+        margin: 10px;
+    }
 }
+
+
 
 body {
     &#page-login-index:not(.drawer-open-left), &#page-login, &#page-login-signup {
@@ -138,7 +176,7 @@ body {
 .block_admin_buttons {
     #accordion {
         .card-header {
-            background-color: $sectionheadercolor !important; 
+            background-color: $sectionheadercolor !important;
         }
         .card-block button.btn.btn-primary {
             border: 1px solid $sectionheadercolor !important;
@@ -146,9 +184,9 @@ body {
 
             &:hover {
                 background-color: $sectionheadercolor !important;
-                color: #FFF !important;  
+                color: #FFF !important;
             }
-        }   
+        }
     }
 }
 
@@ -159,13 +197,21 @@ body {
     }
 }
 
-.block_lw_courses .sectionheadercolor, .block_lbmyteam .sectionheadercolor, .sectionheadercolor-class, .ticket-btn  {
+.block_lw_courses .sectionheadercolor, .block_lbmyteam .sectionheadercolor, .sectionheadercolor-class, .ticket-btn, .myprofile-coursestable .sectionheadercolor  {
     background-color: $sectionheadercolor !important;
     color: #fff;
 }
 
+.lw_courses_list {
+    .grid {
+        .course-title {
+            z-index: 1;
+        }
+    }
+}
+
 .page-link {
-    color: $sectionheadercolor; 
+    color: $sectionheadercolor;
 }
 
 #nav-drawer {
@@ -179,7 +225,7 @@ body {
         -moz-transition: .4s;
         -o-transition: .4s;
         -webkit-transition: .4s;
-        transition: .4s;       
+        transition: .4s;
     }
     .list-group .media-left {
         display: none !important;
@@ -192,20 +238,26 @@ body {
         &[data-isexpandable="1"]{
             &:hover {
                 background-color: $leftmenuitemhovercolor !important;
-                font-weight: bold !important;                
+                font-weight: bold !important;
             }
             &:focus {
                 background-color: $leftmenumainitemcolor !important;
-                color: $leftmenuitemstextcolor !important;               
+                color: $leftmenuitemstextcolor !important;
             }
-        } 
-        &:hover {
+        }
+        &:hover:not([data-key="learnbookpanel"]) {
             background-color: $leftmenuitemhovercolor !important;
             font-weight: bold !important;
+        }
+        &:hover[data-key="learnbookpanel"] {
+            z-index: -1 !important;
         }
         &:not([data-parent-key="myhome"]), &[data-key="sitesettings"] {
             background-color:$leftmenusubitemcolor !important;
             color: $leftmenuitemstextcolor !important;
+        }
+        &.active {
+            border: 1px solid rgba(0,0,0,.125) !important;
         }
     }
     .list-group-item-action {
@@ -213,7 +265,7 @@ body {
         color: $leftmenuitemstextcolor !important;
         &:hover {
             background-color: $leftmenuitemhovercolor !important;
-            font-weight: bold !important;        
+            font-weight: bold !important;
         }
     }
 }

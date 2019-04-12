@@ -178,7 +178,7 @@
     <div class="col-6">
         <div class="card">
             <div class="card-block">
-                <div class="card-body">
+                <div class="card-body"{{^hasinstructions}}{{^identityproviders}} style = "display:none;"{{/identityproviders}}{{/hasinstructions}}>
                     {{#hasinstructions}}
                     <h2>{{#str}}firsttime{{/str}}</h2>
                     {{{instructions}}}
