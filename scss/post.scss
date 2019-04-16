@@ -38,6 +38,13 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     font-size: 2rem;
 }
 
+[role="main"] {
+    -webkit-user-select: unset;
+    -moz-user-select: unset;
+    -ms-user-select: unset;
+    user-select: unset;
+}
+
 #page-header-new {
     .card-block {
         padding: 1.25rem;
