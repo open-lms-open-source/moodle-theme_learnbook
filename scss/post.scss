@@ -171,11 +171,11 @@ footer#page-footer {
     background-color: $footercolor !important;
     .logininfo, .tool_usertours-resettourcontainer, .homelink, .tool_dataprivacy, a, .policiesfooter {
         display: inline-block;
-        margin: 3px 5px;
+        margin: 0 5px;
     }
     .helplink {
         display: inline-block;
-        margin: 3px 5px 3px 0;
+        margin: 0 5px 0 0;
     }
 }
 
