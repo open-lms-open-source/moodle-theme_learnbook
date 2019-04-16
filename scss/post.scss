@@ -50,16 +50,19 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     &.navbar-full {
         background: $footercolor;
     }
-    &.navbar {
-        .logo img {
-            max-height: 65px;
-        }
-        .site-name {
-            display: none !important;
-        }
-        .icon, .usertext, .dropdown-toggle {
+    .logo img {
+        max-height: 65px;
+    }
+    .site-name {
+        display: none !important;
+    }
+    .usertext, .dropdown-toggle {
+        color: $headertextcolor !important;
+    }
+    .popover-region {
+        .icon {
             color: $headertextcolor !important;
-        } 
+        }
     }
     div[data-region="drawer-toggle"] {
         button[data-action="toggle-drawer"] {
