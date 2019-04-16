@@ -51,6 +51,7 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
         button[data-action="toggle-drawer"] {
             background-color: transparent !important;
             border-color: transparent !important;
+            padding-left: 5px;
             i {
                 font-size: 26px !important;
             }
