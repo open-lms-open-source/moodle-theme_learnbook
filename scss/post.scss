@@ -152,9 +152,13 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
 
 footer#page-footer {
     background-color: $footercolor !important;
-    .helplink, .logininfo, .tool_usertours-resettourcontainer, .homelink, .tool_dataprivacy, a, .policiesfooter {
+    .logininfo, .tool_usertours-resettourcontainer, .homelink, .tool_dataprivacy, a, .policiesfooter {
         display: inline-block;
         margin: 3px 5px;
+    }
+    .helplink {
+        display: inline-block;
+        margin: 3px 5px 3px 0;
     }
 }
 
