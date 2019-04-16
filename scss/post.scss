@@ -54,6 +54,9 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
             i {
                 font-size: 26px !important;
             }
+            &:focus {
+                box-shadow: none !important;
+            }
         }
     }
 }
@@ -150,7 +153,7 @@ footer#page-footer {
     background-color: $footercolor !important;
     .helplink, .logininfo, .tool_usertours-resettourcontainer, .homelink, .tool_dataprivacy, a, .policiesfooter {
         display: inline-block;
-        margin: 10px;
+        margin: 3px 5px;
     }
 }
 
