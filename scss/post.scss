@@ -54,6 +54,9 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
             i {
                 font-size: 26px !important;
             }
+            &:focus {
+                box-shadow: none !important;
+            }
         }
     }
 }
