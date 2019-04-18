@@ -157,6 +157,10 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     }
 }
 
+#myteam-blockcontainer .btn-default {
+    background-color: $sectionheadercolor !important;
+}
+
 .enter-course-btn {
     background-color: $coursebtncolor !important;
     border-radius: 5px;
