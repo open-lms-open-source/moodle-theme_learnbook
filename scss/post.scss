@@ -114,8 +114,19 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     }
 }
 
-#myteam-userscontainer .usercard.grid-group-item .inner {
-    background-color: $coursetilecolor !important;
+#myteam-userscontainer {
+    .usercard {
+        &.grid-group-item {
+            .inner {
+                background-color: $coursetilecolor !important;
+            }
+        }
+        &.list-group-item {
+            .inner {
+                background-color: $coursetilecolor !important;
+            }
+        }
+    }
 }
 
 .enter-course-btn {
