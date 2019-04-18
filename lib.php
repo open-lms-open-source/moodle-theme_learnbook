@@ -61,6 +61,7 @@ function theme_learnbook_get_pre_scss($theme) {
 
     $scss = '';
     $configurable = [
+        'brandcolor' => ['brandcolor'],
         'headercolor' => ['headercolor'],
         'headertextcolor' => ['headertextcolor'],
         'leftmenuheadercolor' => ['leftmenuheadercolor'],
@@ -70,7 +71,11 @@ function theme_learnbook_get_pre_scss($theme) {
         'leftmenuitemstextcolor' => ['leftmenuitemstextcolor'],
         'leftmenusubitemcolor' => ['leftmenusubitemcolor'],
         'sectionheadercolor' => ['sectionheadercolor'],
+        'sectionhovercolor' => ['sectionhovercolor'],
+        'coursetilecolor' => ['coursetilecolor'],
+        'coursetiletextcolor' => ['coursetiletextcolor'],
         'coursebtncolor' => ['coursebtncolor'],
+        'coursebtnhovercolor' => ['coursebtnhovercolor'],
         'footercolor' => ['footercolor'],
     ];
 

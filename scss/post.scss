@@ -1,3 +1,4 @@
+$brandcolor: #e1ecf5 !default;
 $headercolor: #ffffff !default;
 $headertextcolor: #00bada !default;
 $leftmenuheadercolor: #fff !default;
@@ -7,7 +8,8 @@ $leftmenuitemhovercolor: #f4f4f4 !default;
 $leftmenuitemstextcolor: #060100 !default;
 $leftmenusubitemcolor: #ffffff !default;
 $sectionheadercolor: #00bada !default;
-$coursebtncolor: #00bada !default; 
+$sectionhovercolor: #00b8dc !default;
+$coursebtncolor: #00bada !default;
 $coursebtnhovercolor: #2a6a97 !default;
 $coursetilecolor: #e1ecf5 !default;
 $coursetiletextcolor: #727477 !default;
@@ -105,11 +107,15 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     border-color: $sectionheadercolor;
 }
 
-.lw_courses_list_item {
+.lb_courses_list_item {
     background-color: $coursetilecolor !important;
     .course-description {
         color: $coursetiletextcolor !important;
     }
+}
+
+#myteam-userscontainer .usercard.grid-group-item .inner {
+    background-color: $coursetilecolor !important;
 }
 
 .enter-course-btn {
@@ -197,12 +203,12 @@ body {
     }
 }
 
-.block_lw_courses .sectionheadercolor, .block_lbmyteam .sectionheadercolor, .sectionheadercolor-class, .ticket-btn, .myprofile-coursestable .sectionheadercolor  {
+.block_lb_courses .sectionheadercolor, .block_lbmyteam .sectionheadercolor, .sectionheadercolor-class, .ticket-btn, .myprofile-coursestable .sectionheadercolor  {
     background-color: $sectionheadercolor !important;
     color: #fff;
 }
 
-.lw_courses_list {
+.lb_courses_list {
     .grid {
         .course-title {
             z-index: 1;
