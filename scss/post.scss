@@ -18,6 +18,14 @@ $footercolor: #00bada !default;
 body {
     background-color: #f4f4f4;
     font-family: 'Open Sans', sans-serif;
+    &.notloggedin {
+        div[data-region="drawer-toggle"] {
+            display: none !important;
+        }
+        #nav-drawer {
+            display: none !important;
+        }
+    }
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .path-calendar .maincalendar .calendar-controls .current, .h3, .h4, .h5, .h6 {
@@ -32,29 +40,49 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     font-size: 2rem;
 }
 
+[role="main"] {
+    -webkit-user-select: unset;
+    -moz-user-select: unset;
+    -ms-user-select: unset;
+    user-select: unset;
+}
+
+#page-header-new {
+    .card-block {
+        padding: 1.25rem;
+    }
+}
+
 .navbar {
     max-height: 70px;
     background-color: $headercolor !important;
     &.navbar-full {
         background: $footercolor;
     }
-    &.navbar {
-        .logo img {
-            max-height: 65px;
-        }
-        .site-name {
-            display: none !important;
-        }
-        .icon, .usertext, .dropdown-toggle {
+    .logo img {
+        max-height: 65px;
+    }
+    .site-name {
+        display: none !important;
+    }
+    .usertext, .dropdown-toggle {
+        color: $headertextcolor !important;
+    }
+    .popover-region {
+        .icon {
             color: $headertextcolor !important;
-        } 
+        }
     }
     div[data-region="drawer-toggle"] {
         button[data-action="toggle-drawer"] {
             background-color: transparent !important;
             border-color: transparent !important;
+            padding-left: 5px;
             i {
                 font-size: 26px !important;
+            }
+            &:focus {
+                box-shadow: none !important;
             }
         }
     }
@@ -63,7 +91,7 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
 .navbar-expand {
     .navbar-nav {
         .dropdown-menu {
-            left: 26px;
+            //left: 26px;
         }
     }
 }
@@ -165,9 +193,13 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
 
 footer#page-footer {
     background-color: $footercolor !important;
-    .helplink, .logininfo, .tool_usertours-resettourcontainer, .homelink, .tool_dataprivacy, a, .policiesfooter {
+    .logininfo, .tool_usertours-resettourcontainer, .homelink, .tool_dataprivacy, a, .policiesfooter {
         display: inline-block;
-        margin: 10px;
+        margin: 0 5px;
+    }
+    .helplink {
+        display: inline-block;
+        margin: 0 5px 0 0;
     }
 }
 
