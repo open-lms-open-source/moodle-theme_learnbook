@@ -120,6 +120,46 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
       border-radius: 1rem;
       border: none;
     }
+    #login-page-main-content-container {
+        padding: 20px;
+        background-color: rgba($headercolor, 0.75);
+        border-radius: 4px;
+    }
+    #login-welcome-title, #login-welcome-msg, #login-first-time {
+        color: $headertextcolor;
+    }
+    #login-welcome-title {
+        text-align: center;
+    }
+    .login-form-alternative-methods {
+        text-align: center;
+    }
+    #login-form-or {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    input[type="text"], input[type="password"] {
+        background-color: #eee;
+        border: none;
+        border-radius: 17px;
+        &:focus {
+            background-color: #fff;
+        }
+    }
+    form#guestlogin {
+        display: inline-block;
+        margin: 0 10px;
+        .btn-primary {
+            margin-top: 0;
+        }
+    }
+    .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+        background-color: $sectionheadercolor;
+    }
+    .potentialidp {
+        display: inline-block;
+        margin: 0 10px;
+    }
 }
 
 .login-input-fa-icons {
@@ -128,6 +168,43 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     top: 22px;
     color: #6e6e6e;
     font-size: 15px;
+}
+
+#login-page-backdrop {
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -999999;
+    position: fixed;
+}
+
+#login-page-backdrop-img-wrapper {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    z-index: -999999;
+}
+
+#login-page-backdrop-img {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    background-size: cover;
 }
 
 .btn-primary {
@@ -253,6 +330,13 @@ body {
 .block_lb_courses .sectionheadercolor, .block_lbmyteam .sectionheadercolor, .sectionheadercolor-class, .ticket-btn, .myprofile-coursestable .sectionheadercolor  {
     background-color: $sectionheadercolor !important;
     color: #fff;
+}
+
+.block_lb_courses {
+    .current-sel-tab, .btn-cus:hover, .grid-icon.icon-selected, .list-icon.icon-selected, .cal-icon.icon-selected, .grid-icon:hover, .list-icon:hover, .cal-icon:hover {
+        background-color: #fff !important;
+        color: $sectionheadercolor !important;
+    }
 }
 
 .lb_courses_list {

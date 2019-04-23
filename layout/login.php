@@ -41,11 +41,22 @@ foreach ($files as $file) {
     }
 }
 
+$welcomeImgFiles = $fs->get_area_files($context->id, 'theme_learnbook', 'welcomeimg', 0);
+foreach ($welcomeImgFiles as $file) {
+    $filename = $file->get_filename();
+    $filetype = $file->get_mimetype();
+    if ($filetype && $filename != '.') {
+        $url = moodle_url::make_pluginfile_url($context->id, 'theme_learnbook', 'welcomeimg', 0, '/', $filename);
+        $welcomeImg = $url->out();
+    }
+}
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
-    'slideshowImgs' => json_encode($slideshowImgs)
+    'slideshowImgs' => !empty($slideshowImgs) ? json_encode($slideshowImgs) : null,
+    'welcomeimg' => $welcomeImg
 ];
 
 echo $OUTPUT->render_from_template('theme_learnbook/login', $templatecontext);
