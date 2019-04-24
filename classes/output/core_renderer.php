@@ -158,5 +158,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $this->render_from_template('core/loginform', $context);
     }
 
+    /**
+     * Returns the url of the custom favicon.
+     */
+    public function favicon() {
+        // Allow customized favicon from settings.
+        $url = $this->page->theme->setting_file_url('favicon', 'favicon');
+        return empty($url) ? parent::favicon() : $url;
+    }
 
 }
