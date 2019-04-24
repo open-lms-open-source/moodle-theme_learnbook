@@ -39,6 +39,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .path-calendar .maincalendar .calendar-control
 h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     font-size: 2rem;
 }
+//Hack added to cater for weird spacing on the calendar export page inherited from Boost.
+body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
+    display: none;
+}
 
 [role="main"] {
     -webkit-user-select: unset;
