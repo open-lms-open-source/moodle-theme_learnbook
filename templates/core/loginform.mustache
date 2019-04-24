@@ -93,14 +93,12 @@
     }
 }}
 
-<div class="my-1 my-sm-5"></div>
-
 <div class="row justify-content-center">
-    <div class="col-6">
+    <div class="col-xl-6 col-lg-10 col-12">
         <div id = "login-page-main-content-container">
             <div class="row">
                 {{#has_welcome}}
-                    <div class="col-6">
+                    <div class="col-md-6 col-12">
                         <div id = "login-left-logo-container">
                             {{#logourl}}
                                 <h2 class="text-center" ><img src="{{logourl}}" title="{{sitename}}" alt="{{sitename}}"/></h2>
@@ -113,10 +111,10 @@
                             {{welcometitle}}
                         </h2>
                         <div id = "login-welcome-msg">
-                            {{welcomemsg}}
+                            {{{welcomemsg}}}
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6 col-12">
                 {{/has_welcome}}
                 {{^has_welcome}}
                     <div class="col-12">
@@ -175,11 +173,11 @@
                     <div class="login-form-alternative-methods"{{^hasidentityproviders}}{{^canloginasguest}} style = "display:none;"{{/canloginasguest}}{{/hasidentityproviders}}>
                         <div id = "login-form-or">{{#str}} or, theme_learnbook {{/str}}</div>
                         {{#canloginasguest}}
-                                <form action="{{loginurl}}" method="post" id="guestlogin">
+                                <form action="{{loginurl}}" method="post" id="guestlogin" {{^hasidentityproviders}}class = "login-full-width"{{/hasidentityproviders}}>
                                     <input type="hidden" name="logintoken" value="{{logintoken}}">
                                     <input type="hidden" name="username" value="guest" />
                                     <input type="hidden" name="password" value="guest" />
-                                    <button class="btn btn-primary" type="submit">{{#str}}guest_login, theme_learnbook{{/str}}</button>
+                                    <button class="btn btn-primary{{^hasidentityproviders}} login-full-width{{/hasidentityproviders}}" type="submit">{{#str}}guest_login, theme_learnbook{{/str}}</button>
                                 </form>
                         {{/canloginasguest}}
 
@@ -197,8 +195,8 @@
                     </div>
                 </div>
             </div>
-            <hr />
             {{#hasinstructions}}
+                <hr id = "login-form-hr" />
                 <div id = "login-first-time">{{#str}}firsttime{{/str}}<br />
                 {{{instructions}}}
                 {{#cansignup}}
