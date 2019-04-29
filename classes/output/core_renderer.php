@@ -33,47 +33,6 @@ require_once $CFG->libdir . '/pagelib.php';
 
 class core_renderer extends \theme_boost\output\core_renderer {
 
- 
-    /**
-     * Wrapper for header elements.
-     *
-     * @return string HTML to display the main header.
-     */
-    public function full_header() {
-        global $PAGE;
-        
-        $hideFrontPageTopBar = '';
-        if ($PAGE->pagetype == 'my-index') {  //i.e frontpage/dashboard
-            $currentURL = $PAGE->url->out();
-            if(!strstr($currentURL, 'indexsys.php') )
-                $hideFrontPageTopBar = 'hidden';               
-        }
-        
-        $html = html_writer::start_tag('header', array('id' => 'page-header-new', 'class' => "row $hideFrontPageTopBar"));
-        $html .= html_writer::start_div('col-xs-12');
-        $html .= html_writer::start_div('card');
-        $html .= html_writer::start_div('card-block');
-        $html .= html_writer::div($this->context_header_settings_menu(), 'pull-xs-right context-header-settings-menu');
-        $html .= html_writer::start_div('pull-xs-left');
-        $html .= $this->context_header();
-        $html .= html_writer::end_div();
-        $pageheadingbutton = $this->page_heading_button();
-        if (empty($PAGE->layout_options['nonavbar'])) {
-            $html .= html_writer::start_div('clearfix w-100 pull-xs-left', array('id' => 'page-navbar'));
-            $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
-            $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button pull-xs-right');
-            $html .= html_writer::end_div();
-        } else if ($pageheadingbutton) {
-            $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button nonavbar pull-xs-right');
-        }
-        $html .= html_writer::tag('div', $this->course_header(), array('id' => 'course-header'));
-        $html .= html_writer::end_div();
-        $html .= html_writer::end_div();
-        $html .= html_writer::end_div();
-        $html .= html_writer::end_tag('header');
-        return $html;
-    }
-
     /**
      * The standard tags that should be included in the <head> tag
      * including a meta description for the front page
