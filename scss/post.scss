@@ -237,9 +237,8 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     bottom: auto;
     background-size: cover;
 }
-
-.btn-primary {
-    background-color: $brandcolor;
+.btn-primary, .btn-secondary {
+    background-color: $sectionheadercolor;
     border-color: $brandcolor;
 }
 
