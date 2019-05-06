@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_learnbook';
-$plugin->version = 2019030506;
+$plugin->version = 2019030507;
 $plugin->release = 'Learnbook Apollo (v3.6.3)';
 $plugin->requires = 2018120300;
 $plugin->maturity = MATURITY_STABLE;
