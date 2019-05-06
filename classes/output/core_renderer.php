@@ -28,10 +28,64 @@ defined('MOODLE_INTERNAL') || die;
 use html_writer;
 use context_course;
 
+include_once($CFG->dirroot . "/course/renderer.php");
 require_once $CFG->libdir . '/outputcomponents.php';
 require_once $CFG->libdir . '/pagelib.php';
 
 class core_renderer extends \theme_boost\output\core_renderer {
+
+    /**
+     * Renders html to display a course search form
+     *
+     * @param string $value default value to populate the search field
+     * @param string $format display format - 'plain' (default), 'short' or 'navbar'
+     * @return string
+     */
+    function course_search_form($value = '', $format = 'plain') {
+        static $count = 0;
+        $formid = 'coursesearch';
+        if ((++$count) > 1) {
+            $formid .= $count;
+        }
+
+        switch ($format) {
+            case 'navbar' :
+                $formid = 'coursesearchnavbar';
+                $inputid = 'navsearchbox';
+                $inputsize = 20;
+                break;
+            case 'short' :
+                $inputid = 'shortsearchbox';
+                $inputsize = 12;
+                break;
+            default :
+                $inputid = 'coursesearchbox';
+                $inputsize = 30;
+        }
+
+        $strsearchcourses= get_string("searchcourses");
+        $searchurl = new moodle_url('/course/search.php');                  
+        
+
+        $output = html_writer::start_tag('form', array('id' => $formid, 'action' => $searchurl, 'method' => 'get'));
+
+        
+        $output .= "<div class='row sectionheadercolor course-header-bar search-bar'>"
+                    . "<div class='col-lg-10 col-xs-10 header-bar-1-custom'>"
+                    . "<input type ='text' value='".s($value)."' name ='search' class='course-search-box-custom' placeholder='$strsearchcourses'>"                    
+                    ."<button type='submit' value='' class='search-btn-custom'><i id='search-box-icon' class='fa fa-search fa-2' aria-hidden='true'></i></button>"
+                    . "</div>"
+                    . "<div class='col-lg-2 col-xs-2 header-bar-1' style='text-align:right;'>"
+//                    . "<div class='collapsible-actions'>"
+//                    . "<a class='collapseexpand' href='#'><i class='fa fa-expand' aria-hidden='true'></i><i class='fa fa-compress' aria-hidden='true'></i></a>"
+//                    . "</div>"
+                    . "</div>"
+                    . "</div>";
+        
+        $output .= html_writer::end_tag('form');
+
+        return $output;
+    }
 
     /**
      * The standard tags that should be included in the <head> tag
