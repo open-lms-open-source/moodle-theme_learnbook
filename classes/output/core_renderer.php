@@ -118,6 +118,23 @@ class core_renderer extends \theme_boost\output\core_renderer {
     }
 
     /**
+     * Wrapper for header elements.
+     *
+     * @return string HTML to display the main header.
+     */
+    public function full_header() {
+        global $PAGE;
+
+        $header = new \stdClass;
+        $header->settingsmenu = $this->context_header_settings_menu();
+        $header->contextheader = $this->context_header();
+        $header->hasnavbar = empty($PAGE->layout_options['nonavbar']);
+        $header->navbar = $this->navbar();
+        $header->courseheader = $this->course_header();
+        return $this->render_from_template('core/full_header', $header);
+    }
+
+    /**
      * Returns the url of the custom favicon.
      */
     public function favicon() {
