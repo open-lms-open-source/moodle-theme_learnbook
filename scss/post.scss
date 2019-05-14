@@ -395,12 +395,20 @@ body {
     }
 }
 
+.block_lb_courses #courses-row .header-bar {
+    height: 100% !important;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
 .lb_courses_list {
     .grid {
         .course-title {
             z-index: 1;
         }
     }
+    padding: 0;
+    margin-left: 0 !important;
 }
 
 .page-link {
@@ -469,16 +477,17 @@ body {
     border: none;
     background: none;
     color: white;
-  }
-  
-  .course-search-box::placeholder {
+}
+
+.course-search-box::placeholder {
     color: white;
-  }
-  
-  .course-search-box-custom {
+}
+
+.course-search-box-custom {
     &::placeholder {
-      color: white;
+        color: white;
     }
+
     border: none;
     border-bottom: 2px solid white;
     background: none;
@@ -487,112 +496,123 @@ body {
     margin-left: 6px;
     outline: none;
     width: 25%;
-  }
-  
-  .header-bar-1-custom {
+}
+
+.header-bar-1-custom {
     margin-top: 15px;
-  }
-  
-  #coursesearch {
+}
+
+#coursesearch {
     margin-top: 0;
     text-align: left;
-  }
-  
-  .course-header-bar {
+}
+
+.course-header-bar {
     height: 50px;
-  }
-  
-  .course_category_tree {
+}
+
+.course_category_tree {
     .category {
-      &.with_children {
-        &.collapsed > .info > .categoryname, > .info > .categoryname {
-          background-image: none !important;
+        &.with_children {
+            &.collapsed > .info > .categoryname, > .info > .categoryname {
+                background-image: none !important;
+            }
         }
-      }
-      > .info > .categoryname {
-        background-image: none !important;
-        /*padding: 0px 20px !important;*/
-        margin: 0px;
-      }
-      &:not(.with_children) > .info > .categoryname:before {
+
+        > .info > .categoryname {
+            background-image: none !important;
+            /*padding: 0px 20px !important;*/
+            margin: 0px;
+        }
+
+        &:not(.with_children) > .info > .categoryname:before {
+            font-family: FontAwesome;
+            content: '\f055';
+            font-style: normal;
+            font-weight: normal;
+            padding-right: 5px;
+            font-size: 15px;
+            visibility: hidden;
+        }
+
+        &.with_children {
+            &.collapsed > .info > .categoryname:before {
+                font-family: FontAwesome;
+                content: '\f055';
+                font-style: normal;
+                font-weight: normal;
+                padding-right: 5px;
+                font-size: 15px;
+                color: $sectionheadercolor;
+
+            }
+
+            > .info > .categoryname:before {
+                font-family: FontAwesome;
+                cursor: pointer;
+                content: '\f056';
+                font-style: normal;
+                font-weight: normal;
+                padding-right: 5px;
+                font-size: 15px;
+                color: $sectionheadercolor;
+
+            }
+        }
+    }
+
+    .categoryname {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 35px;
+    }
+
+    .subcategories .category .category-div {
+        &.even {
+            background-color: #fafafa;
+        }
+
+        height: 40px;
+    }
+}
+
+.grey-bck {
+    background-color: #fafafa;
+    border-bottom: 1px solid rgba(140, 140, 140, 0.18);
+
+    &.first {
+        border-top: 1px solid rgba(140, 140, 140, 0.18);
+    }
+}
+
+.coursebox > .info > {
+    .coursename a {
+        background: none !important;
+        font-weight: 300;
+        font-size: 14px;
+
+        &:hover {
+            /*color : white;*/
+            text-decoration: none;
+        }
+    }
+
+    .moreinfo i:hover {
+        /*color : white;*/
+    }
+
+    .coursename a:before {
         font-family: FontAwesome;
-        content: '\f055';
+        cursor: pointer;
+        content: '\f114';
         font-style: normal;
         font-weight: normal;
         padding-right: 5px;
         font-size: 15px;
-        visibility: hidden;
-      }
-      &.with_children {
-        &.collapsed > .info > .categoryname:before {
-          font-family: FontAwesome;
-          content: '\f055';
-          font-style: normal;
-          font-weight: normal;
-          padding-right: 5px;
-          font-size: 15px;
-          color: $sectionheadercolor;
-       
-        }
-        > .info > .categoryname:before {
-          font-family: FontAwesome;
-          cursor: pointer;
-          content: '\f056';
-          font-style: normal;
-          font-weight: normal;
-          padding-right: 5px;
-          font-size: 15px;
-          color: $sectionheadercolor;
-       
-        }
-      }
     }
-    .categoryname {
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 35px;
-    }
-    .subcategories .category .category-div {
-      &.even {
-        background-color: #fafafa;
-      }
-      height: 40px;
-    }
-  }
-  
-  .grey-bck {
-    background-color: #fafafa;
-    border-bottom: 1px solid rgba(140, 140, 140, 0.18);
-    &.first {
-      border-top: 1px solid rgba(140, 140, 140, 0.18);
-    }
-  }
-  
-  .coursebox > .info > {
-    .coursename a {
-      background: none !important;
-      font-weight: 300;
-      font-size: 14px;
-      &:hover {
-        /*color : white;*/
-        text-decoration: none;
-      }
-    }
-    .moreinfo i:hover {
-      /*color : white;*/
-    }
-    .coursename a:before {
-      font-family: FontAwesome;
-      cursor: pointer;
-      content: '\f114';
-      font-style: normal;
-      font-weight: normal;
-      padding-right: 5px;
-      font-size: 15px;
-    }
-  }
-  
-  .courses .coursebox:hover {
+}
+
+.courses .coursebox:hover {
     background-color: white !important;
     -webkit-box-shadow: 2px 2px 10px 1px rgba(5, 5, 5, 0.5);
     -moz-box-shadow: 2px 2px 10px 1px rgba(5, 5, 5, 0.5);
@@ -600,138 +620,162 @@ body {
     /*border: none;*/
     /*z-index: 9999;*/
     position: relative;
-  }
-  
-  .coursebox {
+}
+
+.coursebox {
     > .info > .coursename a {
-      padding-left: 10px !important;
+        padding-left: 10px !important;
     }
+
     .content {
-      padding-left: 10px;
-      padding-right: 10px;
-      .summary {
-        width: 65%;
-        font-weight: 300;
-        font-size: 13px;
-      }
-      .teachers, .courseimage, .coursefile {
-        width: 30%;
-      }
-      .courseimage {
-        img {
-          width: 100%;
-          height: 100%;
-          max-width: 100%;
-          max-height: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .summary {
+            width: 65%;
+            font-weight: 300;
+            font-size: 13px;
         }
-        height: 170px;
-      }
+
+        .teachers, .courseimage, .coursefile {
+            width: 30%;
+        }
+
+        .courseimage {
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            height: 170px;
+        }
     }
-  }
-  
-  /*.coursebox .content .summary, .coursebox .content .coursecat*/
-  
-  .course_category_tree .collapsible-actions {
+}
+
+/*.coursebox .content .summary, .coursebox .content .coursecat*/
+
+.course_category_tree .collapsible-actions {
     .collapseexpand {
-      .fa-compress, &.collapse-all .fa-expand {
-        display: none;
-      }
-      background: none !important;
-      line-height: 0 !important;
-      font-size: 0 !important;
-      text-decoration: none;
+        .fa-compress, &.collapse-all .fa-expand {
+            display: none;
+        }
+
+        background: none !important;
+        line-height: 0 !important;
+        font-size: 0 !important;
+        text-decoration: none;
     }
+
     padding-bottom: 15px;
     margin-top: -36px;
     margin-left: 90%;
     position: relative;
+
     .collapse-all {
-      background: none !important;
+        background: none !important;
     }
+
     .collapseexpand:before {
-      font-family: FontAwesome;
-      cursor: pointer;
-      content: '\f065';
-      font-style: normal;
-      font-weight: normal;
-      padding-right: 5px;
-      font-size: 15px;
-      color: white;
+        font-family: FontAwesome;
+        cursor: pointer;
+        content: '\f065';
+        font-style: normal;
+        font-weight: normal;
+        padding-right: 5px;
+        font-size: 15px;
+        color: white;
     }
+
     .collapse-all:before {
-      font-family: FontAwesome;
-      cursor: pointer;
-      content: '\f066';
-      font-style: normal;
-      font-weight: normal;
-      padding-right: 5px;
-      font-size: 15px;
-      color: white;
+        font-family: FontAwesome;
+        cursor: pointer;
+        content: '\f066';
+        font-style: normal;
+        font-weight: normal;
+        padding-right: 5px;
+        font-size: 15px;
+        color: white;
     }
-  }
-  
-  .searchhelp {
+}
+
+.searchhelp {
     text-align: left;
-  }
-  
-  .search-bar {
+}
+
+.search-bar {
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
-  }
-  
-  .generalbox .search-bar {
+}
+
+.generalbox .search-bar {
     margin-top: -25px;
-  }
-  
-  .subcategories .pagination .page-item.active {
+}
+
+.subcategories .pagination .page-item.active {
     background-color: unset;
     border-color: unset;
+
     .page-link {
-      background-color: $sectionheadercolor;
-      color: #FFFFFF;
-      border-color: $sectionheadercolor;
+        background-color: $sectionheadercolor;
+        color: #FFFFFF;
+        border-color: $sectionheadercolor;
     }
-  }
-  
-  .singlebutton #new-course-form .btn-secondary {
+}
+
+.singlebutton #new-course-form .btn-secondary {
     &:before {
-      font-family: FontAwesome;
-      cursor: pointer;
-      content: '\f067';
-      font-style: normal;
-      font-weight: normal;
-      padding-right: 5px;
-      font-size: 15px;
-      /*color:white;*/
+        font-family: FontAwesome;
+        cursor: pointer;
+        content: '\f067';
+        font-style: normal;
+        font-weight: normal;
+        padding-right: 5px;
+        font-size: 15px;
+        /*color:white;*/
     }
-  }
-  
-  @media only screen and (max-width: 420px) {
+}
+
+@media only screen and (max-width: 420px) {
     .coursebox {
-      .content {
-        .summary {
-          width: 50%;
+        .content {
+            .summary {
+                width: 50%;
+            }
+            .teachers, .courseimage, .coursefile {
+                width: 40%;
+            }
+            .coursecat, .summary, .courseimage, .coursefile, .teachers {
+                margin: 0;
+            }
         }
-        .teachers, .courseimage, .coursefile {
-          width: 40%;
+        &.remotecoursebox .remotecourseinfo {
+            margin: 0;
         }
-        .coursecat, .summary, .courseimage, .coursefile, .teachers {
-          margin: 0;
+        .content .courseimage {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            height: 100px;
         }
-      }
-      &.remotecoursebox .remotecourseinfo {
-        margin: 0;
-      }
-      .content .courseimage {
-        img {
-          width: 100%;
-          height: 100%;
+        > .info > .coursename a {
+            padding-left: 5px !important;
         }
-        height: 100px;
-      }
-      > .info > .coursename a {
-        padding-left: 5px !important;
-      }
     }
-  }
+    .login-form-body {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .login-form-body {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+}
