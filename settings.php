@@ -217,7 +217,11 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_confightmleditor('theme_learnbook/welcomemsg',                                                              
         get_string('welcomemsg', 'theme_learnbook'), get_string('welcomemsg_desc', 'theme_learnbook'), get_string('welcomemsg', 'theme_learnbook'), PARAM_RAW);                      
     $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting);  
+    $page->add($setting);
+
+    $setting = new admin_setting_configselect('theme_learnbook/welcome_text_location',
+        get_string('welcome_text_location', 'theme_learnbook'), get_string('welcome_text_location_desc', 'theme_learnbook'), 'left', array('left' => get_string('left_side', 'theme_learnbook'), 'right' => get_string('right_side', 'theme_learnbook')));
+    $page->add($setting);
     
     $name = 'theme_learnbook/welcomeimg';            
     $title = get_string('welcomeimg', 'theme_learnbook');

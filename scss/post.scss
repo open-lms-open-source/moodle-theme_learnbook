@@ -143,6 +143,12 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
         display: table-cell;
         vertical-align: middle;
     }
+    #login-left-container {
+        border-right: 1px dotted rgba(0,0,0,.1);
+    }
+    #login-right-container {
+        border-left: 1px dotted rgba(0,0,0,.1);
+    }
     #login-left-logo-container img {
         max-width: 100%;
     }
@@ -161,6 +167,25 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     }
     #login-form-hr {
         margin-top: 5px;
+    }
+    .login-form-body {
+        width: 75%;
+        max-width: 250px;
+        margin: auto;
+    }
+    .login-input {
+        width: calc(100% - 5px);
+        display: inline-block;
+    }
+    #loginbtn {
+        width: calc(100% - 5px);
+    }
+    #login-caps-lock-warning-icon {
+        float: right;
+        margin-right: -17px;
+        margin-top: 7px;
+        color: #f00;
+        display: none;
     }
     input[type="text"], input[type="password"] {
         background-color: #eee;
