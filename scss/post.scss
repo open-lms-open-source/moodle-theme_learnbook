@@ -418,6 +418,12 @@ body {
     }
 }
 
+#page-local-menumanagement {
+    .col-form-label, .form-check {
+        justify-content: left !important;
+    }
+}
+
 .page-link {
     color: $sectionheadercolor;
 }
