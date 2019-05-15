@@ -739,6 +739,14 @@ body {
     }
 }
 
+
+.hidden-xs-down {
+    display: block;
+}
+.hidden-sm-up {
+    display: none;
+}
+
 @media only screen and (max-width: 420px) {
     .coursebox {
         .content {
@@ -774,6 +782,12 @@ body {
 @media only screen and (max-width: 575px) {
     .login-form-body {
         width: 100% !important;
+    }
+    .hidden-xs-down {
+        display: none;
+    }
+    .hidden-sm-up {
+        display: block;
     }
 }
 
