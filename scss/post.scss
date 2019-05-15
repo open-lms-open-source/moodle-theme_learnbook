@@ -393,22 +393,23 @@ body {
         background-color: #fff !important;
         color: $sectionheadercolor !important;
     }
-}
-
-.block_lb_courses #courses-row .header-bar {
-    height: 100% !important;
-    padding-bottom: 15px;
-    text-align: center;
-}
-
-.lb_courses_list {
-    .grid {
-        .course-title {
-            z-index: 1;
+    #courses-row .header-bar {
+        height: 100% !important;
+        padding-bottom: 15px;
+        text-align: center;
+        .grid-list-icons {
+            margin-top: 15px;
         }
     }
-    padding: 0;
-    margin-left: 0 !important;
+    .lb_courses_list {
+        .grid {
+            .course-title {
+                z-index: 1;
+            }
+        }
+        padding: 0;
+        margin-left: 0 !important;
+    }
 }
 
 .page-link {
@@ -770,9 +771,15 @@ body {
     }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575px) {
     .login-form-body {
         width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .block_lb_courses #coursetimeline-col {
+        margin-top: 76px !important;
     }
 }
 

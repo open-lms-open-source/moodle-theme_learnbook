@@ -48,7 +48,10 @@ class core_renderer extends \theme_boost\output\core_renderer {
         
         if ($PAGE->pagelayout == 'login') {            
             $PAGE->requires->js("/theme/$themename/javascript/jquery.backstretch.js", true);
-            $PAGE->requires->js("/theme/learnbook/javascript/login.js", true);
+            $PAGE->requires->js("/theme/$themename/javascript/login.js", true);
+        }
+        if ($PAGE->pagelayout == 'mydashboard') {
+            $PAGE->requires->js("/theme/$themename/javascript/dashboard.js", true);
         }
 
         $output = parent::standard_head_html();
@@ -112,7 +115,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $context->welcometitle = get_config('theme_learnbook', 'welcometitle');
         $context->has_welcome = true;
         $context->welcome_text_left = !empty(get_config('theme_learnbook', 'welcome_text_location')) && get_config('theme_learnbook', 'welcome_text_location') == 'right' ? false : true;
-        if (empty($context->welcomemsg) && empty($context->welcometitle)) {
+        if ((empty($context->welcomemsg) && empty($context->welcometitle)) || !get_config('theme_learnbook', 'display_welcome_text')) {
             $context->has_welcome = false;
         }
 

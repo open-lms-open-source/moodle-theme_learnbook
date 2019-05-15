@@ -208,6 +208,12 @@ if ($ADMIN->fulltree) {
     $settings->add($page);     
     
     $page = new admin_settingpage('theme_learnbook_login', get_string('loginpagesettings', 'theme_learnbook'));
+
+    $name = 'theme_learnbook/display_welcome_text';
+    $title = get_string('display_welcome_text', 'theme_learnbook');
+    $description = get_string('display_welcome_text_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcheckbox($name, $title, $description, true, true, false);
+    $page->add($setting);
     
     $setting = new admin_setting_configtext('theme_learnbook/welcometitle',                                                              
         get_string('welcometitle', 'theme_learnbook'), get_string('welcometitle_desc', 'theme_learnbook'), get_string('welcometitle', 'theme_learnbook'), PARAM_RAW);                      

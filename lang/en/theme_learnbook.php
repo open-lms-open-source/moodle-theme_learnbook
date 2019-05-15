@@ -79,6 +79,8 @@ $string['favicon_desc'] = 'Upload your favicon icon here';
 
 // Login Page Settings
 $string['loginpagesettings'] = 'Login Page Settings';
+$string['display_welcome_text'] = "Display welcome text";
+$string['display_welcome_text_desc'] = "Uncheck to hide welcome text from login page.";
 $string['welcometitle'] = "Welcome Title";
 $string['welcometitle_desc'] = "Title to be showed for Welcome Message on login page.";
 $string['welcomemsg'] = "Welcome Message";
