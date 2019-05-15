@@ -105,3 +105,4 @@ $string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will
 $string['or'] = 'OR';
 $string['guest_login'] = 'Guest login';
 $string['sign_up'] = 'Sign up';
+$string['capslock_help'] = 'Caps lock is on';
