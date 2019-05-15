@@ -412,6 +412,12 @@ body {
     }
 }
 
+#page-user-profile {
+    header .page-header-headings {
+        word-break: break-word;
+    }
+}
+
 .page-link {
     color: $sectionheadercolor;
 }
@@ -789,6 +795,12 @@ body {
     .hidden-sm-up {
         display: block;
     }
+    #page-user-profile {
+        .userprofile > .card.card-block {
+            border: 0;
+        }
+    }
+
 }
 
 @media only screen and (max-width: 991px) {
