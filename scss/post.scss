@@ -422,6 +422,12 @@ body {
     .col-form-label, .form-check {
         justify-content: left !important;
     }
+    .nestable-lists .dd3-content .label-text {
+        overflow: hidden;
+        max-width: 55%;
+        display: inline-flex;
+        max-height: 18px;
+    }
 }
 
 .page-link {
