@@ -355,6 +355,11 @@ body {
     padding: 0 2rem;
 }
 
+ul.pagination {
+    max-width: 100%;
+    overflow: scroll;
+}
+
 .admin_buttons {
     padding: none !important;
 }
