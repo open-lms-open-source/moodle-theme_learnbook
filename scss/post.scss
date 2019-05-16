@@ -410,6 +410,44 @@ ul.pagination {
     }
 }
 
+#page-local-learnbook-report-index {
+    #filter-block, #saved-reports-block {
+        .collapse {
+            padding: 15px;
+        }
+        .card {
+            border: 0;
+        }
+    }
+    #filter-block {
+        #builder {
+            margin-right: 0;
+            .rules-group-header .btn-group {
+                margin-top: 5px;
+            }
+        }
+    }
+    #saved-reports-block table {
+        tr:first-child td {
+            border-top: 0;
+        }
+        td:first-child {
+            border-left: 0;
+        }
+        td:last-child {
+            border-right: 0;
+        }
+    }
+    #local_learnbook_reportserverside_wrapper {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .btn-primary {
+            margin-left: 15px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
 .block_lb_courses {
     &.card {
         margin-top: 0 !important;
@@ -849,6 +887,10 @@ ul.pagination {
     }
 }
 
-@media only screen and (max-width: 1400px) {
-
+@media only screen and (max-width: 1199px) {
+    #page-local-learnbook-report-index {
+        #filter-block span.select2-selection.select2-selection--multiple {
+            width: 100% !important;
+        }
+    }
 }
