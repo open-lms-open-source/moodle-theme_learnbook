@@ -399,6 +399,17 @@ ul.pagination {
     }
 }
 
+#page-course-view-topics {
+    .course-content {
+        ul.topics li.section {
+            padding-top: 1rem;
+        }
+        .section-summary .section-title {
+            margin-bottom: 0;
+        }
+    }
+}
+
 .block_lb_courses {
     &.card {
         margin-top: 0 !important;
