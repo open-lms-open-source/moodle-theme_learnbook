@@ -427,15 +427,18 @@ ul.pagination {
             }
         }
     }
-    #saved-reports-block table {
-        tr:first-child td {
-            border-top: 0;
-        }
-        td:first-child {
-            border-left: 0;
-        }
-        td:last-child {
-            border-right: 0;
+    #saved-reports-block {
+        overflow: scroll;;
+        table {
+            tr:first-child td {
+                border-top: 0;
+            }
+            td:first-child {
+                border-left: 0;
+            }
+            td:last-child {
+                border-right: 0;
+            }
         }
     }
     #local_learnbook_reportserverside_wrapper {
@@ -445,6 +448,9 @@ ul.pagination {
             margin-left: 15px;
             margin-bottom: 15px;
         }
+    }
+    .select2-container {
+        max-width: 100%;
     }
 }
 
