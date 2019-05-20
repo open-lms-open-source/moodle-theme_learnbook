@@ -527,6 +527,10 @@ ul.pagination {
         display: none !important;
     }
     .list-group-item {
+        &:not([data-parent-key="myhome"]), &[data-key="sitesettings"] {
+            background-color:$leftmenusubitemcolor !important;
+            color: $leftmenuitemstextcolor !important;
+        }
         &[data-key="learnbookpanel"] {
             background-color: $leftmenuheadercolor !important;
             color: $leftmenuheadertextcolor !important;
@@ -547,10 +551,6 @@ ul.pagination {
         }
         &:hover[data-key="learnbookpanel"] {
             z-index: -1 !important;
-        }
-        &:not([data-parent-key="myhome"]), &[data-key="sitesettings"] {
-            background-color:$leftmenusubitemcolor !important;
-            color: $leftmenuitemstextcolor !important;
         }
         &.active {
             border: 1px solid rgba(0,0,0,.125) !important;
