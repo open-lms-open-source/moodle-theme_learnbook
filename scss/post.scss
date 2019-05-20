@@ -69,12 +69,16 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     .site-name {
         display: none !important;
     }
+    .usermenu {
+        margin-left: 10px;
+    }
     .usertext, .dropdown-toggle {
         color: $headertextcolor !important;
     }
     .popover-region {
-        .icon {
+        .icon, .ecommerce-icon-cart, .ecommerce-icon-heart {
             color: $headertextcolor !important;
+            font-size: 23px;
         }
     }
     div[data-region="drawer-toggle"] {

@@ -68,7 +68,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
     public function navbar_plugin_output() {
         $output = '';
-        
+
+        foreach (\core_component::get_core_subsystems() as $name => $path) {
+            if ($path) {
+                $output .= component_callback($name, 'render_navbar_output', [$this], '');
+            }
+        }
+
     	if ($pluginsfunction = get_plugins_with_function('render_navbar_output')) {
     		foreach ($pluginsfunction as $plugintype => $plugins) {
     			foreach ($plugins as $pluginfunction) {
