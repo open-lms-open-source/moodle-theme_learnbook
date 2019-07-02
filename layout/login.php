@@ -41,6 +41,7 @@ foreach ($files as $file) {
     }
 }
 
+$welcomeImg = null;
 $welcomeImgFiles = $fs->get_area_files($context->id, 'theme_learnbook', 'welcomeimg', 0);
 foreach ($welcomeImgFiles as $file) {
     $filename = $file->get_filename();
