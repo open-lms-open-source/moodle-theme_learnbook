@@ -155,7 +155,7 @@ class theme_learnbook_core_course_renderer extends core_course_renderer {
      * @param int $depth depth of this category in the current tree
      * @return string
      */
-    protected function coursecat_category(coursecat_helper $chelper, $coursecat, $depth, $infoClasses) {
+    protected function coursecat_category(coursecat_helper $chelper, $coursecat, $depth, $infoClasses = null) {
         // open category tag
         global $DB;
         

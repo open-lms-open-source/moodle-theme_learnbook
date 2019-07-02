@@ -142,6 +142,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $header->hasnavbar = empty($PAGE->layout_options['nonavbar']);
         $header->navbar = $this->navbar();
         $header->courseheader = $this->course_header();
+        $header->pageheadingbutton = $this->page_heading_button();
+//        if (empty($PAGE->layout_options['nonavbar'])) {
+//            $html .= html_writer::start_div('clearfix w-100 pull-xs-left', array('id' => 'page-navbar'));
+//            $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
+//            $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button pull-xs-right');
+//            $html .= html_writer::end_div();
+//        }
         return $this->render_from_template('core/full_header', $header);
     }
 

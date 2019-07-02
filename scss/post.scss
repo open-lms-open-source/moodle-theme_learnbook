@@ -88,6 +88,7 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
             padding-left: 5px;
             i {
                 font-size: 26px !important;
+                color: $headertextcolor;
             }
             &:focus {
                 box-shadow: none !important;
@@ -156,7 +157,7 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     #login-left-logo-container img {
         max-width: 100%;
     }
-    h2, #login-welcome-title, #login-welcome-msg, #login-first-time, .forgetpass a {
+    h2, #login-welcome-title, #login-welcome-msg, #login-first-time, #login-first-time a, .forgetpass a {
         color: $headertextcolor;
     }
     #login-welcome-title {
@@ -294,7 +295,7 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     }
 }
 
-#myteam-blockcontainer .btn-default {
+#local-myteam-container .btn-default {
     background-color: $sectionheadercolor !important;
 }
 
@@ -304,7 +305,9 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     color: white;
     border: none;
     width: 110px;
-    height: 30px;
+    max-width: 100%;
+    height: 100%;
+    padding: 5px;
     font-size: 13px;
     font-weight: 100;
     &:hover {
@@ -456,7 +459,7 @@ ul.pagination {
     &.card {
         margin-top: 0 !important;
     }
-    .current-sel-tab, .btn-cus:hover, .grid-icon.icon-selected, .list-icon.icon-selected, .cal-icon.icon-selected, .grid-icon:hover, .list-icon:hover, .cal-icon:hover {
+    .btn-cus:hover, .grid-icon.icon-selected, .list-icon.icon-selected, .cal-icon.icon-selected, .grid-icon:hover, .list-icon:hover, .cal-icon:hover {
         background-color: #fff !important;
         color: $sectionheadercolor !important;
     }
@@ -465,7 +468,8 @@ ul.pagination {
         padding-bottom: 15px;
         text-align: center;
         .grid-list-icons {
-            margin-top: 15px;
+            padding-left: 5px;
+            padding-right: 5px;
         }
     }
     .lb_courses_list {
@@ -476,6 +480,20 @@ ul.pagination {
         }
         padding: 0;
         margin-left: 0 !important;
+    }
+    .lb-courses-dropdown {
+        list-style: none;
+        padding: 2px 0;
+        margin: 0;
+        display: inline-block;
+        cursor: pointer;
+        .dropdown-caret {
+            margin-left: 10px;
+        }
+    }
+    .lb-courses-dropdown-container {
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 
@@ -882,7 +900,9 @@ ul.pagination {
             border: 0;
         }
     }
-
+    .block_lb_courses .grid-list-icons {
+        margin-top: 15px;
+    }
 }
 
 @media only screen and (max-width: 991px) {

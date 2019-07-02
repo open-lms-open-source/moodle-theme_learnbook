@@ -49,9 +49,17 @@
                 </div>
                 <div class="d-flex flex-wrap">
                     {{#hasnavbar}}
-                    <div id="page-navbar">
-                        {{{navbar}}}
-                    </div>
+                        <div id="page-navbar">
+                            {{{navbar}}}
+                        </div>
+                        <div class="ml-auto d-flex">
+                            {{{pageheadingbutton}}}
+                        </div>
+                    {{/hasnavbar}}
+                    {{^hasnavbar}}
+                        <div class="breadcrumb-button nonavbar float-xs-right">
+                            {{{pageheadingbutton}}}
+                        </div>
                     {{/hasnavbar}}
                     <div id="course-header">
                         {{{courseheader}}}

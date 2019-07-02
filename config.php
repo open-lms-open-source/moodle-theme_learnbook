@@ -39,11 +39,6 @@ $THEME->layouts = [
         'regions' => array(),
         'options' => array('langmenu' => true),
     ),
-    'myteam' => array(
-        'file' => 'myteam.php',
-        'regions' => array('center'),
-        'defaultregion' => 'center',
-    ),
     'admindashboard' => array(
         'file' => 'admindashboard.php',
         'regions' => array('top-left', 'top-center','top-right','bottom'),
