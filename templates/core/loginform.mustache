@@ -227,6 +227,12 @@
                 {{/cansignup}}
                 </div>
             {{/hasinstructions}}
+            {{#error}}
+                <div class="loginerrors mt-3">
+                    <a href="#" id="loginerrormessage" class="accesshide">{{error}}</a>
+                    <div class="alert alert-danger" role="alert" data-aria-autofocus="true">{{error}}</div>
+                </div>
+            {{/error}}
         </div>
     </div>
 </div>
