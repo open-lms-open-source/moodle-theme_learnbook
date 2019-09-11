@@ -853,6 +853,52 @@ ul.pagination {
     display: none;
 }
 
+// LB Program section.
+#program-container {
+    .background-colour {
+        background-color: $headercolor !important;
+    }
+
+    .inverse-background-colour {
+        background-color: $headertextcolor !important;
+    }
+
+    .inverse-text-colour {
+        color: $headercolor !important;
+    }
+
+    .page-link {
+        &:hover {
+            color: $headercolor !important;
+            background-color: $headertextcolor !important;
+        }
+    }
+
+    .program-active {
+        color: $headercolor !important;
+        background-color: $headertextcolor !important;
+    }
+
+    .table {
+        tbody {
+            tr {
+                &:not(.program-active) {
+                    &:hover {
+                        color: $headertextcolor !important;
+                    }
+                }
+                &.program-active .delete-row-button {
+                    color: $headercolor !important;
+                }
+            }
+        }
+    }
+
+    .text-colour {
+        color: $headertextcolor !important;
+    }
+}
+
 @media only screen and (max-width: 420px) {
     .coursebox {
         .content {
