@@ -867,6 +867,16 @@ ul.pagination {
         color: $headercolor !important;
     }
 
+    .k-slider-horizontal {
+        .k-draghandle {
+            background-color: rgba($headertextcolor, 0.5);
+        }
+    }
+
+    .k-tick {
+        color: $headertextcolor !important;
+    }
+
     .page-link {
         &:hover {
             color: $headercolor !important;
