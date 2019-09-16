@@ -859,6 +859,10 @@ ul.pagination {
         background-color: $headercolor !important;
     }
 
+    .fixed-header {
+        background-color: $headercolor !important;
+    }
+
     .inverse-background-colour {
         background-color: $headertextcolor !important;
     }
@@ -869,7 +873,7 @@ ul.pagination {
 
     .k-slider-horizontal {
         .k-draghandle {
-            background-color: rgba($headertextcolor, 0.5);
+            background-color: rgba($headertextcolor, 0.5) !important;
         }
     }
 
