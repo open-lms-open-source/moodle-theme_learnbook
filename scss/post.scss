@@ -871,10 +871,28 @@ ul.pagination {
         color: $headercolor !important;
     }
 
+    .k-filtercell .k-button-icon {
+        color: $headercolor !important;
+    }
+
+    .k-pager-nav {
+        background-color: $headercolor !important;
+        color: $headertextcolor !important;
+    }
+
+    .k-pager-wrap {
+        color: $headertextcolor !important;
+    }
+
     .k-slider-horizontal {
         .k-draghandle {
             background-color: rgba($headertextcolor, 0.5) !important;
         }
+    }
+
+    .k-state-selected {
+        color: $headercolor !important;
+        background-color: $headertextcolor !important;
     }
 
     .k-tick {
@@ -896,13 +914,15 @@ ul.pagination {
     .table {
         tbody {
             tr {
-                &:not(.program-active) {
+                &:not(.program-active):not(.k-state-selected) {
                     &:hover {
                         color: $headertextcolor !important;
                     }
                 }
-                &.program-active .delete-row-button {
-                    color: $headercolor !important;
+                &.program-active, &.k-state-selected {
+                    .delete-row-button, .edit-row-button {
+                        color: $headercolor !important;
+                    }
                 }
             }
         }
