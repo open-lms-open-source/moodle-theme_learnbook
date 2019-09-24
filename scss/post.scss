@@ -147,6 +147,7 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     .login-centred-vertically {
         display: table-cell;
         vertical-align: middle;
+        overflow: hidden;
     }
     #login-left-container {
         border-right: 1px dotted rgba(0,0,0,.1);
@@ -364,7 +365,7 @@ body {
 
 ul.pagination {
     max-width: 100%;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .admin_buttons {
