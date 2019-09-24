@@ -430,7 +430,7 @@ ul.pagination {
         }
     }
     #saved-reports-block {
-        overflow: scroll;;
+        overflow: auto;
         table {
             tr:first-child td {
                 border-top: 0;
