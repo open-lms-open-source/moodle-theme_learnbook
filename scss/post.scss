@@ -971,6 +971,16 @@ ul.pagination {
          border: 1px solid $headertextcolor !important;
      }
 
+    #user-reports-nav li {
+        a {
+            color: $headertextcolor !important;
+            &.active {
+                border-bottom: 2px solid $headertextcolor !important;
+                background-color: $headercolor !important;
+            }
+        }
+    }
+
     #wizard {
         .sw-btn-next {
             &:not(.disabled) {
