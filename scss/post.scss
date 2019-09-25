@@ -887,7 +887,7 @@ ul.pagination {
     }
 
     .k-button{
-        &.k-primary, &:focus {
+        &.k-primary, &:focus, &:active {
             color: $headercolor !important;
             background-color: $headertextcolor !important;
             border-color: $headertextcolor !important;
@@ -924,10 +924,22 @@ ul.pagination {
     .k-state-selected {
         color: $headercolor !important;
         background-color: $headertextcolor !important;
+        .k-link {
+            border-color: $headertextcolor !important;
+            color: $headercolor !important;
+            background-color: $headertextcolor !important;
+        }
     }
 
-    .k-tick {
+    .k-tick, .k-nav-today {
         color: $headertextcolor !important;
+    }
+
+    .k-today {
+        .k-link {
+            color: $headertextcolor !important;
+            box-shadow: inset 0 0 0 1px $headertextcolor !important;
+        }
     }
 
     .page-link {
