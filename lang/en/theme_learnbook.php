@@ -89,8 +89,8 @@ $string['welcome_text_location'] = "Welcome Text Location";
 $string['welcome_text_location_desc'] = "Display welcome text on left or right hand side of login page.";
 $string['left_side'] = "Left side";
 $string['right_side'] = "Right side";
-$string['welcomeimg'] = "Welcome Image";
-$string['welcomeimg_desc'] = "Background image of Welcome Message on login page.";
+//$string['welcomeimg'] = "Welcome Image";
+//$string['welcomeimg_desc'] = "Background image of Welcome Message on login page.";
 $string['slideshow'] =  'Login Slide Image';
 $string['slideshowdesc'] = 'Select Image for Login Page Slide Show';
 
