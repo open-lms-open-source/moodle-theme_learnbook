@@ -143,12 +143,14 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
     $page->add($setting); 
     
-    $name = 'theme_learnbook/sectionhovercolor';                                                                                               
+    /*
+    $name = 'theme_learnbook/sectionhovercolor';
     $title = get_string('sectionhovercolor', 'theme_learnbook');                                                                               
     $description = get_string('sectionhovercolor_desc', 'theme_learnbook');                                                                    
     $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
     $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
+    $page->add($setting);
+    */
     
     $name = 'theme_learnbook/coursetilecolor';                                                                                               
     $title = get_string('coursetilecolor', 'theme_learnbook');                                                                               
@@ -228,7 +230,8 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configselect('theme_learnbook/welcome_text_location',
         get_string('welcome_text_location', 'theme_learnbook'), get_string('welcome_text_location_desc', 'theme_learnbook'), 'left', array('left' => get_string('left_side', 'theme_learnbook'), 'right' => get_string('right_side', 'theme_learnbook')));
     $page->add($setting);
-    
+
+    /*
     $name = 'theme_learnbook/welcomeimg';            
     $title = get_string('welcomeimg', 'theme_learnbook');
     $description = get_string('welcomeimg_desc', 'theme_learnbook');
@@ -236,6 +239,7 @@ if ($ADMIN->fulltree) {
         ['maxfiles' => 1, 'accepted_types' => ['.jpg', '.png']]);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
+    */
        
     $name = 'theme_learnbook/slideshow';            
     $title = get_string('slideshow', 'theme_learnbook');
