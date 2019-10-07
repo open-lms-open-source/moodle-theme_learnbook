@@ -870,6 +870,14 @@ ul.pagination {
         }
     }
 
+    .btn-primary {
+        border-color: $headercolor !important;
+    }
+
+    .btn-secondary {
+        border-color: $headertextcolor !important;
+    }
+
     .fixed-header {
         background-color: $headercolor !important;
     }
