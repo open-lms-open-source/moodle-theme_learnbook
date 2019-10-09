@@ -872,7 +872,9 @@ ul.pagination {
     }
 
     .btn-primary {
-        border-color: $headercolor !important;
+        color: $headercolor !important;
+        background-color: $headertextcolor !important;
+        border-color: $headertextcolor !important;
     }
 
     .btn-secondary {
