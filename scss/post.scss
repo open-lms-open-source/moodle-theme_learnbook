@@ -969,8 +969,17 @@ ul.pagination {
         background-color: $headertextcolor !important;
     }
 
+    table {
+        th {
+            a.k-link {
+                color: $headercolor !important;
+            }
+        }
+    }
+
     .table {
         tbody {
+
             tr {
                 &:not(.program-active):not(.k-state-selected) {
                     &:hover {
