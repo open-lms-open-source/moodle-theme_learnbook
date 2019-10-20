@@ -317,6 +317,23 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     }
 }
 
+.view-cert-btn{
+    background-color: $coursebtncolor !important;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    width: 124px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 100;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    outline:none;
+    &:hover {
+        background-color: $coursebtnhovercolor !important;
+    }
+}
+
 .category-color{
     height: 5px;
     background-color: $sectionheadercolor !important;
