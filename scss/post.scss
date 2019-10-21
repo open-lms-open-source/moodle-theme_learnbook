@@ -1,8 +1,8 @@
 $brandcolor: #e1ecf5 !default;
 $headercolor: #ffffff !default;
 $headertextcolor: #00bada !default;
-$leftmenuheadercolor: #fff !default;
-$leftmenuheadertextcolor: #00bada !default;
+//$leftmenuheadercolor: #fff !default;
+//$leftmenuheadertextcolor: #00bada !default;
 $leftmenumainitemcolor: #ffffff !default;
 $leftmenuitemhovercolor: #f4f4f4 !default;
 $leftmenuitemstextcolor: #060100 !default;
@@ -561,10 +561,10 @@ ul.pagination {
             background-color:$leftmenusubitemcolor !important;
             color: $leftmenuitemstextcolor !important;
         }
-        &[data-key="learnbookpanel"] {
-            background-color: $leftmenuheadercolor !important;
-            color: $leftmenuheadertextcolor !important;
-        }
+        //&[data-key="learnbookpanel"] {
+        //    background-color: $leftmenuheadercolor !important;
+        //    color: $leftmenuheadertextcolor !important;
+        //}
         &[data-isexpandable="1"]{
             &:hover {
                 background-color: $leftmenuitemhovercolor !important;

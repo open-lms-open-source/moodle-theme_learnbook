@@ -79,26 +79,26 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
     $page->add($setting); 
     
-    $name = 'theme_learnbook/headertextcolor';                                                                                               
-    $title = get_string('headertextcolor', 'theme_learnbook');                                                                               
-    $description = get_string('headertextcolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
+    $name = 'theme_learnbook/headertextcolor';
+    $title = get_string('headertextcolor', 'theme_learnbook');
+    $description = get_string('headertextcolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
     
-    $name = 'theme_learnbook/leftmenuheadercolor';                                                                                               
-    $title = get_string('leftmenuheadercolor', 'theme_learnbook');                                                                               
-    $description = get_string('leftmenuheadercolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
+//    $name = 'theme_learnbook/leftmenuheadercolor';
+//    $title = get_string('leftmenuheadercolor', 'theme_learnbook');
+//    $description = get_string('leftmenuheadercolor_desc', 'theme_learnbook');
+//    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+//    $setting->set_updatedcallback('theme_reset_all_caches');
+//    $page->add($setting);
     
-    $name = 'theme_learnbook/leftmenuheadertextcolor';                                                                                               
-    $title = get_string('leftmenuheadertextcolor', 'theme_learnbook');                                                                               
-    $description = get_string('leftmenuheadertextcolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
+//    $name = 'theme_learnbook/leftmenuheadertextcolor';
+//    $title = get_string('leftmenuheadertextcolor', 'theme_learnbook');
+//    $description = get_string('leftmenuheadertextcolor_desc', 'theme_learnbook');
+//    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+//    $setting->set_updatedcallback('theme_reset_all_caches');
+//    $page->add($setting);
     
     $name = 'theme_learnbook/leftmenuitemhovercolor';                                                                                               
     $title = get_string('leftmenuitemhovercolor', 'theme_learnbook');                                                                               
