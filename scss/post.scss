@@ -1,8 +1,8 @@
 $brandcolor: #e1ecf5 !default;
 $headercolor: #ffffff !default;
 $headertextcolor: #00bada !default;
-$leftmenuheadercolor: #fff !default;
-$leftmenuheadertextcolor: #00bada !default;
+//$leftmenuheadercolor: #fff !default;
+//$leftmenuheadertextcolor: #00bada !default;
 $leftmenumainitemcolor: #ffffff !default;
 $leftmenuitemhovercolor: #f4f4f4 !default;
 $leftmenuitemstextcolor: #060100 !default;
@@ -317,6 +317,23 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     }
 }
 
+.view-cert-btn{
+    background-color: $coursebtncolor !important;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    width: 124px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 100;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    outline:none;
+    &:hover {
+        background-color: $coursebtnhovercolor !important;
+    }
+}
+
 .category-color{
     height: 5px;
     background-color: $sectionheadercolor !important;
@@ -544,10 +561,10 @@ ul.pagination {
             background-color:$leftmenusubitemcolor !important;
             color: $leftmenuitemstextcolor !important;
         }
-        &[data-key="learnbookpanel"] {
-            background-color: $leftmenuheadercolor !important;
-            color: $leftmenuheadertextcolor !important;
-        }
+        //&[data-key="learnbookpanel"] {
+        //    background-color: $leftmenuheadercolor !important;
+        //    color: $leftmenuheadertextcolor !important;
+        //}
         &[data-isexpandable="1"]{
             &:hover {
                 background-color: $leftmenuitemhovercolor !important;
