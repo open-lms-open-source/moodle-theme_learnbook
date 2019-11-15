@@ -106,3 +106,7 @@ $string['or'] = 'OR';
 $string['guest_login'] = 'Guest login';
 $string['sign_up'] = 'Sign up';
 $string['capslock_help'] = 'Caps lock is on';
+
+// The learnbook user profile settings
+$string['learnbook_user_profile'] = 'Enable Learnbook User Profile redirection';
+$string['learnbook_user_profile_desc'] = 'Toggle to turn on/off learnbook user profile redirection.';
