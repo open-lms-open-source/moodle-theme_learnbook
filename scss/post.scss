@@ -28,6 +28,10 @@ body {
     }
 }
 
+#nav-drawer .list-group-item.active + .list-group-item {
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .path-calendar .maincalendar .calendar-controls .current, .h3, .h4, .h5, .h6 {
     margin-bottom: .5rem;
     font-family: inherit;
