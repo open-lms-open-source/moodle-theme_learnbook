@@ -51,8 +51,8 @@ if ($ADMIN->fulltree) {
  
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);                                     
     $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting);                                                                                                           
- 
+    $page->add($setting);
+
     $name = 'theme_learnbook/presetfiles';                                                                                              
     $title = get_string('presetfiles','theme_learnbook');                                                                               
     $description = get_string('presetfiles_desc', 'theme_learnbook');                                                                   
@@ -66,9 +66,17 @@ if ($ADMIN->fulltree) {
     $description = get_string('brandcolor_desc', 'theme_learnbook');                                                                    
     $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
     $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting);                                                                                                           
- 
-    $settings->add($page);                                                                                                          
+    $page->add($setting);
+    //$settings->add($page);
+
+    //userprofile redirection settings
+    $name = 'theme_learnbook/learnbook_user_profile';
+    $title = get_string('learnbook_user_profile', 'theme_learnbook');
+    $description = get_string('learnbook_user_profile_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcheckbox($name, $title, $description, true);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    $settings->add($page);
 
     $page = new admin_settingpage('theme_learnbook_common', get_string('commonsettings', 'theme_learnbook'));
     

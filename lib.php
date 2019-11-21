@@ -112,3 +112,61 @@ function theme_learnbook_pluginfile($course, $cm, $context, $filearea, $args, $f
         send_file_not_found();
     }
 }
+
+/**
+ * routes profile pages
+ * switch between moodle default and learnbook
+ */
+function routes() {
+    global $CFG;
+    $routes = array();
+    $theme = theme_config::load('learnbook');
+    $routes['/user/view.php'] = '/local/profile/index.php';
+    $routes['/user/profile.php'] = '/local/profile/index.php';
+    if (empty($theme->settings->learnbook_user_profile)) {
+        unset($routes['/user/view.php']);
+        unset($routes['/user/profile.php']);
+    }
+    if (isset($routes[$_SERVER['SCRIPT_NAME']])) {
+        $uri = $CFG->wwwroot . $routes[$_SERVER['SCRIPT_NAME']]. '?'.$_SERVER['QUERY_STRING'];
+        if (headers_sent()) {
+            redirect($uri);
+        } else {
+            header('Location: ' . $uri);
+        }
+        exit;
+    }
+}
+
+routes();
+
+
+//class theme_learnbook {
+//
+//    public static function routes() {
+//        global $CFG;
+//
+//        $routes = array();
+//        $theme = theme_config::load('learnbook');
+//
+//        $routes['/user/view.php'] = '/local/profile/index.php';
+//        $routes['/user/profile.php'] = '/local/profile/index.php';
+//        if (empty($theme->settings->learnbook_user_profile)) {
+//            unset($routes['/user/view.php']);
+//            unset($routes['/user/profile.php']);
+//        }
+//
+//        if (isset($routes[$_SERVER['SCRIPT_NAME']])) {
+//            $uri = $CFG->wwwroot . $routes[$_SERVER['SCRIPT_NAME']]. '?'.$_SERVER['QUERY_STRING'];
+//
+//            if (headers_sent()) {
+//                redirect($uri);
+//            } else {
+//                header('Location: ' . $uri);
+//            }
+//            exit;
+//        }
+//    }
+//}
+//
+//theme_learnbook::routes();
