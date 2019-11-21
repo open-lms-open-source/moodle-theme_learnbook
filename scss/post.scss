@@ -44,22 +44,16 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     border-top: 1px solid rgba(0,0,0,.125);
 }
 
-.message-drawer {
+.message-app.drawer {
+    z-index: 1020;
     position: fixed;
-    top: 64px;
+    top: 63px;
     right: 0;
     height: calc(100% - 50px);
     width: 320px;
-    z-index: 1020;
     -webkit-box-shadow: -2px 2px 4px rgba(0,0,0,.08);
     box-shadow: -2px 2px 4px rgba(0,0,0,.08);
-    display: flex;
-    flex-direction: column;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
 }
-
 //Hack added to cater for weird spacing on the calendar export page inherited from Boost.
 body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     display: none;
