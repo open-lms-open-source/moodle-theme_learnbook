@@ -45,15 +45,42 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
 }
 
 .message-app.drawer {
-    z-index: 1020;
-    position: fixed;
-    top: 63px;
-    right: 0;
-    height: calc(100% - 50px);
-    width: 320px;
-    -webkit-box-shadow: -2px 2px 4px rgba(0,0,0,.08);
-    box-shadow: -2px 2px 4px rgba(0,0,0,.08);
+  z-index: 1020;
+  position: fixed;
+  top: 63px;
+  right: 0;
+  height: calc(100% - 63px);
+  width: 320px;
+  -webkit-box-shadow: -2px 2px 4px rgba(0,0,0,.08);
+  box-shadow: -2px 2px 4px rgba(0,0,0,.08);
 }
+
+.message-app {
+  display: flex;
+  flex-direction: column;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.bg-light {
+  background-color: #f8f9fa!important;
+}
+
+.message-app.hidden {
+  display: block;
+  right: -320px;
+}
+
+//.message-app.drawer.hidden{
+//  z-index: 1020;
+//  position: fixed;
+//  top: 63px;
+//  height: calc(100% - 63px);
+//  width: 320px;
+//  box-shadow: -2px 2px 4px rgba(0,0,0,.08);
+//}
+
 //Hack added to cater for weird spacing on the calendar export page inherited from Boost.
 body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     display: none;
