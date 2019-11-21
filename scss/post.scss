@@ -28,10 +28,6 @@ body {
     }
 }
 
-#nav-drawer .list-group-item.active + .list-group-item {
-    border-top: 1px solid rgba(0,0,0,.125);
-}
-
 h1, h2, h3, h4, h5, h6, .h1, .h2, .path-calendar .maincalendar .calendar-controls .current, .h3, .h4, .h5, .h6 {
     margin-bottom: .5rem;
     font-family: inherit;
@@ -43,6 +39,27 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .path-calendar .maincalendar .calendar-control
 h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     font-size: 2rem;
 }
+
+#nav-drawer .list-group-item.active + .list-group-item {
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+
+.message-drawer {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    height: calc(100% - 50px);
+    width: 320px;
+    z-index: 1020;
+    -webkit-box-shadow: -2px 2px 4px rgba(0,0,0,.08);
+    box-shadow: -2px 2px 4px rgba(0,0,0,.08);
+    display: flex;
+    flex-direction: column;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
 //Hack added to cater for weird spacing on the calendar export page inherited from Boost.
 body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     display: none;
