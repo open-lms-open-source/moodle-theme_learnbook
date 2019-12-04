@@ -1157,3 +1157,20 @@ ul.pagination {
         }
     }
 }
+
+.popover-region-toggle::before {
+    display: none;
+}
+
+.popover-region-toggle::after {
+    display: none;
+}
+
+.popover-region-footer-container {
+    height: 30px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    padding-top: 3px;
+    border-bottom: 1px solid #ddd;
+}
