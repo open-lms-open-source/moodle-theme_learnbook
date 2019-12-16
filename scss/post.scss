@@ -1046,7 +1046,7 @@ ul.pagination {
                     }
                 }
                 &.program-active, &.k-state-selected {
-                    .delete-row-button, .edit-row-button {
+                    .delete-row-button, .edit-row-button, .duplicate-row-button {
                         color: $headercolor !important;
                     }
                 }
