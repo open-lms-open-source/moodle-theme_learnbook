@@ -1092,6 +1092,23 @@ ul.pagination {
     }
 }
 
+// Org Unit section
+#org-chart-container {
+    .orgchart {
+        .node .content {
+            border-color: $headertextcolor !important;
+        }
+        .lines {
+            .downLine {
+                background-color: $headertextcolor !important;
+            }
+            td {
+                border-color: $headertextcolor !important;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 420px) {
     .coursebox {
         .content {
