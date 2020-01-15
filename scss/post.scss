@@ -914,7 +914,7 @@ ul.pagination {
 }
 
 // LB Program section.
-#program-container, #program-wizard-container, #reports-container, .k-window, .k-popup {
+#program-container, #program-wizard-container, #reports-container, #ou-container, .k-window, .k-popup {
     .background-colour {
         background-color: $headercolor !important;
     }
@@ -1093,7 +1093,29 @@ ul.pagination {
 }
 
 // Org Unit section
-#org-chart-container {
+#page-local-ou-index {
+    .background-colour {
+        background-color: $headercolor !important;
+        border-color: $headertextcolor !important;
+    }
+
+    .inverse-background-colour {
+        background-color: $headertextcolor !important;
+        border-color: $headercolor !important;
+    }
+
+    .inverse-text-colour {
+        color: $headercolor !important;
+        border-color: $headercolor !important;
+    }
+
+    .text-colour {
+        color: $headertextcolor !important;
+        border-color: $headertextcolor !important;
+    }
+}
+
+#ou-container {
     .orgchart {
         .node .content {
             border-color: $headertextcolor !important;
