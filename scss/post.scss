@@ -914,7 +914,7 @@ ul.pagination {
 }
 
 // LB Program section.
-#program-container, #program-wizard-container, #reports-container, #ou-container, .k-window, .k-popup {
+#program-container, #program-wizard-container, #reports-container, #ou-container, #enrolment-request-container, #roles-list-container, #role-container, .k-window, .k-popup {
     .background-colour {
         background-color: $headercolor !important;
     }
@@ -1093,7 +1093,7 @@ ul.pagination {
 }
 
 // Org Unit section
-#page-local-ou-index {
+#page-local-ou-index, #page-local-ou-role {
     .background-colour {
         background-color: $headercolor !important;
         border-color: $headertextcolor !important;
