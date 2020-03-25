@@ -913,6 +913,10 @@ ul.pagination {
         background-color: $headercolor !important;
     }
 
+    .text-colour {
+        color: $headertextcolor !important;
+    }
+
     .btn-radio {
         background-color: $headercolor !important;
         color: $headertextcolor !important;
@@ -1035,21 +1039,21 @@ ul.pagination {
 
             tr {
                 &:not(.program-active):not(.k-state-selected) {
-                    &:hover {
-                        color: $headertextcolor !important;
-                    }
+                    color: $headertextcolor !important;
+                    background-color: $headercolor !important;
+                    //&:hover {
+                    //    color: $headertextcolor !important;
+                    //    background-color: $headercolor !important;
+                    //}
                 }
                 &.program-active, &.k-state-selected {
-                    .delete-row-button, .edit-row-button, .duplicate-row-button {
+                    .delete-row-button, .edit-row-button, .duplicate-row-button, i.fa {
                         color: $headercolor !important;
+                        background-color: $headertextcolor !important;
                     }
                 }
             }
         }
-    }
-
-    .text-colour {
-        color: $headertextcolor !important;
     }
 
     .upload-drop-zone {
