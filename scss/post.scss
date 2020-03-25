@@ -401,14 +401,15 @@ footer#page-footer {
     }
 }
 
-
-
 body {
     &#page-login-index:not(.drawer-open-left), &#page-login, &#page-login-signup {
         margin: 0 !important;
     }
     &:not(.drawer-open-left) {
         margin-left: 60px;
+    }
+    &:not(#page-mod-assign-grader) #page {
+        margin-top: 70px !important;
     }
 }
 
@@ -524,6 +525,13 @@ ul.pagination {
         .grid-list-icons {
             padding-left: 5px;
             padding-right: 5px;
+        }
+    }
+    .header-bar {
+        select {
+            option {
+                color: black;
+            }
         }
     }
     .lb_courses_list {
