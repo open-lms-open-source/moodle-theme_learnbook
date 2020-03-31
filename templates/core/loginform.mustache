@@ -187,11 +187,15 @@
                         {{#hasidentityproviders}}
                             {{#identityproviders}}
                                 <div class="potentialidp">
-                                    <a href="{{url}}" title={{#quote}}{{name}}{{/quote}}>
+                                    {{#iconurl}}
+                                    <a href="{{url}}" title={{#quote}}{{name}}{{/quote}} class="btn btn-primary">
+                                        {{name}}
                                         {{#iconurl}}
                                             <img src="{{iconurl}}" alt="" width="34" height="34"/>
                                         {{/iconurl}}
                                     </a>
+                                    {{/iconurl}}
+
                                 </div>
                             {{/identityproviders}}
                         {{/hasidentityproviders}}
