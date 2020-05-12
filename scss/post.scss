@@ -920,7 +920,8 @@ ul.pagination {
 }
 
 // LB Program section.
-#program-container, #program-wizard-container, #reports-container, #ou-container, #enrolment-request-container, #roles-list-container, #role-container, #ou-upload-container, #program-list-container, .k-window, .k-popup {
+
+#program-container, #program-wizard-container, #skills-form-container, #skill-list-container, #reports-container, #ou-container, #enrolment-request-container, #roles-list-container, #role-container, #ou-upload-container, #program-list-container, .k-window, .k-popup {
     .background-colour {
         background-color: $headercolor !important;
     }
@@ -1140,6 +1141,75 @@ ul.pagination {
         }
     }
 }
+
+.fstChoiceItem {
+    display: block;
+    font-size: 1em;
+    position: relative;
+    margin: 0 .41667em .41667em 0;
+    padding: .33333em .33333em .33333em 1.5em;
+    float: left;
+    border-radius: .25em;
+    border: 1px solid $headertextcolor !important;
+    cursor: auto;
+    color: $headercolor !important;
+    background-color: $headertextcolor !important;
+    -webkit-animation: fstAnimationEnter 0.2s;
+    -moz-animation: fstAnimationEnter 0.2s;
+    animation: fstAnimationEnter 0.2s;
+}
+
+.fstMultipleMode .fstControls {
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: text;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: .9375rem;
+    line-height: 1.5;
+    color: $headercolor !important;
+    background-color: $headercolor !important;
+    background-clip: padding-box;
+    border-radius: 4px;
+    border: 1px solid $headertextcolor !important;
+    clear: both;
+}
+
+.fstResultItem {
+    font-size: 1em;
+    display: block;
+    padding: .5em .71429em;
+    margin: 0;
+    cursor: pointer;
+    border-top: 1px solid #fff;
+}
+
+//can be removed if scrolling in dropdown needed
+.fstMultipleMode.fstActive .fstResults {
+    display: contents;
+    z-index: 10;
+    border-top: 1px solid #D7D7D7;
+}
+
+.fstElement {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #D7D7D7;
+    box-sizing: border-box;
+    color: $headertextcolor !important;
+    font-size: 1.1em;
+    background-color: $headercolor !important;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.fstResultItem.fstSelected {
+    color: $headercolor !important;
+    background-color: $headertextcolor !important;
+    border-color: $headercolor !important;
+}
+
 
 @media only screen and (max-width: 420px) {
     .coursebox {
