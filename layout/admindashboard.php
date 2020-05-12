@@ -37,13 +37,13 @@ if ($navdraweropen) {
     $extraclasses[] = 'drawer-open-left';
 }
 //$PAGE->layout_options['nonavbar'] = '';
-
+$blockshtml = $OUTPUT->blocks('side-pre');
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $toplefthtml = $OUTPUT->blocks('top-left');
 $topcenterhtml = $OUTPUT->blocks('top-center');
 $toprighthtml = $OUTPUT->blocks('top-right');
 $bottomthtml = $OUTPUT->blocks('bottom');
-//$hasblocks = strpos($blockshtml, 'data-block=') !== false;
+$hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
@@ -53,7 +53,7 @@ $templatecontext = [
     'topcenterblocks' => $topcenterhtml,
     'toprightblocks' => $toprighthtml,
     'bottomblocks' => $bottomthtml,
-    //'hasblocks' => $hasblocks,
+    'hasblocks' => $hasblocks,
     'bodyattributes' => $bodyattributes,
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
