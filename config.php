@@ -43,7 +43,12 @@ $THEME->layouts = [
         'file' => 'admindashboard.php',
         'regions' => array('top-left', 'top-center','top-right','bottom'),
         'defaultregion' => 'bottom',
-    )
+    ),
+    'lb_learner_dashboard' => array(
+        'file' => 'lb_learner_dashboard.php',
+        'regions' => array('top-left', 'top-center'),
+        'defaultregion' => 'top-left',
+    ),
 ];
 
 $THEME->enable_dock = false;
