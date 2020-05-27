@@ -24,9 +24,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
-require_once($CFG->libdir . '/behat/lib.php');
-
 $toplefthtml = $OUTPUT->blocks('top-left');
 $topcenterhtml = $OUTPUT->blocks('top-center');
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
