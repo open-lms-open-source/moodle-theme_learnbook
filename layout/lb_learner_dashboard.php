@@ -27,17 +27,6 @@ defined('MOODLE_INTERNAL') || die();
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 require_once($CFG->libdir . '/behat/lib.php');
 
-if (isloggedin()) {
-    $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
-} else {
-    $navdraweropen = false;
-}
-$extraclasses = [];
-if ($navdraweropen) {
-    $extraclasses[] = 'drawer-open-left';
-}
-
-$bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $toplefthtml = $OUTPUT->blocks('top-left');
 $topcenterhtml = $OUTPUT->blocks('top-center');
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
@@ -47,8 +36,6 @@ $templatecontext = [
     'faviconlink' => $PAGE->theme->setting_file_url('favicon', 'favicon'),
     'topleftblocks' => $toplefthtml,
     'topcenterblocks' => $topcenterhtml,
-    'bodyattributes' => $bodyattributes,
-    'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
 ];
