@@ -1266,41 +1266,48 @@ ul.pagination {
 
 //block lb_user_report section
 .block_lb_profile {
-    #lb-profile-tabs-courses, #lb-profile-tabs-programs, #lb-profile-tabs-skills {
-        background-color: $headertextcolor !important;
-        color: $headercolor !important;
-    }
+  #lb-profile-tabs-courses, #lb-profile-tabs-programs, #lb-profile-tabs-skills {
+    background-color: $headertextcolor !important;
+    color: $headercolor !important;
+  }
 
-    #myprofile-coursestable-container, #myprofile-programtable-container, #myprofile-skilltable-container {
-        tr:hover:not(.lb_user_report_header) {
-            background-color: lighten($headertextcolor, 60%) !important;
-        }
+  #myprofile-coursestable-container, #myprofile-programtable-container, #myprofile-skilltable-container {
+    tr:hover:not(.lb_user_report_header) {
+      background-color: lighten($headertextcolor, 60%) !important;
     }
+  }
 
-    .tab-switch {
-        display: none;
-    }
+  .tab-switch {
+    display: none;
+  }
 
-    .tab-label {
-        background: lighten($headertextcolor, 6%) !important;
-        border-right: 0.125rem solid lighten($headertextcolor, 3%) !important;
-        color: $headercolor !important;
-    }
+  .tab-label {
+    background: lighten($headertextcolor, 6%) !important;
+    border-right: 0.125rem solid lighten($headertextcolor, 3%) !important;
+    color: $headercolor !important;
+  }
 
-    .tab-switch:checked + .tab-label {
-        background: $headertextcolor !important;
-        color: $headercolor !important;
-        border-right: 0.125rem solid $headertextcolor !important;
-    }
+  .tab-switch:checked + .tab-label {
+    background: $headertextcolor !important;
+    color: $headercolor !important;
+    border-right: 0.125rem solid $headertextcolor !important;
+  }
 
-    .sectionheadercolor {
-        background: $headertextcolor !important;
-        color: $headercolor !important;
-    }
+  .sectionheadercolor {
+    background: $headertextcolor !important;
+    color: $headercolor !important;
+  }
+
+  .card-body .card-text {
+    margin-top: 0 !important;
+  }
+  .block_lb_profile.card{
+    height: 650px !important;
+  }
 }
 
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 420.99px) {
   .coursebox {
     .content {
       .summary {
@@ -1336,9 +1343,13 @@ ul.pagination {
   .login-form-body {
     width: 100% !important;
   }
+  //block lb_user_report section
+  .block_lb_profile.card{
+    height: 550px !important;
+  }
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (min-width: 421px) and (max-width: 575.99px) {
   .login-form-body {
     width: 100% !important;
   }
@@ -1356,25 +1367,61 @@ ul.pagination {
   .block_lb_courses .grid-list-icons {
     margin-top: 15px;
   }
+  //block lb_user_report section
+  .block_lb_profile.card{
+    height: 550px !important;
+  }
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 576px) and (max-width: 991.99px) {
   .block_lb_courses #coursetimeline-col {
     margin-top: 76px !important;
   }
   //block lb_user_report section
   .block_lb_profile.card{
-    height: 770px !important;
+    height: 750px !important;
   }
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1199.99px) {
   #page-local-learnbook-report-index {
     #filter-block span.select2-selection.select2-selection--multiple {
       width: 100% !important;
     }
   }
+  //block lb_user_report section
+  .block_lb_profile.card{
+    height: 550px !important;
+  }
 }
+
+@media only screen and (min-width: 1200px) and (max-width: 1449.99px) {
+  //block lb_user_report section
+  .block_lb_profile.card{
+    height: 550px !important;
+  }
+}
+
+@media only screen and (min-width: 1450px) and (max-width: 1649.99px) {
+  //block lb_user_report section
+  .block_lb_profile.card{
+    height: 650px !important;
+  }
+}
+
+@media only screen and (min-width: 1650px) and (max-width: 1949.99px) {
+  //block lb_user_report section
+  .block_lb_profile.card{
+    height: 750px !important;
+  }
+}
+
+@media only screen and (min-width: 1950px) {
+  .block_lb_profile.card{
+    height: 800px !important;
+  }
+}
+
 
 .popover-region-toggle::before {
   display: none;
