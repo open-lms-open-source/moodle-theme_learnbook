@@ -1379,7 +1379,10 @@ ul.pagination {
   }
   //block lb_user_report section
   .block_lb_profile.card{
-    height: 750px !important;
+    height: 650px !important;
+  }
+  .block_lb_user_profile.card {
+    min-height: 650px !important;
   }
 }
 
@@ -1393,6 +1396,9 @@ ul.pagination {
   .block_lb_profile.card{
     height: 550px !important;
   }
+  .block_lb_user_profile.card {
+    min-height: 550px !important;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1449.99px) {
@@ -1400,25 +1406,37 @@ ul.pagination {
   .block_lb_profile.card{
     height: 550px !important;
   }
+  .block_lb_user_profile.card {
+    min-height: 550px !important;
+  }
 }
 
 @media only screen and (min-width: 1450px) and (max-width: 1649.99px) {
   //block lb_user_report section
   .block_lb_profile.card{
-    height: 650px !important;
+    height: 620px !important;
+  }
+  .block_lb_user_profile.card {
+    min-height: 620px !important;
   }
 }
 
 @media only screen and (min-width: 1650px) and (max-width: 1949.99px) {
   //block lb_user_report section
   .block_lb_profile.card{
-    height: 750px !important;
+    height: 620px !important;
+  }
+  .block_lb_user_profile.card {
+    min-height: 620px !important;
   }
 }
 
 @media only screen and (min-width: 1950px) {
   .block_lb_profile.card{
-    height: 800px !important;
+    height: 720px !important;
+  }
+  .block_lb_user_profile.card {
+    min-height: 720px !important;
   }
 }
 
