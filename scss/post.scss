@@ -1264,7 +1264,7 @@ ul.pagination {
   border-color: $headercolor !important;
 }
 
-//block lb_user_report section
+//block_lb_profile section
 .block_lb_profile {
   #lb-profile-tabs-courses, #lb-profile-tabs-programs, #lb-profile-tabs-skills {
     background-color: $headertextcolor !important;
@@ -1276,11 +1276,6 @@ ul.pagination {
       background-color: lighten($headertextcolor, 60%) !important;
     }
   }
-
-  .tab-switch {
-    display: none;
-  }
-
   .tab-label {
     background: lighten($headertextcolor, 6%) !important;
     border-right: 0.125rem solid lighten($headertextcolor, 3%) !important;
@@ -1303,6 +1298,20 @@ ul.pagination {
   }
   .block_lb_profile.card{
     height: 650px !important;
+  }
+  //export pdf button
+  #lb-profile-tabs {
+    #export-pdf {
+      color: $headertextcolor !important;
+    }
+  }
+}
+
+//block_lb_user_profile section
+.block_lb_user_profile {
+  //profile options icon color, theme will have this
+  .lb-user-profile-info-icon {
+    color: $headertextcolor !important;
   }
 }
 
@@ -1349,7 +1358,7 @@ ul.pagination {
   }
 }
 
-@media only screen and (min-width: 421px) and (max-width: 575.99px) {
+@media only screen and (min-width: 421px) and (max-width: 575px) {
   .login-form-body {
     width: 100% !important;
   }
@@ -1373,7 +1382,7 @@ ul.pagination {
   }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 991.99px) {
+@media only screen and (min-width: 576px) and (max-width: 991px) {
   .block_lb_courses #coursetimeline-col {
     margin-top: 76px !important;
   }
@@ -1386,7 +1395,7 @@ ul.pagination {
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199.99px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   #page-local-learnbook-report-index {
     #filter-block span.select2-selection.select2-selection--multiple {
       width: 100% !important;
@@ -1401,7 +1410,7 @@ ul.pagination {
   }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1449.99px) {
+@media only screen and (min-width: 1200px) and (max-width: 1449px) {
   //block lb_user_report section
   .block_lb_profile.card{
     height: 550px !important;
@@ -1411,7 +1420,7 @@ ul.pagination {
   }
 }
 
-@media only screen and (min-width: 1450px) and (max-width: 1649.99px) {
+@media only screen and (min-width: 1450px) and (max-width: 1649px) {
   //block lb_user_report section
   .block_lb_profile.card{
     height: 620px !important;
@@ -1421,7 +1430,7 @@ ul.pagination {
   }
 }
 
-@media only screen and (min-width: 1650px) and (max-width: 1949.99px) {
+@media only screen and (min-width: 1650px) and (max-width: 1949px) {
   //block lb_user_report section
   .block_lb_profile.card{
     height: 620px !important;
