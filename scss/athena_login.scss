@@ -1,0 +1,250 @@
+$brandcolor: #e1ecf5 !default;
+$headercolor: #ffffff !default;
+$headertextcolor: #00bada !default;
+$leftmenumainitemcolor: #ffffff !default;
+$leftmenuitemhovercolor: #f4f4f4 !default;
+$leftmenuitemstextcolor: #060100 !default;
+$leftmenusubitemcolor: #ffffff !default;
+$sectionheadercolor: #00bada !default;
+$sectionhovercolor: #00b8dc !default;
+$coursebtncolor: #00bada !default;
+$coursebtnhovercolor: #2a6a97 !default;
+$coursetilecolor: #e1ecf5 !default;
+$coursetiletextcolor: #727477 !default;
+$footercolor: #00bada !default;
+
+
+.pagelayout-login {
+  .login-text{
+    font-weight: 700;
+    font-family: arial, serif;
+  }
+
+  #page {
+    margin-top: 0 !important;
+  }
+
+  #login-form-container {
+    background: #fff;
+    padding-top: 2em;
+  }
+
+  .card-body {
+    background: #fff;
+  }
+
+  form {
+    input {
+      border-radius: unset;
+      border: none;
+      border-bottom-color: currentcolor;
+      border-bottom-style: none;
+      border-bottom-width: medium;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    .rememberpass input {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn {
+    border-radius: 1rem;
+    border: none;
+  }
+
+  #login-page-main-content-container {
+    box-shadow: 3px 3px 20px 3px rgba(5,5,5,.5);
+    border: none;
+
+    h2 img {
+      max-width: 100%;
+    }
+  }
+
+  .login-centre-vertically {
+    display: table;
+    height: 100vh;
+  }
+
+  .login-centred-vertically {
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  h2, #login-welcome-title, #login-welcome-msg, #login-first-time, #login-first-time a, .forgetpass a {
+    color: $headertextcolor;
+  }
+
+  .forgetpass {
+    float: right;
+  }
+
+  .custom-control-label {
+    margin-bottom: 0;
+    font-size: 0.80em;
+    padding-left: 0.2em;
+  }
+
+  #login-welcome-title {
+    text-align: center;
+    padding-top: 1em;
+  }
+
+  #login-welcome-msg {
+    padding-top: 1em;
+  }
+
+  .login-form-alternative-methods {
+    text-align: center;
+  }
+
+  #login-form-or {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  #login-form-hr {
+    margin-top: 5px;
+  }
+
+  .login-form-body {
+    width: 100%;
+  }
+
+  .login-input {
+    width: calc(100% - 5px);
+    display: inline-block;
+    border-radius: unset;
+    border:none;
+    border-bottom:1px solid #d0d0d0;
+    margin-bottom: 25px;
+  }
+
+  #loginbtn {
+    width: 8em;
+    box-shadow: 2px 2px 5px -1px $headertextcolor;
+  }
+
+  #login-caps-lock-warning-icon {
+    float: right;
+    margin-right: -17px;
+    margin-top: 7px;
+    color: #f00;
+    display: none;
+  }
+
+  input[type="text"], input[type="password"] {
+    background-color: #fff;
+    //border-radius: 17px;
+
+    &:focus {
+      background-color: #fff;
+    }
+  }
+
+  form#guestlogin {
+    display: inline-block;
+    margin: 0 10px 20px;
+
+    &.login-full-width {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .btn-primary {
+      margin-top: 0;
+
+      &.login-full-width {
+        width: 100%;
+      }
+    }
+  }
+
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-color: $sectionheadercolor;
+  }
+
+  .potentialidp {
+    display: inline-block;
+    margin: 0 10px 20px;
+  }
+}
+
+.login-input-fa-icons {
+  position: relative;
+  float: right;
+  top: 22px;
+  color: #6e6e6e;
+  font-size: 15px;
+}
+
+#login-page-backdrop {
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -999999;
+  position: fixed;
+}
+
+#login-page-backdrop-img-wrapper {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  z-index: -999999;
+}
+
+#login-page-backdrop-img {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  background-size: cover;
+}
+
+
+
+
+.pagelayout-login {
+  #login-page-main-content-container {
+    box-shadow: 3px 3px 20px 3px rgba(5,5,5,.5);
+    border: none;
+    border-radius: 4px;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 420.99px) {
+  .login-form-body {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 575px) {
+  .login-form-body {
+    width: 100% !important;
+  }
+  .hidden-xs-down {
+    display: none;
+  }
+  .hidden-sm-up {
+    display: block;
+  }
+}

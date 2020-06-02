@@ -47,7 +47,15 @@ function theme_learnbook_get_main_scss_content($theme) {
     }
     $pre = file_get_contents($CFG->dirroot . '/theme/learnbook/scss/pre.scss');
     $post = file_get_contents($CFG->dirroot . '/theme/learnbook/scss/post.scss');
-    return $pre . "\n" . $scss . "\n" . $post;
+
+    $selected_template = get_config('theme_learnbook', 'login_page_template');
+    if ($selected_template === 'Apollo') {
+        $login = file_get_contents($CFG->dirroot . '/theme/learnbook/scss/apollo_login.scss');
+    } else if ($selected_template === 'Athena') {
+        $login = file_get_contents($CFG->dirroot . '/theme/learnbook/scss/athena_login.scss');
+    }
+
+    return $pre . "\n" . $scss . "\n" . $post . "\n" . $login;
 }
 
 /**

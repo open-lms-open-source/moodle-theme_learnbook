@@ -27,6 +27,7 @@ defined('MOODLE_INTERNAL') || die;
 
 use html_writer;
 use context_course;
+use moodle_url;
 
 require_once $CFG->libdir . '/outputcomponents.php';
 require_once $CFG->libdir . '/pagelib.php';
@@ -119,13 +120,37 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         $context->welcomemsg = get_config('theme_learnbook', 'welcomemsg');
         $context->welcometitle = get_config('theme_learnbook', 'welcometitle');
+
+        //extra content for apollo template
         $context->has_welcome = true;
         $context->welcome_text_left = !empty(get_config('theme_learnbook', 'welcome_text_location')) && get_config('theme_learnbook', 'welcome_text_location') == 'right' ? false : true;
         if ((empty($context->welcomemsg) && empty($context->welcometitle)) || !get_config('theme_learnbook', 'display_welcome_text')) {
             $context->has_welcome = false;
         }
 
-        return $this->render_from_template('core/loginform', $context);
+        //extra context for athena template
+        $fs = get_file_storage();
+        $files = $fs->get_area_files(\context_system::instance()->id, 'theme_learnbook', 'welcomeimg', 0);
+
+        $welcomeImg = '';
+        foreach ($files as $file) {
+            $filename = $file->get_filename();
+            if($filename != '.')
+            {
+                $url = moodle_url::make_pluginfile_url($file->get_contextid(), $file->get_component(), $file->get_filearea(), $file->get_itemid(), $file->get_filepath(), $file->get_filename());
+                $welcomeImg = preg_replace('|^https?://|i', '//', $url->out(false));
+                break;
+            }
+        }
+
+        $context->welcomeimg = $welcomeImg;
+
+        $selected_template = get_config('theme_learnbook', 'login_page_template');
+        if ($selected_template === 'Apollo') {
+            return $this->render_from_template('core/loginform', $context);
+        } else if ($selected_template === 'Athena') {
+            return $this->render_from_template('core/athena_loginform', $context);
+        }
     }
 
     /**

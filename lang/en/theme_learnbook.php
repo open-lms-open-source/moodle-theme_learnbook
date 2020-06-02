@@ -71,6 +71,11 @@ $string['coursebtncolor'] = 'Enter Course button color';
 $string['coursebtncolor_desc'] = 'Enter Course button color';
 $string['coursebtnhovercolor'] = 'Enter Course button hover color';                                                                                                                                                                                         
 $string['coursebtnhovercolor_desc'] = 'The color will be applied when hover on Enter Course button';
+$string['login_page_template'] = 'Select login page template';
+$string['login_page_template_desc'] = 'Select the template for the login page.';
+$string['learnbook_template'] = 'Learnbook Template';
+$string['athena_template'] = 'Athena Template';
+$string['apollo_template'] = 'Apollo Template';
 
 // Logo Settings
 $string['logosettings'] = 'Logo settings'; 
@@ -89,8 +94,8 @@ $string['welcome_text_location'] = "Welcome Text Location";
 $string['welcome_text_location_desc'] = "Display welcome text on left or right hand side of login page.";
 $string['left_side'] = "Left side";
 $string['right_side'] = "Right side";
-//$string['welcomeimg'] = "Welcome Image";
-//$string['welcomeimg_desc'] = "Background image of Welcome Message on login page.";
+$string['welcomeimg'] = "Welcome Image";
+$string['welcomeimg_desc'] = "Background image of Welcome Message on login page.";
 $string['slideshow'] =  'Login Slide Image';
 $string['slideshowdesc'] = 'Select Image for Login Page Slide Show';
 
@@ -106,6 +111,7 @@ $string['or'] = 'OR';
 $string['guest_login'] = 'Guest login';
 $string['sign_up'] = 'Sign up';
 $string['capslock_help'] = 'Caps lock is on';
+$string['resetfields'] = 'Forgot password?';
 
 // The learnbook user profile settings
 $string['learnbook_user_profile'] = 'Enable Learnbook User Profile redirection';

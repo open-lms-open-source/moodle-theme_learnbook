@@ -24,7 +24,7 @@
 
 
 defined('MOODLE_INTERNAL') || die();                                                                                                
- 
+ global $OUTPUT;
                                                                                   
 if ($ADMIN->fulltree) {                                                                                                             
  
@@ -216,38 +216,85 @@ if ($ADMIN->fulltree) {
     
     
     $settings->add($page);     
-    
-    $page = new admin_settingpage('theme_learnbook_login', get_string('loginpagesettings', 'theme_learnbook'));
+
+    //login page settings
+    $page = new admin_settingpage('theme_learnbook_login',
+        get_string('loginpagesettings', 'theme_learnbook'));
+
+    $templates = array (
+        'learnbook_template' => $OUTPUT->image_url('learnbook_template', 'theme_learnbook'),
+        'athena_template' => $OUTPUT->image_url('athena_template', 'theme_learnbook'),
+        'apollo_template' => $OUTPUT->image_url('apollo_template', 'theme_learnbook')
+    );
+    $template_description =
+        '<div class="learnbook-template container">
+            <div class="row">
+                <div class="col=4">
+                    <a target="_blank" href='.$templates['athena_template'].'>
+                        <img class="img-responsive" src="'.$templates['athena_template'].'" alt="Learnbook Template" width="150" height="75">
+                    </a>
+                    <div class="text-center">Learnbook Template</div>
+                </div>
+                <div class="col=4 ml-2">
+                    <a target="_blank" href='.$templates['athena_template'].'>
+                        <img class="img-responsive" src="'.$templates['athena_template'].'" alt="Learnbook Template" width="150" height="75">
+                    </a>
+                    <div class="text-center">Apollo Template</div>
+                </div>
+                <div class="col=4 ml-2">
+                    <a target="_blank" href='.$templates['athena_template'].'>
+                        <img class="img-responsive" src="'.$templates['athena_template'].'" alt="Learnbook Template" width="150" height="75">
+                    </a>
+                    <div class="text-center">Athena Template</div>
+                </div>
+            </div>
+        </div>';
+    $setting = new admin_setting_configselect('theme_learnbook/login_page_template',
+        get_string('login_page_template', 'theme_learnbook'),
+        $template_description,
+        'Learnbook',
+        array('Learnbook' => get_string('learnbook_template', 'theme_learnbook'),
+              'Athena' => get_string('athena_template', 'theme_learnbook'),
+              'Apollo' => get_string('apollo_template', 'theme_learnbook')));
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
 
     $name = 'theme_learnbook/display_welcome_text';
     $title = get_string('display_welcome_text', 'theme_learnbook');
     $description = get_string('display_welcome_text_desc', 'theme_learnbook');
     $setting = new admin_setting_configcheckbox($name, $title, $description, true, true, false);
     $page->add($setting);
+
+    $setting = new admin_setting_configselect('theme_learnbook/welcome_text_location',
+        get_string('welcome_text_location', 'theme_learnbook'),
+        get_string('welcome_text_location_desc', 'theme_learnbook'), 'left',
+        array('left' => get_string('left_side', 'theme_learnbook'),
+            'right' => get_string('right_side', 'theme_learnbook')));
+    $page->add($setting);
     
-    $setting = new admin_setting_configtext('theme_learnbook/welcometitle',                                                              
-        get_string('welcometitle', 'theme_learnbook'), get_string('welcometitle_desc', 'theme_learnbook'), get_string('welcometitle', 'theme_learnbook'), PARAM_RAW);                      
+    $setting = new admin_setting_confightmleditor('theme_learnbook/welcometitle',
+        get_string('welcometitle', 'theme_learnbook'),
+        get_string('welcometitle_desc', 'theme_learnbook'),
+        get_string('welcometitle', 'theme_learnbook'), PARAM_RAW);
     $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
     $page->add($setting);  
        
     $setting = new admin_setting_confightmleditor('theme_learnbook/welcomemsg',                                                              
-        get_string('welcomemsg', 'theme_learnbook'), get_string('welcomemsg_desc', 'theme_learnbook'), get_string('welcomemsg', 'theme_learnbook'), PARAM_RAW);                      
+        get_string('welcomemsg', 'theme_learnbook'),
+        get_string('welcomemsg_desc', 'theme_learnbook'),
+        get_string('welcomemsg', 'theme_learnbook'), PARAM_RAW);
     $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
     $page->add($setting);
 
-    $setting = new admin_setting_configselect('theme_learnbook/welcome_text_location',
-        get_string('welcome_text_location', 'theme_learnbook'), get_string('welcome_text_location_desc', 'theme_learnbook'), 'left', array('left' => get_string('left_side', 'theme_learnbook'), 'right' => get_string('right_side', 'theme_learnbook')));
-    $page->add($setting);
 
-    /*
-    $name = 'theme_learnbook/welcomeimg';            
+    $name = 'theme_learnbook/welcomeimg';
     $title = get_string('welcomeimg', 'theme_learnbook');
     $description = get_string('welcomeimg_desc', 'theme_learnbook');
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'welcomeimg', 0,
         ['maxfiles' => 1, 'accepted_types' => ['.jpg', '.png']]);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
-    */
+
        
     $name = 'theme_learnbook/slideshow';            
     $title = get_string('slideshow', 'theme_learnbook');
@@ -256,11 +303,10 @@ if ($ADMIN->fulltree) {
         ['maxfiles' => 6, 'accepted_types' => ['.jpg', '.png']]);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
-    
-    
+
     $settings->add($page);     
     
-    
+    //advanced settings
     $page = new admin_settingpage('theme_learnbook_advanced', get_string('advancedsettings', 'theme_learnbook'));                           
  
     $setting = new admin_setting_configtextarea('theme_learnbook/scsspre',                                                              
