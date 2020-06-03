@@ -100,9 +100,14 @@ $footercolor: #00bada !default;
     text-align: center;
   }
 
+  .login-form-guest-login {
+    position: relative;
+    top: -2.2em;
+
+  }
+
   #login-form-or {
-    text-align: center;
-    margin-bottom: 15px;
+    font-size: 0.8em;
   }
 
   #login-form-hr {
@@ -127,9 +132,14 @@ $footercolor: #00bada !default;
     box-shadow: 2px 2px 5px -1px $headertextcolor;
   }
 
+  #guest-login-btn{
+    width: 8em;
+    box-shadow: 2px 2px 5px -1px $headertextcolor;
+  }
+
   #login-caps-lock-warning-icon {
     float: right;
-    margin-right: -17px;
+    margin-right: -12px;
     margin-top: 7px;
     color: #f00;
     display: none;
@@ -146,7 +156,6 @@ $footercolor: #00bada !default;
 
   form#guestlogin {
     display: inline-block;
-    margin: 0 10px 20px;
 
     &.login-full-width {
       margin-left: 0;

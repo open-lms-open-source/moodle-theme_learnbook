@@ -107,7 +107,7 @@ $string['rawscss'] = 'Raw SCSS';
 $string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will be injected at the end of the style sheet.';
 
 // Login form
-$string['or'] = 'OR';
+$string['or'] = 'or Login with';
 $string['guest_login'] = 'Guest login';
 $string['sign_up'] = 'Sign up';
 $string['capslock_help'] = 'Caps lock is on';
