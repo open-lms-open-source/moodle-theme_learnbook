@@ -31,45 +31,45 @@ $string['choosereadme'] = 'Learnbook';
 $string['configtitle'] = 'Learnbook Settings';
 
 // General settings
-$string['generalsettings'] = 'General settings';                                                                                                                                                                                       
-$string['preset'] = 'Theme preset';                                                                                                 
-$string['preset_desc'] = 'Pick a preset to broadly change the look of the theme.';   
-$string['presetfiles'] = 'Additional theme preset files';                                                                           
+$string['generalsettings'] = 'General settings';
+$string['preset'] = 'Theme preset';
+$string['preset_desc'] = 'Pick a preset to broadly change the look of the theme.';
+$string['presetfiles'] = 'Additional theme preset files';
 $string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme. See <a href=https://docs.moodle.org/dev/Boost_Presets>Boost presets</a> for information on creating and sharing your own preset files, and see the <a href=http://moodle.net/boost>Presets repository</a> for presets that others have shared.';
-$string['brandcolor'] = 'Brand colour';                                                                                             
+$string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
 
 // Common settings
-$string['commonsettings'] = 'Common settings'; 
-$string['headercolor'] = 'Header colour';                                                                                             
-$string['headercolor_desc'] = 'The color will be applied to site header background.';  
-$string['headertextcolor'] = 'Header text colour';                                                                                                                                                                                        
-$string['headertextcolor_desc'] = 'The color will be applied to text in the site header.'; 
-$string['leftmenuheadercolor'] = 'Learnbook panel header colour';                                                                                                                                                                                        
+$string['commonsettings'] = 'Common settings';
+$string['headercolor'] = 'Header colour';
+$string['headercolor_desc'] = 'The color will be applied to site header background.';
+$string['headertextcolor'] = 'Header text colour';
+$string['headertextcolor_desc'] = 'The color will be applied to text in the site header.';
+$string['leftmenuheadercolor'] = 'Learnbook panel header colour';
 $string['leftmenuheadercolor_desc'] = 'The color will be applied to header of learnbook panel.';
-$string['leftmenuheadertextcolor'] = 'Learnbook panel header text colour';                                                                                                                                                                                        
-$string['leftmenuheadertextcolor_desc'] = 'The color will be applied to text of learnbook panel header'; 
-$string['leftmenuitemhovercolor'] = 'Learnbook panel menu items hover colour';                                                                                                                                                                                        
-$string['leftmenuitemhovercolor_desc'] = 'The color will be applied to background of menu items when they are hovered.'; 
-$string['leftmenuitemstextcolor'] = 'Learnbook panel menu items text color';                                                                                                                                                                                        
-$string['leftmenuitemstextcolor_desc'] = 'The color will be applied to text of menu items'; 
-$string['leftmenumainitemcolor'] = 'Learnbook panel main menu items background color';                                                                                                                                                                                        
+$string['leftmenuheadertextcolor'] = 'Learnbook panel header text colour';
+$string['leftmenuheadertextcolor_desc'] = 'The color will be applied to text of learnbook panel header';
+$string['leftmenuitemhovercolor'] = 'Learnbook panel menu items hover colour';
+$string['leftmenuitemhovercolor_desc'] = 'The color will be applied to background of menu items when they are hovered.';
+$string['leftmenuitemstextcolor'] = 'Learnbook panel menu items text color';
+$string['leftmenuitemstextcolor_desc'] = 'The color will be applied to text of menu items';
+$string['leftmenumainitemcolor'] = 'Learnbook panel main menu items background color';
 $string['leftmenumainitemcolor_desc'] = 'The color will be applied as background color of menu items';
-$string['leftmenusubitemcolor'] = 'Learnbook panel sub menu items background color';                                                                                                                                                                                        
+$string['leftmenusubitemcolor'] = 'Learnbook panel sub menu items background color';
 $string['leftmenusubitemcolor_desc'] = 'The color will be applied as background color of sub menu items';
 $string['footercolor'] = 'Footer background color';
 $string['footercolor_desc'] = 'The color will be applied as background color to footer.';
 $string['sectionheadercolor'] = 'Section header colour';
 $string['sectionheadercolor_desc'] = 'The color will be applied as background of Section header.';
-//$string['sectionhovercolor'] = 'Section hover colour';                                                                                                                                                                                         
+//$string['sectionhovercolor'] = 'Section hover colour';
 //$string['sectionhovercolor_desc'] = 'The color will be applied as background to button in sections when hovered on them.';
-$string['coursetilecolor'] = 'Course tile background color';                                                                                                                                                                                         
+$string['coursetilecolor'] = 'Course tile background color';
 $string['coursetilecolor_desc'] = 'The color will be applied as background of course tile';
-$string['coursetiletextcolor'] = 'Course tile text color';                                                                                                                                                                                         
+$string['coursetiletextcolor'] = 'Course tile text color';
 $string['coursetiletextcolor_desc'] = 'The color will be applied to text in a course tile';
-$string['coursebtncolor'] = 'Enter Course button color';                                                                                                                                                                                         
+$string['coursebtncolor'] = 'Enter Course button color';
 $string['coursebtncolor_desc'] = 'Enter Course button color';
-$string['coursebtnhovercolor'] = 'Enter Course button hover color';                                                                                                                                                                                         
+$string['coursebtnhovercolor'] = 'Enter Course button hover color';
 $string['coursebtnhovercolor_desc'] = 'The color will be applied when hover on Enter Course button';
 $string['login_page_template'] = 'Select login page template';
 $string['login_page_template_desc'] = 'Select the template for the login page.';
@@ -78,7 +78,7 @@ $string['athena_template'] = 'Athena Template';
 $string['apollo_template'] = 'Apollo Template';
 
 // Logo Settings
-$string['logosettings'] = 'Logo settings'; 
+$string['logosettings'] = 'Logo settings';
 $string['favicon'] = 'Favicon';
 $string['favicon_desc'] = 'Upload your favicon icon here';
 
@@ -101,14 +101,14 @@ $string['slideshowdesc'] = 'Select Image for Login Page Slide Show';
 
 // Advanced Settings
 $string['advancedsettings'] = 'Advanced settings';
-$string['rawscsspre'] = 'Raw initial SCSS';                                                                                         
+$string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
-$string['rawscss'] = 'Raw SCSS';                                                                                                    
+$string['rawscss'] = 'Raw SCSS';
 $string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will be injected at the end of the style sheet.';
 
 // Login form
 $string['or'] = 'or Login with';
-$string['guest_login'] = 'Guest login';
+$string['guest_login'] = 'Want to explore the site? Login as a Guest';
 $string['sign_up'] = 'Sign up';
 $string['capslock_help'] = 'Caps lock is on';
 $string['resetfields'] = 'Forgot password?';

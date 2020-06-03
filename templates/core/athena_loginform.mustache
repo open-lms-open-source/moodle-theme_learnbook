@@ -179,7 +179,8 @@
                             <label for="rememberusername" class="custom-control-label">{{#str}}
                                 rememberusername, admin {{/str}}</label>
                             <div class="forgetpass text-right">
-                                <p><a href="{{forgotpasswordurl}}">{{#str}} resetfields, theme_learnbook {{/str}}</a></p>
+                                <p><a href="{{forgotpasswordurl}}">{{#str}} resetfields, theme_learnbook {{/str}}</a>
+                                </p>
                             </div>
                         </div>
 
@@ -187,52 +188,55 @@
                         <button type="submit" class="btn btn-primary btn-block mt-3" id="loginbtn">{{#str}}
                             login{{/str}}</button>
                     </form>
-                    <div class="login-form-guest-login text-right"{{^hasidentityproviders}}{{^canloginasguest}}
-                         style="display:none;"{{/canloginasguest}}{{/hasidentityproviders}}>
-
-                        {{#canloginasguest}}
-                            <form action="{{loginurl}}" method="post" id="guestlogin"
-                                  {{^hasidentityproviders}}class="login-full-width"{{/hasidentityproviders}}>
-                                <input type="hidden" name="logintoken" value="{{logintoken}}">
-                                <input type="hidden" name="username" value="guest"/>
-                                <input type="hidden" name="password" value="guest"/>
-                                <button class="btn btn-primary btn-block"
-                                        type="submit" id="guest-login-btn">{{#str}}guest_login, theme_learnbook{{/str}}</button>
-                            </form>
-                        {{/canloginasguest}}
-                    </div>
 
                 </div>
-                <div class="mt-3 text-center" id="login-form-or">{{#str}} or, theme_learnbook {{/str}}</div>
-                <div class="mt-3 login-form-alternative-methods"{{^hasidentityproviders}}{{^canloginasguest}}
-                     style="display:none;"{{/canloginasguest}}{{/hasidentityproviders}}>
 
+                <div class="mt-2 mb-4 login-form-alternative-methods"{{^hasidentityproviders}}
+                     style="display:none;"{{/hasidentityproviders}}>
+                    <div class="mb-3 text-center" id="login-form-or">{{#str}} or, theme_learnbook {{/str}}</div>
+                    {{#hasidentityproviders}}
+                        <div class="container idp-container">
+                            <div class="row">
+                                {{#identityproviders}}
+                                    <div class="col-6 col-md-6 mb-2 text-left">
+                                        <div class="potentialidp">
+                                            {{#iconurl}}
+                                                <a href="{{url}}" title={{#quote}}{{name}}{{/quote}}
+                                                   class="btn btn-primary">
+                                                    {{name}}
+                                                    {{#iconurl}}
+                                                        <img src="{{iconurl}}" alt="" width="34" height="34"/>
+                                                    {{/iconurl}}
+                                                </a>
+                                            {{/iconurl}}
+
+                                        </div>
+                                    </div>
+                                {{/identityproviders}}
+
+                            </div>
+                        </div>
+                    {{/hasidentityproviders}}
+                </div>
+                {{#hasinstructions}}
+                    <div id="login-first-time">{{#str}}firsttime{{/str}}
+                        {{#cansignup}}
+                            <a href="{{signupurl}}">{{#str}}sign_up, theme_learnbook{{/str}}
+                            </a>
+                        {{/cansignup}}
+                    </div>
+                {{/hasinstructions}}
+                <div class="login-form-guest-login text-left mt-4"{{^canloginasguest}}
+                     style="display:none;"{{/canloginasguest}}>
                     {{#canloginasguest}}
-                        <form action="{{loginurl}}" method="post" id="guestlogin"
-                              {{^hasidentityproviders}}class="login-full-width"{{/hasidentityproviders}}>
+                        <form action="{{loginurl}}" method="post" id="guestlogin">
                             <input type="hidden" name="logintoken" value="{{logintoken}}">
                             <input type="hidden" name="username" value="guest"/>
                             <input type="hidden" name="password" value="guest"/>
-                            <button class="btn btn-primary{{^hasidentityproviders}} login-full-width{{/hasidentityproviders}}"
-                                    type="submit">{{#str}}guest_login, theme_learnbook{{/str}}</button>
+                            <button type="submit" id="guest-login-btn">{{#str}}
+                                guest_login, theme_learnbook{{/str}}</button>
                         </form>
                     {{/canloginasguest}}
-
-                    {{#hasidentityproviders}}
-                        {{#identityproviders}}
-                            <div class="potentialidp">
-                                {{#iconurl}}
-                                    <a href="{{url}}" title={{#quote}}{{name}}{{/quote}} class="btn btn-primary">
-                                        {{name}}
-                                        {{#iconurl}}
-                                            <img src="{{iconurl}}" alt="" width="34" height="34"/>
-                                        {{/iconurl}}
-                                    </a>
-                                {{/iconurl}}
-
-                            </div>
-                        {{/identityproviders}}
-                    {{/hasidentityproviders}}
                 </div>
             </div>
                 {{#has_welcome}}
@@ -249,16 +253,6 @@
                     {{/welcome_text_left}}
                 {{/has_welcome}}
             </div>
-                {{#hasinstructions}}
-                    <hr id="login-form-hr"/>
-                    <div id="login-first-time">{{#str}}firsttime{{/str}}<br/>
-                        {{{instructions}}}
-                        {{#cansignup}}
-                            <a href="{{signupurl}}">{{#str}}sign_up, theme_learnbook{{/str}}</a>
-                        {{/cansignup}}
-                    </div>
-                {{/hasinstructions}}
-
             </div>
         </div>
     </div>

@@ -227,7 +227,7 @@ if ($ADMIN->fulltree) {
         'apollo_template' => $OUTPUT->image_url('apollo_template', 'theme_learnbook')
     );
     $template_description =
-        '<div class="learnbook-template container">
+        '<div class="learnbook-template container float-left">
             <div class="row">
                 <div class="col=4">
                     <a target="_blank" href='.$templates['athena_template'].'>

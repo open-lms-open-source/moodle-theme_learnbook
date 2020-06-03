@@ -24,9 +24,20 @@ $footercolor: #00bada !default;
     margin-top: 0 !important;
   }
 
+  //.login-page-right-radius {
+  //  border-top-right-radius: 0.5em;
+  //  border-bottom-right-radius: 0.5em;
+  //}
+  //
+  //.login-page-left-radius {
+  //  border-top-left-radius: 0.5em;
+  //  border-bottom-left-radius: 0.5em;
+  //}
+
   #login-form-container {
     background: #fff;
     padding-top: 2em;
+    padding-bottom: 2em;
   }
 
   .card-body {
@@ -100,12 +111,6 @@ $footercolor: #00bada !default;
     text-align: center;
   }
 
-  .login-form-guest-login {
-    position: relative;
-    top: -2.2em;
-
-  }
-
   #login-form-or {
     font-size: 0.8em;
   }
@@ -132,11 +137,6 @@ $footercolor: #00bada !default;
     box-shadow: 2px 2px 5px -1px $headertextcolor;
   }
 
-  #guest-login-btn{
-    width: 8em;
-    box-shadow: 2px 2px 5px -1px $headertextcolor;
-  }
-
   #login-caps-lock-warning-icon {
     float: right;
     margin-right: -12px;
@@ -156,28 +156,58 @@ $footercolor: #00bada !default;
 
   form#guestlogin {
     display: inline-block;
+    //
+    //&.login-full-width {
+    //  margin-left: 0;
+    //  width: 100%;
+    //}
+    //
+    //.btn-primary {
+    //  margin-top: 0;
+    //
+    //  &.login-full-width {
+    //    width: 100%;
+    //  }
+    //}
+  }
 
-    &.login-full-width {
-      margin-left: 0;
-      width: 100%;
+  .login-form-guest-login {
+    a {
+      color: $headertextcolor;
     }
+  }
 
-    .btn-primary {
-      margin-top: 0;
-
-      &.login-full-width {
-        width: 100%;
-      }
-    }
+  #guest-login-btn {
+    border: none;
+    background-color: inherit;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+    color: $headertextcolor;
   }
 
   .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
     background-color: $sectionheadercolor;
   }
 
+  .idp-container {
+    padding-left: 0;
+  }
+
   .potentialidp {
     display: inline-block;
-    margin: 0 10px 20px;
+
+    a{
+      box-shadow: 2px 2px 5px -1px $headertextcolor;
+      height: 2.1em;
+      width: 10em;
+      font-size: 1em;
+    }
+
+    a img {
+      height: 1em;
+      width: 1em;
+    }
   }
 }
 
