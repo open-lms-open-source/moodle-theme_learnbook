@@ -15,6 +15,18 @@ $footercolor: #00bada !default;
 
 
 .pagelayout-login {
+  .login-welcome-text{
+    margin-right: 10em;
+  }
+
+  #login-logo-container {
+    a {
+      img {
+        height: 4em;
+      }
+    }
+  }
+
   .login-text{
     font-weight: 700;
     font-family: arial, serif;
@@ -50,17 +62,8 @@ $footercolor: #00bada !default;
   }
 
   .btn {
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     border: none;
-  }
-
-  #login-page-main-content-container {
-    box-shadow: 3px 3px 20px 3px rgba(5,5,5,.5);
-    border: none;
-
-    h2 img {
-      max-width: 100%;
-    }
   }
 
   .login-centre-vertically {
@@ -71,15 +74,11 @@ $footercolor: #00bada !default;
   .login-centred-vertically {
     display: table-cell;
     vertical-align: middle;
-    overflow: hidden;
+    overflow: hidden !important;
   }
 
-  h2, #login-welcome-title, #login-welcome-msg, #login-first-time, #login-first-time a, .forgetpass a {
+  h2, #login-first-time, #login-first-time a, .forgetpass a {
     color: $headertextcolor;
-  }
-
-  .forgetpass {
-    float: right;
   }
 
   .custom-control-label {
@@ -88,14 +87,10 @@ $footercolor: #00bada !default;
     padding-left: 0.2em;
   }
 
-  #login-welcome-title {
-    text-align: center;
-    padding-top: 1em;
-  }
-
-  #login-welcome-msg {
-    padding-top: 1em;
-  }
+  //#login-welcome-title {
+  //  text-align: center;
+  //  padding-top: 1em;
+  //}
 
   .login-form-alternative-methods {
     text-align: center;
@@ -118,13 +113,14 @@ $footercolor: #00bada !default;
     display: inline-block;
     border-radius: unset;
     border:none;
-    border-bottom:1px solid #d0d0d0;
+    border-bottom:1px solid $headertextcolor;
     margin-bottom: 25px;
+    padding-left: 25px;
   }
 
   #loginbtn {
-    width: calc(100% - 5px);
     box-shadow: 2px 2px 5px -1px $headertextcolor;
+    height: 3em;
   }
 
   #login-caps-lock-warning-icon {
@@ -165,31 +161,42 @@ $footercolor: #00bada !default;
 
   .idp-container {
     padding-left: 0;
+    .potentialidp-container {
+      padding-right: 0 !important;
+    }
   }
 
   .potentialidp {
     display: inline-block;
+    width: 100%;
 
     a{
       box-shadow: 2px 2px 5px -1px $headertextcolor;
-      height: 2.1em;
-      width: 10em;
+      height: 3em;
       font-size: 1em;
+      display: flex;
+      justify-content: center;
+      align-items:center;
     }
 
     a img {
       height: 1em;
       width: 1em;
     }
+
+    a span {
+      display: inline-block;
+    }
   }
 }
 
 .login-input-fa-icons {
   position: relative;
-  float: right;
-  top: 22px;
-  color: #6e6e6e;
+  float: left;
+  top: 24px;
+  color: $headertextcolor;
   font-size: 15px;
+  padding-right: 5px;
 }
 
 #login-page-backdrop {
@@ -229,17 +236,19 @@ $footercolor: #00bada !default;
   background-size: cover;
 }
 
-.pagelayout-login {
-  #login-page-main-content-container {
-    box-shadow: 3px 3px 20px 3px rgba(5,5,5,.5);
-    border: none;
-    border-radius: 4px;
-  }
+.curved svg {
+  display: block;
 }
 
 @media only screen and (max-width: 420.99px) {
   .login-form-body {
     width: 100% !important;
+  }
+  #page-wrapper {
+    background-image:none !important;
+  }
+  .pagelayout-login .login-welcome-text {
+    margin-right: 0;
   }
 }
 
@@ -252,5 +261,11 @@ $footercolor: #00bada !default;
   }
   .hidden-sm-up {
     display: block;
+  }
+  #page-wrapper {
+    background-image:none !important;
+  }
+  .pagelayout-login .login-welcome-text {
+    margin-right: 0;
   }
 }

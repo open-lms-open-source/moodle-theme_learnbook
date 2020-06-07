@@ -1,0 +1,82 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_learnbook/login
+
+    Login page template
+
+    Example context (json):
+    {
+        "output": {
+            "doctype": "<!DOCTYPE html>",
+            "page_title": "Login page",
+            "favicon": "favicon.ico",
+            "main_content": "<h1>Headers keep HTML validators happy</h1>"
+        }
+    }
+}}
+{{> theme_learnbook/head }}
+
+<body {{{ bodyattributes }}}" >
+
+<div id="page-wrapper" style='background-image: url("{{curvedimg}}"); background-repeat: no-repeat; background-position: right; height: max-content;'>
+    {{{ output.standard_top_of_body_html }}}
+
+    <div id="page" class="container-fluid mt-0">
+        <div id="page-content" class="row">
+            <div id="region-main-box" class="col-12 login-centre-vertically">
+                <section id="region-main" class="col-12 login-centred-vertically" aria-label="{{#str}}content{{/str}}" >
+                    {{{ output.course_content_header }}}
+                    {{{ output.main_content }}}
+                    {{{ output.course_content_footer }}}
+
+                </section>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!--<div class="" style="display: block;">-->
+<!--<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-220 140 700 50">-->
+<!--        <path fill="#fff" fill-opacity="1" d="M162.24,-463.31 C345.08,-307.39 43.16,-93.25 300,200 L600,200 L496.32,-460.36 Z">-->
+<!--        </path>-->
+<!--    </svg>-->
+<!--   </div>-->
+
+{{#slideshowImgs}}
+    <script>
+        var slideshowImgs = {{{slideshowImgs}}};
+        $.backstretch(slideshowImgs, {
+            fade: 750,
+            duration: 6000
+        });
+    </script>
+{{/slideshowImgs}}
+{{^slideshowImgs}}
+    {{#welcomeimg}}
+        <div id="login-page-backdrop">
+            <div id="login-page-backdrop-img-wrapper">
+                <img id = "login-page-backdrop-img" alt="" src="{{{welcomeimg}}}">
+            </div>
+        </div>
+    {{/welcomeimg}}
+{{/slideshowImgs}}
+</body>
+</html>
+{{#js}}
+    require(['theme_boost/loader']);
+{{/js}}

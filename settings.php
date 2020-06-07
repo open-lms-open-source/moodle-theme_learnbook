@@ -236,8 +236,8 @@ if ($ADMIN->fulltree) {
                     <div class="text-center">Learnbook Template</div>
                 </div>
                 <div class="col=4 ml-2">
-                    <a target="_blank" href='.$templates['athena_template'].'>
-                        <img class="img-responsive" src="'.$templates['athena_template'].'" alt="Learnbook Template" width="150" height="75">
+                    <a target="_blank" href='.$templates['apollo_template'].'>
+                        <img class="img-responsive" src="'.$templates['apollo_template'].'" alt="Learnbook Template" width="150" height="75">
                     </a>
                     <div class="text-center">Apollo Template</div>
                 </div>
@@ -271,7 +271,14 @@ if ($ADMIN->fulltree) {
         array('left' => get_string('left_side', 'theme_learnbook'),
             'right' => get_string('right_side', 'theme_learnbook')));
     $page->add($setting);
-    
+
+    $setting = new admin_setting_confightmleditor('theme_learnbook/logintitle',
+        get_string('logintitle', 'theme_learnbook'),
+        get_string('logintitle_desc', 'theme_learnbook'),
+        get_string('logintitle_default', 'theme_learnbook'), PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     $setting = new admin_setting_confightmleditor('theme_learnbook/welcometitle',
         get_string('welcometitle', 'theme_learnbook'),
         get_string('welcometitle_desc', 'theme_learnbook'),

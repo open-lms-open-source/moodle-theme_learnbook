@@ -76,6 +76,9 @@ $string['login_page_template_desc'] = 'Select the template for the login page.';
 $string['learnbook_template'] = 'Learnbook Template';
 $string['athena_template'] = 'Athena Template';
 $string['apollo_template'] = 'Apollo Template';
+$string['logintitle'] = 'Login form title';
+$string['logintitle_desc'] = 'Title text to be displayed in the login form.';
+$string['logintitle_default'] = 'Login';
 
 // Logo Settings
 $string['logosettings'] = 'Logo settings';
@@ -85,13 +88,13 @@ $string['favicon_desc'] = 'Upload your favicon icon here';
 // Login Page Settings
 $string['loginpagesettings'] = 'Login Page Settings';
 $string['display_welcome_text'] = "Display welcome text";
-$string['display_welcome_text_desc'] = "Uncheck to hide welcome text from login page.";
+$string['display_welcome_text_desc'] = "Uncheck to hide welcome text from Apollo template, hiding not aplicable for Athena template.";
 $string['welcometitle'] = "Welcome Title";
 $string['welcometitle_desc'] = "Title to be showed for Welcome Message on login page.";
 $string['welcomemsg'] = "Welcome Message";
 $string['welcomemsg_desc'] = "Welcome Message to be displayed on login page.";
 $string['welcome_text_location'] = "Welcome Text Location";
-$string['welcome_text_location_desc'] = "Display welcome text on left or right hand side of login page.";
+$string['welcome_text_location_desc'] = "Display welcome text on left or right hand side of login page, mobile view might affect this change.";
 $string['left_side'] = "Left side";
 $string['right_side'] = "Right side";
 $string['welcomeimg'] = "Welcome Image";
@@ -107,8 +110,9 @@ $string['rawscss'] = 'Raw SCSS';
 $string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will be injected at the end of the style sheet.';
 
 // Login form
-$string['or'] = 'or Login with';
-$string['guest_login'] = 'Want to explore the site? Login as a Guest';
+$string['or'] = 'Or login with';
+$string['guest_login_desc'] = 'Want to explore the site? Login as a guest';
+$string['guest_login'] = 'Guest Login';
 $string['sign_up'] = 'Sign up';
 $string['capslock_help'] = 'Caps lock is on';
 $string['resetfields'] = 'Forgot password?';

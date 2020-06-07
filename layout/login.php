@@ -23,7 +23,7 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
-
+global $OUTPUT;
 $bodyattributes = $OUTPUT->body_attributes();
 
 $context = context_system::instance();
@@ -51,13 +51,21 @@ foreach ($welcomeImgFiles as $file) {
         $welcomeImg = $url->out();
     }
 }
+$curvedImg = null;
+$curvedImg = $OUTPUT->image_url('curve', 'theme_learnbook');
 
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
     'slideshowImgs' => !empty($slideshowImgs) ? json_encode($slideshowImgs) : null,
-    'welcomeimg' => $welcomeImg
+    'welcomeimg' => $welcomeImg,
+    'curvedimg' => $curvedImg
 ];
 
-echo $OUTPUT->render_from_template('theme_learnbook/login', $templatecontext);
+$selected_template = get_config('theme_learnbook', 'login_page_template');
+if ($selected_template === 'Learnbook') {
+    echo $OUTPUT->render_from_template('theme_learnbook/learnbook_login', $templatecontext);
+} else {
+    echo $OUTPUT->render_from_template('theme_learnbook/login', $templatecontext);
+}

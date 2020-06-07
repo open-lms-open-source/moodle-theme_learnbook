@@ -118,6 +118,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $context->sitename = format_string($SITE->fullname, true,
             ['context' => context_course::instance(SITEID), "escape" => false]);
 
+        $context->logintitle = get_config('theme_learnbook', 'logintitle');
         $context->welcomemsg = get_config('theme_learnbook', 'welcomemsg');
         $context->welcometitle = get_config('theme_learnbook', 'welcometitle');
 
@@ -150,6 +151,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
             return $this->render_from_template('core/loginform', $context);
         } else if ($selected_template === 'Athena') {
             return $this->render_from_template('core/athena_loginform', $context);
+        } else if ($selected_template === 'Learnbook') {
+            return $this->render_from_template('core/learnbook_loginform', $context);
         }
     }
 

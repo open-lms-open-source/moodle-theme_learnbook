@@ -106,7 +106,6 @@
     <div class="col-xl-8 col-lg-10 col-12">
         <div id="login-page-main-content-container">
             <div class="row">
-                {{#has_welcome}}
                     {{#welcome_text_left}}
                         <div class="col-md-6 col-12" id="login-left-container"
                              style='background-image: url("{{welcomeimg}}");'>
@@ -119,19 +118,6 @@
                         </div>
                     {{/welcome_text_left}}
                 <div class="col-md-6 col-12" id="login-form-container">
-                {{/has_welcome}}
-                {{^has_welcome}}
-                    <div class="col-12">
-                        {{#logourl}}
-                            <h2 class="text-center"><img src="{{logourl}}" title="{{sitename}}" alt="{{sitename}}"/>
-                            </h2>
-                        {{/logourl}}
-                        {{^logourl}}
-                            <h2 class="text-center">{{sitename}}</h2>
-                        {{/logourl}}
-                    </div>
-                <div class="col-12">
-                {{/has_welcome}}
                 <div class="login-form-body">
                     {{#error}}
                         <div class="loginerrors mt-1">
@@ -191,14 +177,14 @@
 
                 </div>
 
-                <div class="mt-2 mb-4 login-form-alternative-methods"{{^hasidentityproviders}}
+                <div class="mt-4 mb-4 login-form-alternative-methods"{{^hasidentityproviders}}
                      style="display:none;"{{/hasidentityproviders}}>
                     <div class="mb-3 text-center" id="login-form-or">{{#str}} or, theme_learnbook {{/str}}</div>
                     {{#hasidentityproviders}}
                         <div class="container idp-container">
                             <div class="row">
                                 {{#identityproviders}}
-                                    <div class="col-6 col-md-6 mb-2 text-left">
+                                    <div class="col-6 col-md-6 mb-2 text-center">
                                         <div class="potentialidp">
                                             {{#iconurl}}
                                                 <a href="{{url}}" title={{#quote}}{{name}}{{/quote}}
@@ -234,12 +220,11 @@
                             <input type="hidden" name="username" value="guest"/>
                             <input type="hidden" name="password" value="guest"/>
                             <button type="submit" id="guest-login-btn">{{#str}}
-                                guest_login, theme_learnbook{{/str}}</button>
+                                guest_login_desc, theme_learnbook{{/str}}</button>
                         </form>
                     {{/canloginasguest}}
                 </div>
             </div>
-                {{#has_welcome}}
                     {{^welcome_text_left}}
                         <div class="col-md-6 col-12" id="login-right-container"
                              style='background-image: url("{{welcomeimg}}");'>
@@ -251,7 +236,6 @@
                             </div>
                         </div>
                     {{/welcome_text_left}}
-                {{/has_welcome}}
             </div>
             </div>
         </div>
