@@ -1085,9 +1085,12 @@ ul.pagination {
   }
   .tab-label {
     background: lighten($headertextcolor, 6%) !important;
-    border-right: 0.125rem solid lighten($headertextcolor, 3%) !important;
     color: $headercolor !important;
   }
+
+  //.tab-label:hover {
+  //  background: $headertextcolor;
+  //}
 
   .tab-switch:checked + .tab-label {
     background: $headertextcolor !important;
@@ -1224,6 +1227,12 @@ ul.pagination {
   }
   .block_lb_user_profile.card {
     min-height: 550px !important;
+  }
+  //options text size, as it cant accomodate the texts while menu open
+  #lb-user-profile-info {
+    .lb-user-profile-info-text {
+      font-size: 0.70em !important;
+    }
   }
 }
 
