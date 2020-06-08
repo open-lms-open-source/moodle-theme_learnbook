@@ -125,8 +125,8 @@
                             <div class="alert alert-danger" role="alert" data-aria-autofocus="true">{{error}}</div>
                         </div>
                     {{/error}}
-                    <div class="mb-4">
-                        <h2 class="login-text">Login</h2>
+                    <div class="text-left mb-4">
+                        {{{logintitle}}}
                     </div>
                     <form class="" action="{{loginurl}}" method="post" id="login">
                         <input id="anchor" type="hidden" name="anchor" value="">
@@ -169,8 +169,6 @@
                                 </p>
                             </div>
                         </div>
-
-
                         <button type="submit" class="btn btn-primary btn-block mt-3" id="loginbtn">{{#str}}
                             login{{/str}}</button>
                     </form>
@@ -179,13 +177,12 @@
 
                 <div class="mt-4 mb-4 login-form-alternative-methods"{{^hasidentityproviders}}
                      style="display:none;"{{/hasidentityproviders}}>
-                    <div class="mb-3 text-center" id="login-form-or">{{#str}} or, theme_learnbook {{/str}}</div>
+                    <div class="mb-3 ml-1 text-left" id="login-form-or">{{#str}} or, theme_learnbook {{/str}}</div>
                     {{#hasidentityproviders}}
                         <div class="container idp-container">
                             <div class="row">
                                 {{#identityproviders}}
-                                    <div class="col-6 col-md-6 mb-2 text-center">
-                                        <div class="potentialidp">
+                                    <div class="col-6 col-md-6 col-12 mb-2 text-left potentialidp">
                                             {{#iconurl}}
                                                 <a href="{{url}}" title={{#quote}}{{name}}{{/quote}}
                                                    class="btn btn-primary">
@@ -195,11 +192,8 @@
                                                     {{/iconurl}}
                                                 </a>
                                             {{/iconurl}}
-
-                                        </div>
                                     </div>
                                 {{/identityproviders}}
-
                             </div>
                         </div>
                     {{/hasidentityproviders}}

@@ -15,6 +15,10 @@ $footercolor: #00bada !default;
 
 
 .pagelayout-login {
+  #login-left-container, #login-right-container {
+    background-color: $headertextcolor;
+  }
+
   .login-text{
     font-weight: 700;
     font-family: arial, serif;
@@ -95,11 +99,12 @@ $footercolor: #00bada !default;
 
   #login-welcome-msg {
     padding-top: 1em;
+    padding-left: 1em;
   }
 
-  .login-form-alternative-methods {
-    text-align: center;
-  }
+  //.login-form-alternative-methods {
+  //  text-align: center;
+  //}
 
   #login-form-or {
     font-size: 0.8em;
@@ -123,7 +128,7 @@ $footercolor: #00bada !default;
   }
 
   #loginbtn {
-    width: calc(100% - 5px);
+    width: calc(50% - 1.5rem);
     box-shadow: 2px 2px 5px -1px $headertextcolor;
   }
 
@@ -169,11 +174,12 @@ $footercolor: #00bada !default;
 
   .potentialidp {
     display: inline-block;
+    padding-right: 0 !important;
 
     a{
       box-shadow: 2px 2px 5px -1px $headertextcolor;
-      height: 2.1em;
-      width: 10em;
+      height: 2.3em;
+      width: 100%;
       font-size: 1em;
     }
 

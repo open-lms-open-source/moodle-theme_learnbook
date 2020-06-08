@@ -72,13 +72,6 @@ $string['coursebtncolor_desc'] = 'Enter Course button color';
 $string['coursebtnhovercolor'] = 'Enter Course button hover color';
 $string['coursebtnhovercolor_desc'] = 'The color will be applied when hover on Enter Course button';
 $string['login_page_template'] = 'Select login page template';
-$string['login_page_template_desc'] = 'Select the template for the login page.';
-$string['learnbook_template'] = 'Learnbook Template';
-$string['athena_template'] = 'Athena Template';
-$string['apollo_template'] = 'Apollo Template';
-$string['logintitle'] = 'Login form title';
-$string['logintitle_desc'] = 'Title text to be displayed in the login form.';
-$string['logintitle_default'] = 'Login';
 
 // Logo Settings
 $string['logosettings'] = 'Logo settings';
@@ -88,19 +81,26 @@ $string['favicon_desc'] = 'Upload your favicon icon here';
 // Login Page Settings
 $string['loginpagesettings'] = 'Login Page Settings';
 $string['display_welcome_text'] = "Display welcome text";
-$string['display_welcome_text_desc'] = "Uncheck to hide welcome text from Apollo template, hiding not aplicable for Athena template.";
+$string['display_welcome_text_desc'] = "Uncheck to hide welcome text from Apollo and Learnbook template (Not applicable for Athena template).";
 $string['welcometitle'] = "Welcome Title";
 $string['welcometitle_desc'] = "Title to be showed for Welcome Message on login page.";
 $string['welcomemsg'] = "Welcome Message";
 $string['welcomemsg_desc'] = "Welcome Message to be displayed on login page.";
 $string['welcome_text_location'] = "Welcome Text Location";
-$string['welcome_text_location_desc'] = "Display welcome text on left or right hand side of login page, mobile view might affect this change.";
+$string['welcome_text_location_desc'] = "Display welcome text on left or right hand side Athena or Apollo template, mobile view might affect this change (Not applicable for Learnbook template).";
 $string['left_side'] = "Left side";
 $string['right_side'] = "Right side";
 $string['welcomeimg'] = "Welcome Image";
-$string['welcomeimg_desc'] = "Background image of Welcome Message on login page.";
+$string['welcomeimg_desc'] = "Background image of Welcome Message on login page (Not applicable for Apollo and Learnbook template).";
 $string['slideshow'] =  'Login Slide Image';
 $string['slideshowdesc'] = 'Select Image for Login Page Slide Show';
+$string['login_page_template_desc'] = 'Select the template for the login page.';
+$string['learnbook_template'] = 'Learnbook Template';
+$string['athena_template'] = 'Athena Template';
+$string['apollo_template'] = 'Apollo Template';
+$string['logintitle'] = 'Login form title';
+$string['logintitle_desc'] = 'Title text to be displayed in the login form.';
+$string['logintitle_default'] = 'Login';
 
 // Advanced Settings
 $string['advancedsettings'] = 'Advanced settings';

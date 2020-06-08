@@ -230,8 +230,8 @@ if ($ADMIN->fulltree) {
         '<div class="learnbook-template container float-left">
             <div class="row">
                 <div class="col=4">
-                    <a target="_blank" href='.$templates['athena_template'].'>
-                        <img class="img-responsive" src="'.$templates['athena_template'].'" alt="Learnbook Template" width="150" height="75">
+                    <a target="_blank" href='.$templates['learnbook_template'].'>
+                        <img class="img-responsive" src="'.$templates['learnbook_template'].'" alt="Learnbook Template" width="150" height="75">
                     </a>
                     <div class="text-center">Learnbook Template</div>
                 </div>

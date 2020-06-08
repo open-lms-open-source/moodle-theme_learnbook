@@ -125,7 +125,7 @@
                                 <div class="alert alert-danger" role="alert" data-aria-autofocus="true">{{error}}</div>
                             </div>
                         {{/error}}
-                        <div class="mb-4">
+                        <div class="text-left mb-4">
                             {{{logintitle}}}
                         </div>
                         <form class="" action="{{loginurl}}" method="post" id="login">
@@ -159,7 +159,7 @@
                                    title="{{#str}} capslock_help, theme_learnbook{{/str}}"></i>
                             </div>
 
-                            <div class="rememberpass mb-4 custom-control custom-checkbox">
+                            <div class="rememberpass mb-4 custom-control custom-checkbox text-left">
                                 <input type="checkbox" name="rememberusername" id="rememberusername"
                                        class="custom-control-input" value="1"
                                        {{#username}}checked="checked"{{/username}} />
@@ -210,7 +210,7 @@
                         {{/hasidentityproviders}}
                     </div>
                     {{#hasinstructions}}
-                        <div id="login-first-time">{{#str}}firsttime{{/str}}
+                        <div class="text-left" id="login-first-time">{{#str}}firsttime{{/str}}
                             {{#cansignup}}
                                 <a href="{{signupurl}}">{{#str}}sign_up, theme_learnbook{{/str}}
                                 </a>

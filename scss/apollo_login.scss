@@ -15,6 +15,21 @@ $footercolor: #00bada !default;
 
 
 .pagelayout-login {
+  .login-form-guest-login {
+    a {
+      color: $headertextcolor;
+    }
+  }
+
+  #guest-login-btn {
+    border: none;
+    background-color: inherit;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+    color: $headertextcolor;
+  }
+
   #page {
     margin-top: 0 !important;
   }
@@ -136,7 +151,6 @@ $footercolor: #00bada !default;
 
   form#guestlogin {
     display: inline-block;
-    margin: 0 10px 20px;
 
     &.login-full-width {
       margin-left: 0;

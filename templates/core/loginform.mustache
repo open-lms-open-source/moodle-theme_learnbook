@@ -94,7 +94,7 @@
 }}
 
 <div class="row justify-content-center">
-    <div class="col-xl-6 col-lg-10 col-12">
+    <div class="col-xl-7 col-lg-10 col-12">
         <div id = "login-page-main-content-container">
             <div class="row">
                 {{#has_welcome}}
@@ -130,7 +130,9 @@
                     <div class="col-12">
                 {{/has_welcome}}
                     <div class="login-form-body">
-
+                        <div class="text-left mb-4">
+                            {{{logintitle}}}
+                        </div>
                         <form class="" action="{{loginurl}}" method="post" id="login">
                             <input id="anchor" type="hidden" name="anchor" value="">
                             <script>document.getElementById('anchor').value = location.hash;</script>
@@ -170,20 +172,12 @@
                         </form>
 
                         <div class="forgetpass mt-3 text-center">
-                            <p><a href="{{forgotpasswordurl}}">{{#str}}forgotten{{/str}}</a></p>
+                            <p><a href="{{forgotpasswordurl}}">{{#str}} resetfields, theme_learnbook {{/str}}</a></p>
                         </div>
                     </div>
-                    <div class="login-form-alternative-methods"{{^hasidentityproviders}}{{^canloginasguest}} style = "display:none;"{{/canloginasguest}}{{/hasidentityproviders}}>
-                        <div id = "login-form-or">{{#str}} or, theme_learnbook {{/str}}</div>
-                        {{#canloginasguest}}
-                                <form action="{{loginurl}}" method="post" id="guestlogin" {{^hasidentityproviders}}class = "login-full-width"{{/hasidentityproviders}}>
-                                    <input type="hidden" name="logintoken" value="{{logintoken}}">
-                                    <input type="hidden" name="username" value="guest" />
-                                    <input type="hidden" name="password" value="guest" />
-                                    <button class="btn btn-primary{{^hasidentityproviders}} login-full-width{{/hasidentityproviders}}" type="submit">{{#str}}guest_login, theme_learnbook{{/str}}</button>
-                                </form>
-                        {{/canloginasguest}}
 
+                    <div class="login-form-alternative-methods"{{^hasidentityproviders}} style = "display:none;"{{/hasidentityproviders}}>
+                        <div id = "login-form-or">{{#str}} or, theme_learnbook {{/str}}</div>
                         {{#hasidentityproviders}}
                             {{#identityproviders}}
                                 <div class="potentialidp">
@@ -231,6 +225,18 @@
                 {{/cansignup}}
                 </div>
             {{/hasinstructions}}
+                <div class="login-form-guest-login text-left mt-2"{{^canloginasguest}}
+                     style="display:none;"{{/canloginasguest}}>
+                    {{#canloginasguest}}
+                        <form action="{{loginurl}}" method="post" id="guestlogin">
+                            <input type="hidden" name="logintoken" value="{{logintoken}}">
+                            <input type="hidden" name="username" value="guest"/>
+                            <input type="hidden" name="password" value="guest"/>
+                            <button type="submit" id="guest-login-btn">{{#str}}
+                                guest_login_desc, theme_learnbook{{/str}}</button>
+                        </form>
+                    {{/canloginasguest}}
+                </div>
             {{#error}}
                 <div class="loginerrors mt-3">
                     <a href="#" id="loginerrormessage" class="accesshide">{{error}}</a>
