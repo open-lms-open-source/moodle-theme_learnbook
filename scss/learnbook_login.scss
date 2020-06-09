@@ -156,7 +156,7 @@ $footercolor: #00bada !default;
   }
 
   .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-    background-color: $sectionheadercolor;
+    background-color: $headertextcolor;
   }
 
   .idp-container {
@@ -236,9 +236,9 @@ $footercolor: #00bada !default;
   background-size: cover;
 }
 
-.curved svg {
-  display: block;
-}
+//.curved svg {
+//  display: block;
+//}
 
 @media only screen and (max-width: 420px) {
   .login-form-body {
@@ -267,5 +267,11 @@ $footercolor: #00bada !default;
   }
   .pagelayout-login .login-welcome-text {
     margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1650px){
+  #page-wrapper {
+    background-size: 55% auto;
   }
 }

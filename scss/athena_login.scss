@@ -165,7 +165,7 @@ $footercolor: #00bada !default;
   }
 
   .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-    background-color: $sectionheadercolor;
+    background-color: $headertextcolor;
   }
 
   .idp-container {
