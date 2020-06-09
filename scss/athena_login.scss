@@ -235,6 +235,12 @@ $footercolor: #00bada !default;
   background-size: cover;
 }
 
+.btn-primary {
+  color: #fff !important;
+  background-color: $headertextcolor !important;
+  border-color: $headertextcolor !important;
+}
+
 .pagelayout-login {
   #login-page-main-content-container {
     box-shadow: 3px 3px 20px 3px rgba(5,5,5,.5);

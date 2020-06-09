@@ -66,16 +66,16 @@ $footercolor: #00bada !default;
     border: none;
   }
 
-  .login-centre-vertically {
-    display: table;
-    height: 100vh;
-  }
-
-  .login-centred-vertically {
-    display: table-cell;
-    vertical-align: middle;
-    overflow: hidden !important;
-  }
+  //.login-centre-vertically {
+  //  display: table;
+  //  height: 100vh;
+  //}
+  //
+  //.login-centred-vertically {
+  //  display: table-cell;
+  //  vertical-align: middle;
+  //  overflow: hidden !important;
+  //}
 
   h2, #login-first-time, #login-first-time a, .forgetpass a {
     color: $headertextcolor;
@@ -236,6 +236,12 @@ $footercolor: #00bada !default;
   background-size: cover;
 }
 
+.btn-primary {
+  color: #fff !important;
+  background-color: $headertextcolor !important;
+  border-color: $headertextcolor !important;
+}
+
 //.curved svg {
 //  display: block;
 //}
@@ -272,6 +278,6 @@ $footercolor: #00bada !default;
 
 @media only screen and (min-width: 1650px){
   #page-wrapper {
-    background-size: 55% auto;
+    background-size: 55% auto !important;
   }
 }
