@@ -42,6 +42,53 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
   font-size: 2rem;
 }
 
+//#region-main-settings-menu.has-blocks, #region-main.has-blocks {
+//  display: inline-block;
+//  width: 100%
+//}
+
+#region-right-menu {
+  border-left: 0.2em solid #DEDEDE;
+  padding-left: 1.5em;
+  height: 100%;
+}
+
+.right-menu-icon-container {
+  font-size: 1.5em;
+  color: #fff;
+  background-color: $headertextcolor;
+  right: 375px;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1em;
+  padding-left: 0.5em;
+  position: fixed;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+}
+
+.left-menu-icon-container {
+  color: #fff;
+  background-color: $headertextcolor;
+  //height: 3.2em;
+  width: 1em;
+  //padding-top: 0.9em;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  margin-right: 0;
+  position: relative;
+  top: -60%;
+  transform: translateY(-60%);
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+}
+
+.hide-section {
+  display: none;
+  opacity: 0;
+}
+
 #nav-drawer .list-group-item.active + .list-group-item {
   border-top: 1px solid rgba(0, 0, 0, .125);
 }
@@ -1166,6 +1213,21 @@ ul.pagination {
   .block_lb_profile.card{
     height: 550px !important;
   }
+  //right menu
+  #region-main-settings-menu.has-blocks, #region-main.has-blocks {
+    display: inline-block;
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+  }
+
+  #right-menu-right-icon {
+    display: none;
+  }
+  #region-right-menu {
+    display: none;
+  }
+
 }
 
 @media only screen and (min-width: 421px) and (max-width: 575px) {
@@ -1190,6 +1252,20 @@ ul.pagination {
   .block_lb_profile.card{
     height: 550px !important;
   }
+  //right menu
+  #region-main-settings-menu.has-blocks, #region-main.has-blocks {
+    display: inline-block;
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+  }
+
+  #right-menu-right-icon {
+    display: none;
+  }
+  #region-right-menu {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
@@ -1202,6 +1278,20 @@ ul.pagination {
   }
   .block_lb_user_profile.card {
     min-height: 700px !important;
+  }
+  //right menu
+  #region-main-settings-menu.has-blocks, #region-main.has-blocks {
+    display: inline-block;
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+  }
+
+  #right-menu-right-icon {
+    display: none;
+  }
+  #region-right-menu {
+    display: none;
   }
 }
 
@@ -1217,6 +1307,20 @@ ul.pagination {
   }
   .block_lb_user_profile.card {
     min-height: 550px !important;
+  }
+  //right menu
+  #region-main-settings-menu.has-blocks, #region-main.has-blocks {
+    display: inline-block;
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+  }
+
+  #right-menu-right-icon {
+    display: none;
+  }
+  #region-right-menu {
+    display: none;
   }
 }
 
