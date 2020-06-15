@@ -131,8 +131,8 @@ function routes() {
     global $CFG;
     $routes = array();
     $theme = theme_config::load('learnbook');
-    $routes['/user/view.php'] = '/local/profile/index.php';
-    $routes['/user/profile.php'] = '/local/profile/index.php';
+    $routes['/user/view.php'] = '/local/lb_learner_dashboard/index.php';
+    $routes['/user/profile.php'] = '/local/lb_learner_dashboard/index.php';
     if (empty($theme->settings->learnbook_user_profile)) {
         unset($routes['/user/view.php']);
         unset($routes['/user/profile.php']);
