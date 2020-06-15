@@ -63,9 +63,8 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
   border-radius: 1em;
   padding-left: 0.5em;
   position: fixed;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 55%;
+  transform: translateY(-55%);
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 }
 
@@ -77,15 +76,14 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
   border-bottom-left-radius: 1em;
   margin-right: 0;
   position: fixed;
-  top: 50%;
+  top: 55%;
   right: 0;
-  transform: translateY(50%);
+  transform: translateY(-55%);
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 }
 
 .hide-section {
   display: none;
-  opacity: 0;
 }
 
 #nav-drawer .list-group-item.active + .list-group-item {
