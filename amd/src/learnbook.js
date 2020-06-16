@@ -24,19 +24,20 @@ define(['jquery', 'core/ajax', 'core/str', 'core/config', 'core/templates', 'cor
     function ($, AJAX, str, mdlcfg, templates, notification) {
         var learnbook = {
             init: function () {
-                if (localStorage.getItem('rightMenuHidden') === '1') {
-                    $("#region-right-menu").addClass('hide-section');
-                    $("#region-main.has-blocks").css("width", "100%");
-                    $("#right-menu-left-icon").css("display", "block");
-                }
+                //for right menu
+                // if (localStorage.getItem('rightMenuHidden') === '1') {
+                //     $("#region-right-menu").addClass('hide-section');
+                //     $("#region-main.has-blocks").css("width", "100%");
+                //     $("#right-menu-left-icon").css("display", "block");
+                // }
                 $('#right-menu-right-icon').click(function () {
                     $("#region-right-menu").addClass('hide-section');
                     $("#region-main.has-blocks").css("width", "100%");
                     $("#right-menu-left-icon").css("display", "block");
-                    localStorage.setItem('rightMenuHidden', '1');
+                    // localStorage.setItem('rightMenuHidden', '1');
                 });
                 $('#right-menu-left-icon').click(function () {
-                    localStorage.setItem('rightMenuHidden', '0');
+                    // localStorage.setItem('rightMenuHidden', '0');
                     $("#right-menu-left-icon").css("display", "none");
                     $("#region-right-menu").removeClass('hide-section');
                     $("#region-main.has-blocks").css("width", "calc(100% - 375px)");
