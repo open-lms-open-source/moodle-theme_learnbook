@@ -30,7 +30,7 @@ define(['jquery', 'core/ajax', 'core/str', 'core/config', 'core/templates', 'cor
                 //for right menu
                 if (localStorage.getItem('rightMenuHidden') === '0') {
                     $("#right-menu-left-icon").css('display', 'none');
-                    $("#region-right-menu").show(300);
+                    $("#region-right-menu").show('slow');
                     $("#region-main.has-blocks").css("width", "calc(100% - 375px)");
                 }
                 $('#right-menu-right-icon').click(function () {
@@ -43,7 +43,7 @@ define(['jquery', 'core/ajax', 'core/str', 'core/config', 'core/templates', 'cor
                 $('#right-menu-left-icon').click(function () {
                     localStorage.setItem('rightMenuHidden', '0');
                     $("#right-menu-left-icon").hide(300);
-                    $("#region-right-menu").show(300);
+                    $("#region-right-menu").show('slow');
                     $("#region-main.has-blocks").css("transition", "width 0.5s");
                     $("#region-main.has-blocks").css("width", "calc(100% - 375px)");
                 });
