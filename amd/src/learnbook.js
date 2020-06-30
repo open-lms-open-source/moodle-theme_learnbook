@@ -27,6 +27,10 @@ define(['jquery', 'core/ajax', 'core/str', 'core/config', 'core/templates', 'cor
                 if ($('#region-right-menu').length) {
                     $("#right-menu-left-icon").show(500);
                 }
+                //for empty value
+                if (localStorage.getItem('rightMenuHidden') === null) {
+                    localStorage.setItem('rightMenuHidden', '0');
+                }
                 //for right menu
                 if (localStorage.getItem('rightMenuHidden') === '0') {
                     $("#right-menu-left-icon").css('display', 'none');
