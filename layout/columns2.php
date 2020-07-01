@@ -27,15 +27,16 @@ defined('MOODLE_INTERNAL') || die();
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 require_once($CFG->libdir . '/behat/lib.php');
 $PAGE->requires->js_call_amd('theme_learnbook/learnbook', 'init');
-if (isloggedin()) {
-    $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
-} else {
-    $navdraweropen = false;
-}
+//if (isloggedin()) {
+//    $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
+//} else {
+//    $navdraweropen = false;
+//}
+$navdraweropen = false;
 $extraclasses = [];
-if ($navdraweropen) {
-    $extraclasses[] = 'drawer-open-left';
-}
+//if ($navdraweropen) {
+//    $extraclasses[] = 'drawer-open-left';
+//}
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;

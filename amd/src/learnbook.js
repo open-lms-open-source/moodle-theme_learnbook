@@ -24,33 +24,48 @@ define(['jquery', 'core/ajax', 'core/str', 'core/config', 'core/templates', 'cor
     function ($, AJAX, str, mdlcfg, templates, notification) {
         var learnbook = {
             init: function () {
-                if ($('#region-right-menu').length) {
-                    $("#right-menu-left-icon").show(500);
+                function rightMenu (size) {
+                    if (!size.matches) { // If media query matches
+                        if ($('#region-right-menu').length) {
+                            $("#right-menu-left-icon").show(500);
+                        }
+                        //}
+                        //for empty value
+                        if (localStorage.getItem('rightMenuHidden') === null) {
+                            localStorage.setItem('rightMenuHidden', '0');
+                        }
+                        //for right menu
+                        if (localStorage.getItem('rightMenuHidden') === '0') {
+                            //if (!x.matches) { // If media query matches
+                            $("#right-menu-left-icon").css('display', 'none');
+                            $("#region-right-menu").show('slow');
+                            $("#region-main.has-blocks").css("width", "calc(100% - 375px)");
+                            //}
+                        }
+                        $('#right-menu-right-icon').click(function () {
+                            $("#region-right-menu").hide(300);
+                            $("#region-main.has-blocks").css("transition", "none");
+                            $("#region-main.has-blocks").animate({width: '100%'}, "slow");
+                            $("#right-menu-left-icon").show(300);
+                            localStorage.setItem('rightMenuHidden', '1');
+                        });
+                        $('#right-menu-left-icon').click(function () {
+                            localStorage.setItem('rightMenuHidden', '0');
+                            $("#right-menu-left-icon").hide(300);
+                            $("#region-right-menu").show('slow');
+                            $("#region-main.has-blocks").css("transition", "width 0.5s");
+                            $("#region-main.has-blocks").css("width", "calc(100% - 375px)");
+                        });
+                    } else {
+                        $("#right-menu-left-icon").css('display', 'none');
+                        $("#right-menu-left-icon").css('display', 'none');
+                        //$("#region-right-menu").css('display', 'none');
+                        $("#region-main.has-blocks").css("width", "100%");
+                    }
                 }
-                //for empty value
-                if (localStorage.getItem('rightMenuHidden') === null) {
-                    localStorage.setItem('rightMenuHidden', '0');
-                }
-                //for right menu
-                if (localStorage.getItem('rightMenuHidden') === '0') {
-                    $("#right-menu-left-icon").css('display', 'none');
-                    $("#region-right-menu").show('slow');
-                    $("#region-main.has-blocks").css("width", "calc(100% - 375px)");
-                }
-                $('#right-menu-right-icon').click(function () {
-                    $("#region-right-menu").hide(300);
-                    $("#region-main.has-blocks").css("transition", "none");
-                    $("#region-main.has-blocks").animate({width: '100%'}, "slow");
-                    $("#right-menu-left-icon").show(300);
-                    localStorage.setItem('rightMenuHidden', '1');
-                });
-                $('#right-menu-left-icon').click(function () {
-                    localStorage.setItem('rightMenuHidden', '0');
-                    $("#right-menu-left-icon").hide(300);
-                    $("#region-right-menu").show('slow');
-                    $("#region-main.has-blocks").css("transition", "width 0.5s");
-                    $("#region-main.has-blocks").css("width", "calc(100% - 375px)");
-                });
+                var size = window.matchMedia("(max-width: 1200px)");
+                rightMenu(size);
+                size.addListener(rightMenu);
             }
         };
         return learnbook;

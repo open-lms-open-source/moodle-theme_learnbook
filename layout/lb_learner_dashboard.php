@@ -24,12 +24,12 @@
 
 defined('MOODLE_INTERNAL') || die();
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
-$navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
-
+//$navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
+$navdraweropen = false;
 $extraclasses = [];
-if ($navdraweropen) {
-    $extraclasses[] = 'drawer-open-left';
-}
+//if ($navdraweropen) {
+//    $extraclasses[] = 'drawer-open-left';
+//}
 
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $toplefthtml = $OUTPUT->blocks('top-left');
