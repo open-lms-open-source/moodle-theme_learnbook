@@ -18,14 +18,14 @@
  * Theme Learnbook - version file
  *
  * @package    theme_learnbook
- * @author     2019 Chris Megahan, eCreators <chris@ecreators.com.au>
+ * @author     2020 Chris Megahan <chris@ecreators.com.au>, Safat Shahin <safat@ecreators.com.au>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_learnbook';
-$plugin->version = 2020063000;
+$plugin->version = 2020070200;
 $plugin->release = 'Learnbook Apollo (v3.7)';
 $plugin->requires = 2018120300;
 $plugin->maturity = MATURITY_STABLE;

@@ -91,6 +91,21 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 }
 
+//navbar brand logo
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 1rem;
+  font-size: 1.171875rem;
+  line-height: inherit;
+  white-space: nowrap; }
+.navbar-brand:hover, .navbar-brand:focus {
+  text-decoration: none; }
+
+nav.navbar .logo img {
+  max-height: 41px; }
+
 #nav-drawer .list-group-item.active + .list-group-item {
   border-top: 1px solid rgba(0, 0, 0, .125);
 }
@@ -246,6 +261,11 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
   }
 }
 
+#local-myteam-container .sectionheadercolor {
+  color: $headercolor !important;
+  background: $headertextcolor !important;
+}
+
 .enter-course-btn {
   background-color: $coursebtncolor !important;
   border-radius: 5px;
@@ -294,6 +314,8 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
   top: 63px;
   width: 270px;
   background-color: #eceeef;
+  box-shadow: 5px 10px 8px #888888;
+  transition: width 0.7s ease;
 }
 
 footer#page-footer {
