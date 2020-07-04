@@ -68,6 +68,7 @@ define(['jquery', 'core/custom_interaction_events', 'core/log', 'core/pubsub'],
             } else {
                 trigger.attr('aria-expanded', 'false');
             }
+            drawer.attr('aria-hidden', 'false');
         }.bind(this));
 
         this.registerEventListeners();
@@ -87,7 +88,7 @@ define(['jquery', 'core/custom_interaction_events', 'core/log', 'core/pubsub'],
 
             trigger.attr('aria-expanded', 'false');
             body.removeClass('drawer-open-' + side);
-            drawer.attr('aria-hidden', 'true');
+            drawer.attr('aria-hidden', 'false');
             drawer.addClass('closed');
             if (!small) {
                 M.util.set_user_preference(preference, 'false');
