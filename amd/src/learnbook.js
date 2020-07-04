@@ -20,8 +20,8 @@
  * @copyright  2020 eCreators Safat
  */
 
-define(['jquery', 'core/ajax', 'core/str', 'core/config', 'core/templates', 'core/notification', 'core/custom_interaction_events', 'core/log', 'core/pubsub'],
-    function ($, AJAX, str, mdlcfg, templates, notification, CustomEvents, Log, PubSub) {
+define(['jquery', 'core/ajax', 'core/str', 'core/config', 'core/templates', 'core/notification'],
+    function ($, AJAX, str, mdlcfg, templates, notification) {
         var learnbook = {
             init: function () {
                 function rightMenu (size) {
@@ -63,20 +63,19 @@ define(['jquery', 'core/ajax', 'core/str', 'core/config', 'core/templates', 'cor
                 rightMenu(size);
                 size.addListener(rightMenu);
                 // REMOVE NAV-BAR IN CLICK IN PAGE
-                var body = $('body');
-                $('#page').click(function () {
-                    if (body.hasClass('drawer-open-left')) {
-                        body.removeClass('drawer-open-left');
-                        if (!$('#nav-drawer').hasClass('closed')) {
-                            $('#nav-drawer').addClass('closed');
-                            $('#nav-drawer').attr('aria-expanded', 'false');
-                            $('#nav-drawer').attr('aria-hidden', 'true');
-                            $('.list-group').css('text-align', 'center');
-                            $('.nav-link').attr('aria-expanded', 'false');
-                        }
-                    }
-                });
-
+                // var body = $('body');
+                // $('#page').click(function () {
+                //     if (body.hasClass('drawer-open-left')) {
+                //         body.removeClass('drawer-open-left');
+                //         if (!$('#nav-drawer').hasClass('closed')) {
+                //             $('#nav-drawer').addClass('closed');
+                //             $('#nav-drawer').attr('aria-expanded', 'false');
+                //             $('#nav-drawer').attr('aria-hidden', 'true');
+                //             $('.list-group').css('text-align', 'center');
+                //             $('.nav-link').attr('aria-expanded', 'false');
+                //         }
+                //     }
+                // });
             }
         };
         return learnbook;

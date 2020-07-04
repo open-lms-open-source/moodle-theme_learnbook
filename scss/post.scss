@@ -30,13 +30,13 @@ body {
   }
 }
 
-body.drawer-open-left {
-  margin-left: 0;
-}
-
-body:not(.drawer-open-left) {
-  margin-left: 0 !important;
-}
+//body.drawer-open-left {
+//  margin-left: 0;
+//}
+//
+//body:not(.drawer-open-left) {
+//  margin-left: 0 !important;
+//}
 
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .path-calendar .maincalendar .calendar-controls .current, .h3, .h4, .h5, .h6 {
@@ -314,8 +314,8 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
   top: 63px;
   width: 270px;
   background-color: #eceeef;
-  box-shadow: 5px 10px 8px #888888;
-  transition: width 0.7s ease;
+  //box-shadow: 5px 10px 8px #888888;
+  //transition: width 0.7s ease;
 }
 
 footer#page-footer {
@@ -1313,10 +1313,10 @@ ul.pagination {
   }
   //block lb_user_report section
   .block_lb_profile.card{
-    height: 900px !important;
+    height: 700px !important;
   }
   .block_lb_user_profile.card {
-    min-height: 900px !important;
+    min-height: 700px !important;
   }
   //right menu
   //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
@@ -1350,10 +1350,10 @@ ul.pagination {
   }
   //block lb_user_report section
   .block_lb_profile.card{
-    height: 700px !important;
+    height: 550px !important;
   }
   .block_lb_user_profile.card {
-    min-height: 700px !important;
+    min-height: 550px !important;
   }
   //right menu
   //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
@@ -1398,29 +1398,29 @@ ul.pagination {
 @media only screen and (min-width: 1450px) and (max-width: 1649px) {
   //block lb_user_report section
   .block_lb_profile.card{
-    height: 720px !important;
+    height: 620px !important;
   }
   .block_lb_user_profile.card {
-    min-height: 720px !important;
+    min-height: 620px !important;
   }
 }
 
 @media only screen and (min-width: 1650px) and (max-width: 1949px) {
   //block lb_user_report section
   .block_lb_profile.card{
-    height: 720px !important;
+    height: 620px !important;
   }
   .block_lb_user_profile.card {
-    min-height: 720px !important;
+    min-height: 620px !important;
   }
 }
 
 @media only screen and (min-width: 1950px) {
   .block_lb_profile.card{
-    height: 800px !important;
+    height: 720px !important;
   }
   .block_lb_user_profile.card {
-    min-height: 800px !important;
+    min-height: 720px !important;
   }
 }
 
