@@ -83,7 +83,7 @@ $string['loginpagesettings'] = 'Login Page Settings';
 $string['display_welcome_text'] = "Display welcome text";
 $string['display_welcome_text_desc'] = "Uncheck to hide welcome text from Apollo and Learnbook template (Not applicable for Athena template).";
 $string['welcometitle'] = "Welcome Title";
-$string['welcometitle_desc'] = "Title to be showed for Welcome Message on login page.";
+$string['welcometitle_desc'] = "Title to be showed for Welcome Message on login page (maximum 30 characters allowed).";
 $string['welcomemsg'] = "Welcome Message";
 $string['welcomemsg_desc'] = "Welcome Message to be displayed on login page.";
 $string['welcome_text_location'] = "Welcome Text Location";
@@ -99,7 +99,7 @@ $string['learnbook_template'] = 'Learnbook Template';
 $string['athena_template'] = 'Athena Template';
 $string['apollo_template'] = 'Apollo Template';
 $string['logintitle'] = 'Login form title';
-$string['logintitle_desc'] = 'Title text to be displayed in the login form.';
+$string['logintitle_desc'] = 'Title text to be displayed in the login form (maximum 40 characters allowed).';
 $string['logintitle_default'] = 'Login';
 
 // Advanced Settings
