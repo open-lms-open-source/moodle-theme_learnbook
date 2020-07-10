@@ -120,3 +120,30 @@ $string['resetfields'] = 'Forgot password?';
 // The learnbook user profile settings
 $string['learnbook_user_profile'] = 'Enable Learnbook User Profile redirection';
 $string['learnbook_user_profile_desc'] = 'Toggle to turn on/off learnbook user profile redirection.';
+
+//footer settings
+$string['disabled'] = 'Disable';
+$string['moodledocs'] = 'Moodle Docs link';
+$string['moodledocsdesc'] = 'Display the Moodle Docs link in the footer.';
+$string['layoutcheck'] = 'Check your layout';
+$string['layoutcheckdesc'] = 'Use the tool below to check the number of blocks you have used and see a representation of your new layout.';
+$string['layoutcount1'] = 'You can set a maximum of ';
+$string['layoutcount2'] = ' block regions. You are currently using: ';
+$string['layoutaddcontent'] = 'Happy With Your Layout? Now Add Content to Your Blocks.';
+$string['layoutsettings'] = 'Footer Settings';
+$string['footersettings'] = 'Footer';
+$string['footersettingsheading'] = 'Set the content that should appear in the footer.';
+$string['footerdesc'] = 'Control the content that appears in the 4 footer sections of the page.';
+$string['showfooterblocks'] = 'Show Footnote Block';
+$string['showfooterblocksdesc'] = 'Show / hide the lower footerblock used for footnote / Moodle docs region';
+$string['moodlefooterinfo'] = 'Footer Login Details ';
+$string['moodlefooterinfodesc'] = 'Display the login information in the footer.';
+$string['footerlayoutrow'] = 'Footer Layout Builder';
+$string['footerlayoutrowdesc'] = 'Design your layout for footer block regions.';
+$string['footnote'] = 'Footnote';
+$string['footnotedesc'] = 'Add text to the footer.';
+$string['footercontent'] = 'Footer Content Section ';
+$string['footercontentdesc'] = 'Add content to footer section ';
+$string['hide'] = 'Hide';
+$string['show'] = 'Show';
+

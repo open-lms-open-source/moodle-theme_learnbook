@@ -41,6 +41,23 @@ $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
+//footer
+$layoutSettings = get_config('theme_learnbook');
+$layoutSettings->row1_isDisabled = ($layoutSettings->footerlayoutrow1 == '0-0-0-0') ? true : false;
+$layoutSettings->row1_is1        = ($layoutSettings->footerlayoutrow1 == '12-0-0-0') ? true : false;
+$layoutSettings->row1_is66       = ($layoutSettings->footerlayoutrow1 == '6-6-0-0') ? true : false;
+$layoutSettings->row1_is444      = ($layoutSettings->footerlayoutrow1 == '4-4-4-0') ? true : false;
+$layoutSettings->row1_is3333     = ($layoutSettings->footerlayoutrow1 == '3-3-3-3') ? true : false;
+$layoutSettings->row1_is633      = ($layoutSettings->footerlayoutrow1 == '6-3-3-0') ? true : false;
+$layoutSettings->row1_is336      = ($layoutSettings->footerlayoutrow1 == '3-3-6-0') ? true : false;
+$layoutSettings->row1_is363      = ($layoutSettings->footerlayoutrow1 == '3-6-3-0') ? true : false;
+$layoutSettings->row1_is48       = ($layoutSettings->footerlayoutrow1 == '4-8-0-0') ? true : false;
+$layoutSettings->row1_is84       = ($layoutSettings->footerlayoutrow1 == '8-4-0-0') ? true : false;
+$layoutSettings->row1_is39       = ($layoutSettings->footerlayoutrow1 == '3-9-0-0') ? true : false;
+$layoutSettings->row1_is93       = ($layoutSettings->footerlayoutrow1 == '9-3-0-0') ? true : false;
+$layoutSettings->row1_is57       = ($layoutSettings->footerlayoutrow1 == '5-7-0-0') ? true : false;
+$layoutSettings->row1_is75       = ($layoutSettings->footerlayoutrow1 == '7-5-0-0') ? true : false;
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -49,7 +66,8 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes,
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
-    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
+    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
+    'layoutSettings' => $layoutSettings
 ];
 
 $nav = $PAGE->flatnav;
