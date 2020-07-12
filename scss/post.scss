@@ -1150,6 +1150,12 @@ ul.pagination {
   border-color: $headercolor !important;
 }
 
+.fstResultItem.fstFocused {
+  color: $headercolor !important;
+  background-color: $headertextcolor !important;
+  border-color: $headercolor !important;
+}
+
 //block_lb_profile section
 .block_lb_profile {
   #lb-profile-tabs-courses, #lb-profile-tabs-programs, #lb-profile-tabs-skills {
