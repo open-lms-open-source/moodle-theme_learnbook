@@ -342,13 +342,11 @@ if ($ADMIN->fulltree) {
     $page->add(new admin_setting_heading('theme_learnbook_footer', get_string('footersettings', 'theme_learnbook'),
         format_text(get_string('footersettingsheading', 'theme_learnbook'), FORMAT_MARKDOWN)));
 
-    // Show moodle docs link.
-    $name = 'theme_learnbook/moodledocs';
-    $title = get_string('moodledocs', 'theme_learnbook');
-    $description = get_string('moodledocsdesc', 'theme_learnbook');
-    $default = true;
-    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
-    $setting->set_updatedcallback('theme_reset_all_caches');
+    // Show Footer blocks.
+    $name = 'theme_learnbook/showfooterblocks';
+    $title = get_string('showfooterblocks', 'theme_learnbook');
+    $description = get_string('showfooterblocksdesc', 'theme_learnbook');
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 1);
     $page->add($setting);
 
     // Show moodle login info
@@ -360,12 +358,13 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-
-    // Show Footer blocks.
-    $name = 'theme_learnbook/showfooterblocks';
-    $title = get_string('showfooterblocks', 'theme_learnbook');
-    $description = get_string('showfooterblocksdesc', 'theme_learnbook');
-    $setting = new admin_setting_configcheckbox($name, $title, $description, 1);
+    // Show moodle docs link.
+    $name = 'theme_learnbook/moodledocs';
+    $title = get_string('moodledocs', 'theme_learnbook');
+    $description = get_string('moodledocsdesc', 'theme_learnbook');
+    $default = true;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     $totalblocks = 0;
@@ -407,6 +406,14 @@ if ($ADMIN->fulltree) {
     $page->add(new admin_setting_heading('theme_learnbook_footerlayoutaddcontent', get_string('layoutaddcontent', 'theme_learnbook'),
         ''));
 
+    // Footnote.
+    $name = 'theme_learnbook/footnote';
+    $title = get_string('footnote', 'theme_learnbook');
+    $description = get_string('footnotedesc', 'theme_learnbook');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $page->add($setting);
+
     for ($i = 1; $i <= 4; $i++) {
         $name = 'theme_learnbook/footer' . $i . 'content';
         $title = get_string('footercontent', 'theme_learnbook') . $i;
@@ -415,14 +422,6 @@ if ($ADMIN->fulltree) {
         $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
         $page->add($setting);
     }
-
-    // Footnote.
-    $name = 'theme_learnbook/footnote';
-    $title = get_string('footnote', 'theme_learnbook');
-    $description = get_string('footnotedesc', 'theme_learnbook');
-    $default = '';
-    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
-    $page->add($setting);
 
     $settings->add($page);
 
