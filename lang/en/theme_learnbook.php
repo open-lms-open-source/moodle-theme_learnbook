@@ -130,6 +130,7 @@ $string['layoutcheckdesc'] = 'Use the tool below to check the number of blocks y
 $string['layoutcount1'] = 'You can set a maximum of ';
 $string['layoutcount2'] = ' block regions. You are currently using: ';
 $string['layoutaddcontent'] = 'Happy With Your Layout? Now Add Content to Your Blocks.';
+$string['layoutaddcontentdesc'] = 'Please use html if you want to customise your text.';
 $string['layoutsettings'] = 'Footer Settings';
 $string['footersettings'] = 'Footer';
 $string['footersettingsheading'] = 'Set the content that should appear in the footer.';

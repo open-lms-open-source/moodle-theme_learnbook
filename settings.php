@@ -346,7 +346,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_learnbook/showfooterblocks';
     $title = get_string('showfooterblocks', 'theme_learnbook');
     $description = get_string('showfooterblocksdesc', 'theme_learnbook');
-    $setting = new admin_setting_configcheckbox($name, $title, $description, 1);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
     $page->add($setting);
 
     // Show moodle login info
@@ -404,14 +404,14 @@ if ($ADMIN->fulltree) {
     $page->add(new admin_setting_heading('theme_learnbook_footerlayoutbuilder', '', $imgblder));
 
     $page->add(new admin_setting_heading('theme_learnbook_footerlayoutaddcontent', get_string('layoutaddcontent', 'theme_learnbook'),
-        ''));
+        get_string('layoutaddcontentdesc', 'theme_learnbook')));
 
     // Footnote.
     $name = 'theme_learnbook/footnote';
     $title = get_string('footnote', 'theme_learnbook');
     $description = get_string('footnotedesc', 'theme_learnbook');
     $default = '';
-    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
     $page->add($setting);
 
     for ($i = 1; $i <= 4; $i++) {
@@ -419,7 +419,7 @@ if ($ADMIN->fulltree) {
         $title = get_string('footercontent', 'theme_learnbook') . $i;
         $description = get_string('footercontentdesc', 'theme_learnbook') . $i;
         $default = '';
-        $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+        $setting = new admin_setting_configtextarea($name, $title, $description, $default);
         $page->add($setting);
     }
 
