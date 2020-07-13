@@ -17,7 +17,7 @@
 {{!
     Page footer.
 }}
-<footer id="page-footer" class="pt-2 bg-dark text-light">
+<footer id="page-footer" class="py-3 bg-dark text-light">
     <div class="container">
             {{#layoutSettings.footerlayoutrow1}}
                 <div class="row">
@@ -252,19 +252,19 @@
             {{/layoutSettings.footerlayoutrow1}}
         <div class="row">
             {{#layoutSettings.moodledocs}}
-                <div class="col-md-3 text-center">
+                <div class="col-md-4 text-center">
                     {{{ output.page_doc_link }}}
                 </div>
             {{/layoutSettings.moodledocs}}
 
             {{#layoutSettings.moodlefooterinfo}}
-                <div class="col-md-5 text-center">
+                <div class="col-md-4 text-center">
                     {{{ output.login_info }}}
                 </div>
             {{/layoutSettings.moodlefooterinfo}}
 
             {{#layoutSettings.showfooterblocks}}
-                <div class="col-md-4 text-center">
+                <div class="col-md-4">
                     {{{layoutSettings.footnote}}}
                 </div>
             {{/layoutSettings.showfooterblocks}}
