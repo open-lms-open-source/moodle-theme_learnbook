@@ -118,7 +118,7 @@
                         </div>
                     {{/welcome_text_left}}
                 <div class="col-md-6 col-12" id="login-form-container">
-                <div class="login-form-body">
+                <div class="login-form-body mb-4">
                     {{#error}}
                         <div class="loginerrors mt-1">
                             <a href="#" id="loginerrormessage" class="accesshide">{{error}}</a>
@@ -175,7 +175,7 @@
 
                 </div>
 
-                <div class="mt-4 mb-4 login-form-alternative-methods"{{^hasidentityproviders}}
+                <div class="mb-4 login-form-alternative-methods"{{^hasidentityproviders}}
                      style="display:none;"{{/hasidentityproviders}}>
                     <div class="mb-3 ml-1 text-left" id="login-form-or">{{#str}} or, theme_learnbook {{/str}}</div>
                     {{#hasidentityproviders}}
