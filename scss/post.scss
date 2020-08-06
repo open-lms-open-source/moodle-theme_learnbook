@@ -1166,12 +1166,13 @@ ul.pagination {
 
 //block_lb_profile section
 .block_lb_profile {
-  #lb-profile-tabs-courses, #lb-profile-tabs-programs, #lb-profile-tabs-skills {
+  #lb-profile-tabs-courses, #lb-profile-tabs-programs, #lb-profile-tabs-skills, #lb-profile-tabs-certs {
     background-color: $headertextcolor !important;
     color: $headercolor !important;
   }
 
-  #myprofile-coursestable-container, #myprofile-programtable-container, #myprofile-skilltable-container {
+  #myprofile-coursestable-container, #myprofile-programtable-container,
+  #myprofile-skilltable-container, #myprofile-certificatetable-container {
     tr:hover:not(.lb_user_report_header) {
       background-color: lighten($headertextcolor, 60%) !important;
     }
@@ -1280,6 +1281,11 @@ ul.pagination {
   //  display: none;
   //}
 
+  .learner-dashboard-content-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 }
 
 @media only screen and (min-width: 421px) and (max-width: 575px) {
@@ -1326,6 +1332,11 @@ ul.pagination {
   //#region-right-menu {
   //  display: none;
   //}
+  .learner-dashboard-content-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
@@ -1361,6 +1372,14 @@ ul.pagination {
   //#region-right-menu {
   //  display: none;
   //}
+  .learner-dashboard-content-section {
+    padding-left: 0;
+    padding-right: 0;
+    .card-body {
+      padding-left: 0 !important;
+    }
+  }
+
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1398,6 +1417,11 @@ ul.pagination {
   //#region-right-menu {
   //  display: none;
   //}
+  .learner-dashboard-content-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1449px) {

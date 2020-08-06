@@ -133,9 +133,11 @@ function routes() {
     $theme = theme_config::load('learnbook');
     $routes['/user/view.php'] = '/local/lb_learner_dashboard/index.php';
     $routes['/user/profile.php'] = '/local/lb_learner_dashboard/index.php';
+    $routes['/local/profile/index.php'] = '/local/lb_learner_dashboard/';
     if (empty($theme->settings->learnbook_user_profile)) {
         unset($routes['/user/view.php']);
         unset($routes['/user/profile.php']);
+        unset($routes['/local/profile/index.php']);
     }
     if (isset($routes[$_SERVER['SCRIPT_NAME']])) {
         $uri = $CFG->wwwroot . $routes[$_SERVER['SCRIPT_NAME']]. '?'.$_SERVER['QUERY_STRING'];

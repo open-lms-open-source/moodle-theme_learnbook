@@ -24,48 +24,51 @@
 
 
 defined('MOODLE_INTERNAL') || die();
+
+require_once(__DIR__.'/libs/admin_confightmleditor.php');
+
 global $OUTPUT, $PAGE;
-                                                                                  
-if ($ADMIN->fulltree) {                                                                                                             
- 
-    $settings = new theme_boost_admin_settingspage_tabs('themesettinglearnbook', get_string('configtitle', 'theme_learnbook'));             
-    $page = new admin_settingpage('theme_learnbook_general', get_string('generalsettings', 'theme_learnbook'));    
-       
- 
+
+if ($ADMIN->fulltree) {
+
+    $settings = new theme_boost_admin_settingspage_tabs('themesettinglearnbook', get_string('configtitle', 'theme_learnbook'));
+    $page = new admin_settingpage('theme_learnbook_general', get_string('generalsettings', 'theme_learnbook'));
+
+
     $name = 'theme_learnbook/preset';
     $title = get_string('preset', 'theme_learnbook', null, true);
     $description = get_string('preset_desc', 'theme_learnbook', null, true);
-    $default = 'default.scss';                                                                                                  
-                                                                               
-    $context = context_system::instance();                                                                                          
-    $fs = get_file_storage();                                                                                                       
-    $files = $fs->get_area_files($context->id, 'theme_learnbook', 'preset', 0, 'itemid, filepath, filename', false);                    
- 
-    $choices = [];                                                                                                                  
-    foreach ($files as $file) {                                                                                                     
-        $choices[$file->get_filename()] = $file->get_filename();                                                                    
-    }                                                                                                                               
+    $default = 'default.scss';
 
-    $choices['default.scss'] = 'default.scss';                                                                                      
-    $choices['plain.scss'] = 'plain.scss';                                                                                          
- 
-    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);                                     
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
+    $context = context_system::instance();
+    $fs = get_file_storage();
+    $files = $fs->get_area_files($context->id, 'theme_learnbook', 'preset', 0, 'itemid, filepath, filename', false);
+
+    $choices = [];
+    foreach ($files as $file) {
+        $choices[$file->get_filename()] = $file->get_filename();
+    }
+
+    $choices['default.scss'] = 'default.scss';
+    $choices['plain.scss'] = 'plain.scss';
+
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    $name = 'theme_learnbook/presetfiles';                                                                                              
-    $title = get_string('presetfiles','theme_learnbook');                                                                               
-    $description = get_string('presetfiles_desc', 'theme_learnbook');                                                                   
- 
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'preset', 0,                                         
-        array('maxfiles' => 20, 'accepted_types' => array('.scss')));                                                               
-    $page->add($setting);     
- 
-    $name = 'theme_learnbook/brandcolor';                                                                                               
-    $title = get_string('brandcolor', 'theme_learnbook');                                                                               
-    $description = get_string('brandcolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
+    $name = 'theme_learnbook/presetfiles';
+    $title = get_string('presetfiles','theme_learnbook');
+    $description = get_string('presetfiles_desc', 'theme_learnbook');
+
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'preset', 0,
+        array('maxfiles' => 20, 'accepted_types' => array('.scss')));
+    $page->add($setting);
+
+    $name = 'theme_learnbook/brandcolor';
+    $title = get_string('brandcolor', 'theme_learnbook');
+    $description = get_string('brandcolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     //$settings->add($page);
 
@@ -79,120 +82,120 @@ if ($ADMIN->fulltree) {
     $settings->add($page);
 
     $page = new admin_settingpage('theme_learnbook_common', get_string('commonsettings', 'theme_learnbook'));
-    
-    $name = 'theme_learnbook/headercolor';                                                                                               
-    $title = get_string('headercolor', 'theme_learnbook');                                                                               
-    $description = get_string('headercolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
-    
+
+    $name = 'theme_learnbook/headercolor';
+    $title = get_string('headercolor', 'theme_learnbook');
+    $description = get_string('headercolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     $name = 'theme_learnbook/headertextcolor';
     $title = get_string('headertextcolor', 'theme_learnbook');
     $description = get_string('headertextcolor_desc', 'theme_learnbook');
     $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
-    
+
 //    $name = 'theme_learnbook/leftmenuheadercolor';
 //    $title = get_string('leftmenuheadercolor', 'theme_learnbook');
 //    $description = get_string('leftmenuheadercolor_desc', 'theme_learnbook');
 //    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
 //    $setting->set_updatedcallback('theme_reset_all_caches');
 //    $page->add($setting);
-    
+
 //    $name = 'theme_learnbook/leftmenuheadertextcolor';
 //    $title = get_string('leftmenuheadertextcolor', 'theme_learnbook');
 //    $description = get_string('leftmenuheadertextcolor_desc', 'theme_learnbook');
 //    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
 //    $setting->set_updatedcallback('theme_reset_all_caches');
 //    $page->add($setting);
-    
-    $name = 'theme_learnbook/leftmenuitemhovercolor';                                                                                               
-    $title = get_string('leftmenuitemhovercolor', 'theme_learnbook');                                                                               
-    $description = get_string('leftmenuitemhovercolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
-    
-    $name = 'theme_learnbook/leftmenuitemstextcolor';                                                                                               
-    $title = get_string('leftmenuitemstextcolor', 'theme_learnbook');                                                                               
-    $description = get_string('leftmenuitemstextcolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
-    
-    $name = 'theme_learnbook/leftmenumainitemcolor';                                                                                               
-    $title = get_string('leftmenumainitemcolor', 'theme_learnbook');                                                                               
-    $description = get_string('leftmenumainitemcolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting);    
-    
-    $name = 'theme_learnbook/leftmenusubitemcolor';                                                                                               
-    $title = get_string('leftmenusubitemcolor', 'theme_learnbook');                                                                               
-    $description = get_string('leftmenusubitemcolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting);  
-    
-    $name = 'theme_learnbook/footercolor';                                                                                               
-    $title = get_string('footercolor', 'theme_learnbook');                                                                               
-    $description = get_string('footercolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting);  
-    
-    
-    $name = 'theme_learnbook/sectionheadercolor';                                                                                               
-    $title = get_string('sectionheadercolor', 'theme_learnbook');                                                                               
-    $description = get_string('sectionheadercolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
-    
+
+    $name = 'theme_learnbook/leftmenuitemhovercolor';
+    $title = get_string('leftmenuitemhovercolor', 'theme_learnbook');
+    $description = get_string('leftmenuitemhovercolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $name = 'theme_learnbook/leftmenuitemstextcolor';
+    $title = get_string('leftmenuitemstextcolor', 'theme_learnbook');
+    $description = get_string('leftmenuitemstextcolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $name = 'theme_learnbook/leftmenumainitemcolor';
+    $title = get_string('leftmenumainitemcolor', 'theme_learnbook');
+    $description = get_string('leftmenumainitemcolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $name = 'theme_learnbook/leftmenusubitemcolor';
+    $title = get_string('leftmenusubitemcolor', 'theme_learnbook');
+    $description = get_string('leftmenusubitemcolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $name = 'theme_learnbook/footercolor';
+    $title = get_string('footercolor', 'theme_learnbook');
+    $description = get_string('footercolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+
+    $name = 'theme_learnbook/sectionheadercolor';
+    $title = get_string('sectionheadercolor', 'theme_learnbook');
+    $description = get_string('sectionheadercolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     /*
     $name = 'theme_learnbook/sectionhovercolor';
-    $title = get_string('sectionhovercolor', 'theme_learnbook');                                                                               
-    $description = get_string('sectionhovercolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
+    $title = get_string('sectionhovercolor', 'theme_learnbook');
+    $description = get_string('sectionhovercolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     */
-    
-    $name = 'theme_learnbook/coursetilecolor';                                                                                               
-    $title = get_string('coursetilecolor', 'theme_learnbook');                                                                               
-    $description = get_string('coursetilecolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
-    
-    $name = 'theme_learnbook/coursetiletextcolor';                                                                                               
-    $title = get_string('coursetiletextcolor', 'theme_learnbook');                                                                               
-    $description = get_string('coursetiletextcolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
-    
-    $name = 'theme_learnbook/coursebtncolor';                                                                                               
-    $title = get_string('coursebtncolor', 'theme_learnbook');                                                                               
-    $description = get_string('coursebtncolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
-    
-    $name = 'theme_learnbook/coursebtnhovercolor';                                                                                               
-    $title = get_string('coursebtnhovercolor', 'theme_learnbook');                                                                               
-    $description = get_string('coursebtnhovercolor_desc', 'theme_learnbook');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting); 
-    
-    
-    $settings->add($page);           
-    
+
+    $name = 'theme_learnbook/coursetilecolor';
+    $title = get_string('coursetilecolor', 'theme_learnbook');
+    $description = get_string('coursetilecolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $name = 'theme_learnbook/coursetiletextcolor';
+    $title = get_string('coursetiletextcolor', 'theme_learnbook');
+    $description = get_string('coursetiletextcolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $name = 'theme_learnbook/coursebtncolor';
+    $title = get_string('coursebtncolor', 'theme_learnbook');
+    $description = get_string('coursebtncolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $name = 'theme_learnbook/coursebtnhovercolor';
+    $title = get_string('coursebtnhovercolor', 'theme_learnbook');
+    $description = get_string('coursebtnhovercolor_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+
+    $settings->add($page);
+
     $page = new admin_settingpage('theme_learnbook_logo', get_string('logosettings', 'theme_learnbook'));
-    
+
     $title = get_string('logo', 'admin');
     $description = get_string('logo_desc', 'admin');
     $setting = new admin_setting_configstoredfile('core_admin/logo', $title, $description, 'logo', 0,
@@ -213,9 +216,9 @@ if ($ADMIN->fulltree) {
         ['maxfiles' => 1, 'accepted_types' => ['.jpg', '.png', '.ico']]);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
-    
-    
-    $settings->add($page);     
+
+
+    $settings->add($page);
 
     //login page settings
     $page = new admin_settingpage('theme_learnbook_login',
@@ -283,14 +286,14 @@ if ($ADMIN->fulltree) {
         get_string('welcometitle', 'theme_learnbook'),
         get_string('welcometitle_desc', 'theme_learnbook'),
         get_string('welcometitle', 'theme_learnbook'), PARAM_RAW);
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting);  
-       
-    $setting = new admin_setting_confightmleditor('theme_learnbook/welcomemsg',                                                              
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $setting = new admin_setting_confightmleditor('theme_learnbook/welcomemsg',
         get_string('welcomemsg', 'theme_learnbook'),
         get_string('welcomemsg_desc', 'theme_learnbook'),
         get_string('welcomemsg', 'theme_learnbook'), PARAM_RAW);
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
+    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
 
@@ -302,8 +305,8 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-       
-    $name = 'theme_learnbook/slideshow';            
+
+    $name = 'theme_learnbook/slideshow';
     $title = get_string('slideshow', 'theme_learnbook');
     $description = get_string('slideshowdesc', 'theme_learnbook');
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'slideshow', 0,
@@ -411,7 +414,7 @@ if ($ADMIN->fulltree) {
     $title = get_string('footnote', 'theme_learnbook');
     $description = get_string('footnotedesc', 'theme_learnbook');
     $default = '';
-    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting = new learnbook_setting_confightmleditor($name, $title, $description, $default);
     $page->add($setting);
 
     for ($i = 1; $i <= 4; $i++) {
@@ -419,7 +422,7 @@ if ($ADMIN->fulltree) {
         $title = get_string('footercontent', 'theme_learnbook') . $i;
         $description = get_string('footercontentdesc', 'theme_learnbook') . $i;
         $default = '';
-        $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+        $setting = new learnbook_setting_confightmleditor($name, $title, $description, $default);
         $page->add($setting);
     }
 
@@ -427,19 +430,19 @@ if ($ADMIN->fulltree) {
 
 
     //advanced settings
-    $page = new admin_settingpage('theme_learnbook_advanced', get_string('advancedsettings', 'theme_learnbook'));                           
- 
-    $setting = new admin_setting_configtextarea('theme_learnbook/scsspre',                                                              
-        get_string('rawscsspre', 'theme_learnbook'), get_string('rawscsspre_desc', 'theme_learnbook'), '', PARAM_RAW);                      
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting);                                                                                                           
- 
-    $setting = new admin_setting_configtextarea('theme_learnbook/scss', get_string('rawscss', 'theme_learnbook'),                           
-        get_string('rawscss_desc', 'theme_learnbook'), '', PARAM_RAW);                                                                  
-    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting);                                                                                                           
- 
-    $settings->add($page);  
-    
-    
+    $page = new admin_settingpage('theme_learnbook_advanced', get_string('advancedsettings', 'theme_learnbook'));
+
+    $setting = new admin_setting_configtextarea('theme_learnbook/scsspre',
+        get_string('rawscsspre', 'theme_learnbook'), get_string('rawscsspre_desc', 'theme_learnbook'), '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $setting = new admin_setting_configtextarea('theme_learnbook/scss', get_string('rawscss', 'theme_learnbook'),
+        get_string('rawscss_desc', 'theme_learnbook'), '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $settings->add($page);
+
+
 }
