@@ -13,6 +13,9 @@ $coursetilecolor: #e1ecf5 !default;
 $coursetiletextcolor: #727477 !default;
 $footercolor: #00bada !default;
 
+#athena-loginform-container {
+  max-width: 60em;
+}
 
 .pagelayout-login {
   #login-left-container, #login-right-container {
