@@ -46,8 +46,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $PAGE->requires->jquery();
         $themename = $PAGE->theme->name;
         $PAGE->requires->js("/theme/$themename/javascript/tooltips.js");
-        
-        if ($PAGE->pagelayout == 'login') {            
+
+        if ($PAGE->pagelayout == 'login') {
             $PAGE->requires->js("/theme/$themename/javascript/jquery.backstretch.js", true);
             $PAGE->requires->js("/theme/$themename/javascript/login.js", true);
         }
@@ -83,7 +83,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     			}
     		}
         }
-        
+
     	$find = ['fa-bell ', 'fa-comment '];
     	$replace = ['fa-bell-o ', 'fa-commenting-o '];
     	$output = str_replace($find, $replace, $output);
@@ -152,6 +152,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
         } else if ($selected_template === 'Athena') {
             return $this->render_from_template('core/athena_loginform', $context);
         } else if ($selected_template === 'Learnbook') {
+            return $this->render_from_template('core/learnbook_loginform', $context);
+        } else {
             return $this->render_from_template('core/learnbook_loginform', $context);
         }
     }
