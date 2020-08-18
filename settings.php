@@ -436,6 +436,14 @@ if ($ADMIN->fulltree) {
 //
 //    $settings->add($page);
 
+    //footer
+    $page = new admin_settingpage('theme_learnbook_footer', get_string('layoutsettings', 'theme_learnbook'));
+    $footer_url = $CFG->wwwroot.'/admin/settings.php?section=theme_learnbook_layout';
+    $footer_string_heml = '<a href='.$footer_url.'>Click here</a>';
+    $footer_string = $footer_string_heml.' to customise the footer.';
+    $page->add(new admin_setting_heading('theme_learnbook_footer_head', get_string('footersettings', 'theme_learnbook'), $footer_string));
+    $settings->add($page);
+
 
     //advanced settings
     $page = new admin_settingpage('theme_learnbook_advanced', get_string('advancedsettings', 'theme_learnbook'));
