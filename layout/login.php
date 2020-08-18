@@ -35,8 +35,8 @@ $slideshowImgs = array();
 foreach ($files as $file) {
     $filename = $file->get_filename();
     if($filename != ".")
-    {        
-        $url = moodle_url::make_pluginfile_url($file->get_contextid(), $file->get_component(), $file->get_filearea(), $file->get_itemid(), $file->get_filepath(), $file->get_filename());        
+    {
+        $url = moodle_url::make_pluginfile_url($file->get_contextid(), $file->get_component(), $file->get_filearea(), $file->get_itemid(), $file->get_filepath(), $file->get_filename());
         $slideshowImgs[] = preg_replace('|^https?://|i', '//', $url->out(false));
     }
 }
@@ -66,6 +66,8 @@ $templatecontext = [
 $selected_template = get_config('theme_learnbook', 'login_page_template');
 if ($selected_template === 'Learnbook') {
     echo $OUTPUT->render_from_template('theme_learnbook/learnbook_login', $templatecontext);
-} else {
+} else if ($selected_template === 'Apollo' || $selected_template === 'Athena') {
     echo $OUTPUT->render_from_template('theme_learnbook/login', $templatecontext);
+} else {
+    echo $OUTPUT->render_from_template('theme_learnbook/learnbook_login', $templatecontext);
 }
