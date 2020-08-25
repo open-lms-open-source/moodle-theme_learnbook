@@ -263,7 +263,7 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configselect('theme_learnbook/login_page_template',
         get_string('login_page_template', 'theme_learnbook'),
         $template_description,
-        'Learnbook',
+        'Apollo',
         array('Learnbook' => get_string('learnbook_template', 'theme_learnbook'),
               'Athena' => get_string('athena_template', 'theme_learnbook'),
               'Apollo' => get_string('apollo_template', 'theme_learnbook')));

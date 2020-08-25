@@ -56,7 +56,7 @@ function theme_learnbook_get_main_scss_content($theme) {
     } else if ($selected_template === 'Learnbook') {
         $login = file_get_contents($CFG->dirroot . '/theme/learnbook/scss/learnbook_login.scss');
     } else {
-        $login = file_get_contents($CFG->dirroot . '/theme/learnbook/scss/learnbook_login.scss');
+        $login = file_get_contents($CFG->dirroot . '/theme/learnbook/scss/apollo_login.scss');
     }
 
     return $pre . "\n" . $scss . "\n" . $post . "\n" . $login;
