@@ -69,5 +69,5 @@ if ($selected_template === 'Learnbook') {
 } else if ($selected_template === 'Apollo' || $selected_template === 'Athena') {
     echo $OUTPUT->render_from_template('theme_learnbook/login', $templatecontext);
 } else {
-    echo $OUTPUT->render_from_template('theme_learnbook/learnbook_login', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_learnbook/login', $templatecontext);
 }
