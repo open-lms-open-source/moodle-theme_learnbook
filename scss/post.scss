@@ -64,7 +64,7 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
 
 .right-menu-icon-container {
     font-size: 1.5em;
-    color: #fff;
+    color: $headercolor;
     background-color: $headertextcolor;
     right: 372px;
     width: 1.5em;
@@ -78,7 +78,7 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
 }
 
 .left-menu-icon-container {
-    color: #fff;
+    color: $headercolor;
     background-color: $headertextcolor;
     width: 1em;
     border-top-left-radius: 1em;
