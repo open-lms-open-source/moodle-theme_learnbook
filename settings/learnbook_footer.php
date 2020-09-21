@@ -123,7 +123,7 @@ $name = 'theme_learnbook/footnote';
 $title = get_string('footnote', 'theme_learnbook');
 $description = get_string('footnotedesc', 'theme_learnbook');
 $default = '';
-$setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+$setting = new learnbook_setting_confightmleditor($name, $title, $description, $default);
 $page->add($setting);
 
 for ($i = 1; $i <= 4; $i++) {
@@ -131,7 +131,7 @@ for ($i = 1; $i <= 4; $i++) {
     $title = get_string('footercontent', 'theme_learnbook') . $i;
     $description = get_string('footercontentdesc', 'theme_learnbook') . $i;
     $default = '';
-    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting = new learnbook_setting_confightmleditor($name, $title, $description, $default);
     $page->add($setting);
 }
 

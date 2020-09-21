@@ -16,18 +16,18 @@ $coursetiletextcolor: #727477 !default;
 $footercolor: #00bada !default;
 
 body {
-  background-color: #f4f4f4;
-  font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    font-family: 'Open Sans', sans-serif;
 
-  &.notloggedin {
-    div[data-region="drawer-toggle"] {
-      display: none !important;
-    }
+    &.notloggedin {
+        div[data-region="drawer-toggle"] {
+            display: none !important;
+        }
 
-    #nav-drawer {
-      display: none !important;
+        #nav-drawer {
+            display: none !important;
+        }
     }
-  }
 }
 
 //body.drawer-open-left {
@@ -40,102 +40,106 @@ body {
 
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .path-calendar .maincalendar .calendar-controls .current, .h3, .h4, .h5, .h6 {
-  margin-bottom: .5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
 }
 
 h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 #region-main-settings-menu.has-blocks, #region-main.has-blocks {
-  display: inline-block;
-  width: 100%;
+    display: inline-block;
+    width: 100%;
 }
 
 #region-right-menu {
-  border-left: 0.2em solid #DEDEDE;
-  padding-left: 1.5em;
-  height: 100%;
+    border-left: 0.2em solid #DEDEDE;
+    padding-left: 1.5em;
+    height: 100%;
 }
 
 .right-menu-icon-container {
-  font-size: 1.5em;
-  color: #fff;
-  background-color: $headertextcolor;
-  right: 372px;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 1em;
-  padding-left: 0.5em;
-  position: fixed;
-  top: 55%;
-  transform: translateY(-55%);
-  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+    font-size: 1.5em;
+    color: #fff;
+    background-color: $headertextcolor;
+    right: 372px;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 1em;
+    padding-left: 0.5em;
+    position: fixed;
+    top: 55%;
+    transform: translateY(-55%);
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 }
 
 .left-menu-icon-container {
-  color: #fff;
-  background-color: $headertextcolor;
-  width: 1em;
-  border-top-left-radius: 1em;
-  border-bottom-left-radius: 1em;
-  margin-right: 0;
-  position: fixed;
-  top: 55%;
-  right: 0;
-  transform: translateY(-55%);
-  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+    color: #fff;
+    background-color: $headertextcolor;
+    width: 1em;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    margin-right: 0;
+    position: fixed;
+    top: 55%;
+    right: 0;
+    transform: translateY(-55%);
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 }
 
 //navbar brand logo
 .navbar-brand {
-  display: inline-block;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-right: 1rem;
-  font-size: 1.171875rem;
-  line-height: inherit;
-  white-space: nowrap; }
+    display: inline-block;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 1rem;
+    font-size: 1.171875rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
 .navbar-brand:hover, .navbar-brand:focus {
-  text-decoration: none; }
+    text-decoration: none;
+}
 
 nav.navbar .logo img {
-  max-height: 41px; }
+    max-height: 41px;
+}
 
 #nav-drawer .list-group-item.active + .list-group-item {
-  border-top: 1px solid rgba(0, 0, 0, .125);
+    border-top: 1px solid rgba(0, 0, 0, .125);
 }
 
 .message-app.drawer {
-  z-index: 1020;
-  position: fixed;
-  top: 63px;
-  right: 0;
-  height: calc(100% - 63px);
-  width: 320px;
-  -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, .08);
-  box-shadow: -2px 2px 4px rgba(0, 0, 0, .08);
+    z-index: 1020;
+    position: fixed;
+    top: 63px;
+    right: 0;
+    height: calc(100% - 63px);
+    width: 320px;
+    -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, .08);
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, .08);
 }
 
 .message-app {
-  display: flex;
-  flex-direction: column;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+    background-color: #f8f9fa !important;
 }
 
 .message-app.hidden {
-  display: block;
-  right: -320px;
+    display: block;
+    right: -320px;
 }
 
 //.message-app.drawer.hidden{
@@ -149,69 +153,69 @@ nav.navbar .logo img {
 
 //Hack added to cater for weird spacing on the calendar export page inherited from Boost.
 body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
-  display: none;
+    display: none;
 }
 
 [role="main"] {
-  -webkit-user-select: unset;
-  -moz-user-select: unset;
-  -ms-user-select: unset;
-  user-select: unset;
+    -webkit-user-select: unset;
+    -moz-user-select: unset;
+    -ms-user-select: unset;
+    user-select: unset;
 }
 
 #page-header-new {
-  .card-block {
-    padding: 1.25rem;
-  }
+    .card-block {
+        padding: 1.25rem;
+    }
 }
 
 .navbar {
-  max-height: 70px;
-  background-color: $headercolor !important;
+    max-height: 70px;
+    background-color: $headercolor !important;
 
-  &.navbar-full {
-    background: $footercolor;
-  }
-
-  .logo img {
-    max-height: 65px;
-  }
-
-  .site-name {
-    display: none !important;
-  }
-
-  .usermenu {
-    margin-left: 10px;
-  }
-
-  .usertext, .dropdown-toggle {
-    color: $headertextcolor !important;
-  }
-
-  .popover-region {
-    .icon, .ecommerce-icon-cart, .ecommerce-icon-heart {
-      color: $headertextcolor !important;
-      font-size: 23px;
+    &.navbar-full {
+        background: $footercolor;
     }
-  }
 
-  div[data-region="drawer-toggle"] {
-    button[data-action="toggle-drawer"] {
-      background-color: transparent !important;
-      border-color: transparent !important;
-      padding-left: 5px;
-
-      i {
-        font-size: 26px !important;
-        color: $headertextcolor;
-      }
-
-      &:focus {
-        box-shadow: none !important;
-      }
+    .logo img {
+        max-height: 65px;
     }
-  }
+
+    .site-name {
+        display: none !important;
+    }
+
+    .usermenu {
+        margin-left: 10px;
+    }
+
+    .usertext, .dropdown-toggle {
+        color: $headertextcolor !important;
+    }
+
+    .popover-region {
+        .icon, .ecommerce-icon-cart, .ecommerce-icon-heart {
+            color: $headertextcolor !important;
+            font-size: 23px;
+        }
+    }
+
+    div[data-region="drawer-toggle"] {
+        button[data-action="toggle-drawer"] {
+            background-color: transparent !important;
+            border-color: transparent !important;
+            padding-left: 5px;
+
+            i {
+                font-size: 26px !important;
+                color: $headertextcolor;
+            }
+
+            &:focus {
+                box-shadow: none !important;
+            }
+        }
+    }
 }
 
 //.navbar-expand {
@@ -223,1268 +227,1272 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
 //}
 
 .btn-primary, .btn-secondary {
-  color: #fff;
-  background-color: $sectionheadercolor;
-  border-color: $sectionheadercolor;
+    color: #fff;
+    background-color: $sectionheadercolor;
+    border-color: $sectionheadercolor;
 }
 
 .lb_courses_list_item {
-  background-color: $coursetilecolor !important;
+    background-color: $coursetilecolor !important;
 
-  .course-description {
-    color: $coursetiletextcolor !important;
-  }
+    .course-description {
+        color: $coursetiletextcolor !important;
+    }
 }
 
 #myteam-userscontainer {
-  .usercard {
-    &.grid-group-item {
-      .inner {
-        background-color: $coursetilecolor !important;
-      }
-    }
+    .usercard {
+        &.grid-group-item {
+            .inner {
+                background-color: $coursetilecolor !important;
+            }
+        }
 
-    &.list-group-item {
-      .inner {
-        background-color: $coursetilecolor !important;
-      }
+        &.list-group-item {
+            .inner {
+                background-color: $coursetilecolor !important;
+            }
+        }
     }
-  }
 }
 
 #local-myteam-container .btn-default {
-  background-color: $sectionheadercolor !important;
+    background-color: $sectionheadercolor !important;
 
-  .grid-icon.icon-selected, .list-icon.icon-selected, .cal-icon.icon-selected, .grid-icon:hover, .list-icon:hover, .cal-icon:hover {
-    background-color: #fff !important;
-    color: $sectionheadercolor !important;
-  }
+    .grid-icon.icon-selected, .list-icon.icon-selected, .cal-icon.icon-selected, .grid-icon:hover, .list-icon:hover, .cal-icon:hover {
+        background-color: #fff !important;
+        color: $sectionheadercolor !important;
+    }
 }
 
 #local-myteam-container .sectionheadercolor {
-  color: $headercolor !important;
-  background: $headertextcolor !important;
+    color: $headercolor !important;
+    background: $headertextcolor !important;
 }
 
 .enter-course-btn {
-  background-color: $coursebtncolor !important;
-  border-radius: 5px;
-  color: white;
-  border: none;
-  width: 110px;
-  max-width: 100%;
-  height: 100%;
-  padding: 5px;
-  font-size: 13px;
-  font-weight: 100;
+    background-color: $coursebtncolor !important;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    width: 110px;
+    max-width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 100;
 
-  &:hover {
-    background-color: $coursebtnhovercolor !important;
-    cursor: pointer;
-  }
+    &:hover {
+        background-color: $coursebtnhovercolor !important;
+        cursor: pointer;
+    }
 }
 
 .view-cert-btn {
-  background-color: $coursebtncolor !important;
-  border-radius: 5px;
-  color: white;
-  border: none;
-  width: 124px;
-  height: 30px;
-  font-size: 13px;
-  font-weight: 100;
-  margin-top: 15px;
-  margin-bottom: 20px;
-  outline: none;
+    background-color: $coursebtncolor !important;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    width: 124px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 100;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    outline: none;
 
-  &:hover {
-    background-color: $coursebtnhovercolor !important;
-  }
+    &:hover {
+        background-color: $coursebtnhovercolor !important;
+    }
 }
 
 .category-color {
-  height: 5px;
-  background-color: $sectionheadercolor !important;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+    height: 5px;
+    background-color: $sectionheadercolor !important;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 [data-region="drawer"] {
-  padding: 0 !important;
-  top: 63px;
-  width: 285px;
-  background-color: #eceeef;
-  //box-shadow: 5px 10px 8px #888888;
-  //transition: width 0.7s ease;
+    padding: 0 !important;
+    top: 63px;
+    width: 285px;
+    background-color: #eceeef;
+    //box-shadow: 5px 10px 8px #888888;
+    //transition: width 0.7s ease;
 }
 
 footer#page-footer {
-  background-color: $footercolor !important;
+    background-color: $footercolor !important;
 
-  .logininfo, .tool_usertours-resettourcontainer, .homelink, .tool_dataprivacy, a, .policiesfooter {
-    display: inline-block;
-    margin: 0 5px;
-  }
+    .logininfo, .tool_usertours-resettourcontainer, .homelink, .tool_dataprivacy, a, .policiesfooter {
+        display: inline-block;
+        margin: 0 5px;
+    }
 
-  .helplink {
-    display: inline-block;
-    margin: 0 5px 0 0;
-  }
+    .helplink {
+        display: inline-block;
+        margin: 0 5px 0 0;
+    }
 
-  .usertour {
-    display: block!important;
-    text-align: center;
-  }
+    .usertour {
+        display: block !important;
+        text-align: center;
+    }
 
-  div p {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+    div p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
-  .purgecaches {
-    display: none;
-  }
+    .purgecaches {
+        display: none;
+    }
 
 }
 
 body {
-  &#page-login-index:not(.drawer-open-left), &#page-login, &#page-login-signup {
-    margin: 0 !important;
-  }
+    &#page-login-index:not(.drawer-open-left), &#page-login, &#page-login-signup {
+        margin: 0 !important;
+    }
 
-  &:not(.drawer-open-left) {
-    margin-left: 60px;
-  }
+    &:not(.drawer-open-left) {
+        margin-left: 60px;
+    }
 
-  &:not(#page-mod-assign-grader) #page {
-    margin-top: 70px !important;
-  }
+    &:not(#page-mod-assign-grader) #page {
+        margin-top: 70px !important;
+    }
 }
 
 #page.container-fluid {
-  padding: 0 2rem;
+    padding: 0 2rem;
 }
 
 ul.pagination {
-  max-width: 100%;
-  overflow: auto;
+    max-width: 100%;
+    overflow: auto;
 }
 
 .admin_buttons {
-  padding: none !important;
+    padding: none !important;
 }
 
 .block_admin_buttons {
-  #accordion {
-    .card-header {
-      background-color: $sectionheadercolor !important;
-    }
+    #accordion {
+        .card-header {
+            background-color: $sectionheadercolor !important;
+        }
 
-    .card-block button.btn.btn-primary {
-      border: 1px solid $sectionheadercolor !important;
-      color: $headercolor !important;
+        .card-block button.btn.btn-primary {
+            border: 1px solid $sectionheadercolor !important;
+            color: $headercolor !important;
 
-      &:hover {
-        background-color: $sectionheadercolor !important;
-        color: #FFF !important;
-      }
+            &:hover {
+                background-color: $sectionheadercolor !important;
+                color: #FFF !important;
+            }
+        }
     }
-  }
 }
 
 .block_userscoursecompletion {
-  .sectionheadercolor, .paginationActive {
-    background-color: $sectionheadercolor !important;
-    color: #fff;
-  }
+    .sectionheadercolor, .paginationActive {
+        background-color: $sectionheadercolor !important;
+        color: #fff;
+    }
 }
 
 .block_lb_courses .sectionheadercolor, .block_lbmyteam .sectionheadercolor, .sectionheadercolor-class, .ticket-btn, .myprofile-coursestable .sectionheadercolor {
-  background-color: $sectionheadercolor !important;
-  color: #fff;
+    background-color: $sectionheadercolor !important;
+    color: #fff;
 }
 
 #page-course-view-topics {
-  .course-content {
-    ul.topics li.section {
-      padding-top: 1rem;
-    }
+    .course-content {
+        ul.topics li.section {
+            padding-top: 1rem;
+        }
 
-    .section-summary .section-title {
-      margin-bottom: 0;
+        .section-summary .section-title {
+            margin-bottom: 0;
+        }
     }
-  }
 }
 
 #page-local-learnbook-report-index {
-  #filter-block, #saved-reports-block {
-    .collapse {
-      padding: 15px;
+    #filter-block, #saved-reports-block {
+        .collapse {
+            padding: 15px;
+        }
+
+        .card {
+            border: 0;
+        }
     }
 
-    .card {
-      border: 0;
+    #filter-block {
+        #builder {
+            margin-right: 0;
+
+            .rules-group-header .btn-group {
+                margin-top: 5px;
+            }
+        }
     }
-  }
 
-  #filter-block {
-    #builder {
-      margin-right: 0;
+    #saved-reports-block {
+        overflow: auto;
 
-      .rules-group-header .btn-group {
-        margin-top: 5px;
-      }
+        table {
+            tr:first-child td {
+                border-top: 0;
+            }
+
+            td:first-child {
+                border-left: 0;
+            }
+
+            td:last-child {
+                border-right: 0;
+            }
+        }
     }
-  }
 
-  #saved-reports-block {
-    overflow: auto;
+    #local_learnbook_reportserverside_wrapper {
+        padding-top: 15px;
+        padding-bottom: 15px;
 
-    table {
-      tr:first-child td {
-        border-top: 0;
-      }
-
-      td:first-child {
-        border-left: 0;
-      }
-
-      td:last-child {
-        border-right: 0;
-      }
+        .btn-primary {
+            margin-left: 15px;
+            margin-bottom: 15px;
+        }
     }
-  }
 
-  #local_learnbook_reportserverside_wrapper {
-    padding-top: 15px;
-    padding-bottom: 15px;
-
-    .btn-primary {
-      margin-left: 15px;
-      margin-bottom: 15px;
+    .select2-container {
+        max-width: 100%;
     }
-  }
-
-  .select2-container {
-    max-width: 100%;
-  }
 }
 
 .block_lb_courses {
-  &.card {
-    margin-top: 0 !important;
-  }
-
-  .btn-cus:hover, .grid-icon.icon-selected, .list-icon.icon-selected, .cal-icon.icon-selected, .grid-icon:hover, .list-icon:hover, .cal-icon:hover {
-    background-color: #fff !important;
-    color: $sectionheadercolor !important;
-  }
-
-  #courses-row .header-bar {
-    height: 100% !important;
-    padding-bottom: 15px;
-    text-align: center;
-
-    .grid-list-icons {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-  }
-
-  .header-bar {
-    select {
-      option {
-        color: black;
-      }
-    }
-  }
-
-  .lb_courses_list {
-    .grid {
-      .course-title {
-        z-index: 1;
-      }
+    &.card {
+        margin-top: 0 !important;
     }
 
-    padding: 0;
-    margin-left: 0 !important;
-  }
-
-  .lb-courses-dropdown {
-    list-style: none;
-    padding: 2px 0;
-    margin: 0;
-    display: inline-block;
-    cursor: pointer;
-
-    .dropdown-caret {
-      margin-left: 10px;
+    .btn-cus:hover, .grid-icon.icon-selected, .list-icon.icon-selected, .cal-icon.icon-selected, .grid-icon:hover, .list-icon:hover, .cal-icon:hover {
+        background-color: #fff !important;
+        color: $sectionheadercolor !important;
     }
-  }
 
-  .lb-courses-dropdown-container {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+    #courses-row .header-bar {
+        height: 100% !important;
+        padding-bottom: 15px;
+        text-align: center;
+
+        .grid-list-icons {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+
+    .header-bar {
+        select {
+            option {
+                color: black;
+            }
+        }
+    }
+
+    .lb_courses_list {
+        .grid {
+            .course-title {
+                z-index: 1;
+            }
+        }
+
+        padding: 0;
+        margin-left: 0 !important;
+    }
+
+    .lb-courses-dropdown {
+        list-style: none;
+        padding: 2px 0;
+        margin: 0;
+        display: inline-block;
+        cursor: pointer;
+
+        .dropdown-caret {
+            margin-left: 10px;
+        }
+    }
+
+    .lb-courses-dropdown-container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
 #page-user-profile {
-  header .page-header-headings {
-    word-break: break-word;
-  }
+    header .page-header-headings {
+        word-break: break-word;
+    }
 }
 
 #page-local-menumanagement {
-  .col-form-label, .form-check {
-    justify-content: left !important;
-  }
+    .col-form-label, .form-check {
+        justify-content: left !important;
+    }
 
-  .nestable-lists .dd3-content .label-text {
-    overflow: hidden;
-    max-width: 55%;
-    display: inline-flex;
-    max-height: 18px;
-  }
+    .nestable-lists .dd3-content .label-text {
+        overflow: hidden;
+        max-width: 55%;
+        display: inline-flex;
+        max-height: 18px;
+    }
 
-  #user-menu {
-    border: 0;
-  }
+    #user-menu {
+        border: 0;
+    }
 }
 
 .page-link {
-  color: $sectionheadercolor;
+    color: $sectionheadercolor;
 }
 
 #nav-drawer {
-  &.closed {
-    left: 0 !important;
-    width: 60px;
-    overflow: hidden;
-    padding-left: 0;
-    padding-right: 0;
-    webkit-transition: .4s;
-    -moz-transition: .4s;
-    -o-transition: .4s;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-
-  .list-group .media-left {
-    display: none !important;
-  }
-
-  .list-group-item {
-    &:not([data-parent-key="myhome"]), &[data-key="sitesettings"] {
-      background-color: $leftmenusubitemcolor !important;
-      color: $leftmenuitemstextcolor !important;
+    &.closed {
+        left: 0 !important;
+        width: 60px;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+        webkit-transition: .4s;
+        -moz-transition: .4s;
+        -o-transition: .4s;
+        -webkit-transition: .4s;
+        transition: .4s;
     }
 
-    //&[data-key="learnbookpanel"] {
-    //    background-color: $leftmenuheadercolor !important;
-    //    color: $leftmenuheadertextcolor !important;
-    //}
-    &[data-isexpandable="1"] {
-      &:hover {
-        background-color: $leftmenuitemhovercolor !important;
-        font-weight: bold !important;
-      }
+    .list-group .media-left {
+        display: none !important;
+    }
 
-      &:focus {
+    .list-group-item {
+        &:not([data-parent-key="myhome"]), &[data-key="sitesettings"] {
+            background-color: $leftmenusubitemcolor !important;
+            color: $leftmenuitemstextcolor !important;
+        }
+
+        //&[data-key="learnbookpanel"] {
+        //    background-color: $leftmenuheadercolor !important;
+        //    color: $leftmenuheadertextcolor !important;
+        //}
+        &[data-isexpandable="1"] {
+            &:hover {
+                background-color: $leftmenuitemhovercolor !important;
+                font-weight: bold !important;
+            }
+
+            &:focus {
+                background-color: $leftmenumainitemcolor !important;
+                color: $leftmenuitemstextcolor !important;
+            }
+        }
+
+        &:hover:not([data-key="learnbookpanel"]) {
+            background-color: $leftmenuitemhovercolor !important;
+            font-weight: bold !important;
+        }
+
+        &:hover[data-key="learnbookpanel"] {
+            z-index: -1 !important;
+        }
+
+        &.active {
+            border: 1px solid rgba(0, 0, 0, .125) !important;
+        }
+    }
+
+    .list-group-item-action {
         background-color: $leftmenumainitemcolor !important;
         color: $leftmenuitemstextcolor !important;
-      }
-    }
 
-    &:hover:not([data-key="learnbookpanel"]) {
-      background-color: $leftmenuitemhovercolor !important;
-      font-weight: bold !important;
+        &:hover {
+            background-color: $leftmenuitemhovercolor !important;
+            font-weight: bold !important;
+        }
     }
-
-    &:hover[data-key="learnbookpanel"] {
-      z-index: -1 !important;
-    }
-
-    &.active {
-      border: 1px solid rgba(0, 0, 0, .125) !important;
-    }
-  }
-
-  .list-group-item-action {
-    background-color: $leftmenumainitemcolor !important;
-    color: $leftmenuitemstextcolor !important;
-
-    &:hover {
-      background-color: $leftmenuitemhovercolor !important;
-      font-weight: bold !important;
-    }
-  }
 }
 
 /* courses */
 
 .search-btn-custom {
-  border: none;
-  background: none;
-  color: white;
+    border: none;
+    background: none;
+    color: white;
 }
 
 .course-search-box::placeholder {
-  color: white;
+    color: white;
 }
 
 .course-search-box-custom {
-  &::placeholder {
-    color: white;
-  }
+    &::placeholder {
+        color: white;
+    }
 
-  border: none;
-  border-bottom: 2px solid white;
-  background: none;
-  color: white;
-  line-height: 20px;
-  margin-left: 6px;
-  outline: none;
-  width: 25%;
+    border: none;
+    border-bottom: 2px solid white;
+    background: none;
+    color: white;
+    line-height: 20px;
+    margin-left: 6px;
+    outline: none;
+    width: 25%;
 }
 
 .header-bar-1-custom {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 #coursesearch {
-  margin-top: 0;
-  text-align: left;
+    margin-top: 0;
+    text-align: left;
 }
 
 .course-header-bar {
-  height: 50px;
-  background-color: $headertextcolor;
+    height: 50px;
+    background-color: $headertextcolor;
 }
 
 .course_category_tree {
-  .category {
-    &.with_children {
-      &.collapsed > .info > .categoryname, > .info > .categoryname {
-        background-image: none !important;
-      }
+    .category {
+        &.with_children {
+            &.collapsed > .info > .categoryname, > .info > .categoryname {
+                background-image: none !important;
+            }
+        }
+
+        > .info > .categoryname {
+            background-image: none !important;
+            /*padding: 0px 20px !important;*/
+            margin: 0px;
+        }
+
+        &:not(.with_children) > .info > .categoryname:before {
+            font-family: FontAwesome;
+            content: '\f055';
+            font-style: normal;
+            font-weight: normal;
+            padding-right: 5px;
+            font-size: 15px;
+            visibility: hidden;
+        }
+
+        &.with_children {
+            &.collapsed > .info > .categoryname:before {
+                font-family: FontAwesome;
+                content: '\f055';
+                font-style: normal;
+                font-weight: normal;
+                padding-right: 5px;
+                font-size: 15px;
+                color: $sectionheadercolor;
+
+            }
+
+            > .info > .categoryname:before {
+                font-family: FontAwesome;
+                cursor: pointer;
+                content: '\f056';
+                font-style: normal;
+                font-weight: normal;
+                padding-right: 5px;
+                font-size: 15px;
+                color: $sectionheadercolor;
+
+            }
+        }
     }
 
-    > .info > .categoryname {
-      background-image: none !important;
-      /*padding: 0px 20px !important;*/
-      margin: 0px;
+    .categoryname {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 35px;
     }
 
-    &:not(.with_children) > .info > .categoryname:before {
-      font-family: FontAwesome;
-      content: '\f055';
-      font-style: normal;
-      font-weight: normal;
-      padding-right: 5px;
-      font-size: 15px;
-      visibility: hidden;
+    .subcategories .category .category-div {
+        &.even {
+            background-color: #fafafa;
+        }
+
+        height: 40px;
     }
-
-    &.with_children {
-      &.collapsed > .info > .categoryname:before {
-        font-family: FontAwesome;
-        content: '\f055';
-        font-style: normal;
-        font-weight: normal;
-        padding-right: 5px;
-        font-size: 15px;
-        color: $sectionheadercolor;
-
-      }
-
-      > .info > .categoryname:before {
-        font-family: FontAwesome;
-        cursor: pointer;
-        content: '\f056';
-        font-style: normal;
-        font-weight: normal;
-        padding-right: 5px;
-        font-size: 15px;
-        color: $sectionheadercolor;
-
-      }
-    }
-  }
-
-  .categoryname {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 35px;
-  }
-
-  .subcategories .category .category-div {
-    &.even {
-      background-color: #fafafa;
-    }
-
-    height: 40px;
-  }
 }
 
 .grey-bck {
-  background-color: #fafafa;
-  border-bottom: 1px solid rgba(140, 140, 140, 0.18);
+    background-color: #fafafa;
+    border-bottom: 1px solid rgba(140, 140, 140, 0.18);
 
-  &.first {
-    border-top: 1px solid rgba(140, 140, 140, 0.18);
-  }
+    &.first {
+        border-top: 1px solid rgba(140, 140, 140, 0.18);
+    }
 }
 
 .coursebox > .info > {
-  .coursename a {
-    background: none !important;
-    font-weight: 300;
-    font-size: 14px;
+    .coursename a {
+        background: none !important;
+        font-weight: 300;
+        font-size: 14px;
 
-    &:hover {
-      /*color : white;*/
-      text-decoration: none;
+        &:hover {
+            /*color : white;*/
+            text-decoration: none;
+        }
     }
-  }
 
-  .moreinfo i:hover {
-    /*color : white;*/
-  }
+    .moreinfo i:hover {
+        /*color : white;*/
+    }
 
-  .coursename a:before {
-    font-family: FontAwesome;
-    cursor: pointer;
-    content: '\f114';
-    font-style: normal;
-    font-weight: normal;
-    padding-right: 5px;
-    font-size: 15px;
-  }
+    .coursename a:before {
+        font-family: FontAwesome;
+        cursor: pointer;
+        content: '\f114';
+        font-style: normal;
+        font-weight: normal;
+        padding-right: 5px;
+        font-size: 15px;
+    }
 }
 
 .courses .coursebox:hover {
-  background-color: white !important;
-  -webkit-box-shadow: 2px 2px 10px 1px rgba(5, 5, 5, 0.5);
-  -moz-box-shadow: 2px 2px 10px 1px rgba(5, 5, 5, 0.5);
-  box-shadow: 2px 2px 10px 1px rgba(5, 5, 5, 0.5);
-  /*border: none;*/
-  /*z-index: 9999;*/
-  position: relative;
+    background-color: white !important;
+    -webkit-box-shadow: 2px 2px 10px 1px rgba(5, 5, 5, 0.5);
+    -moz-box-shadow: 2px 2px 10px 1px rgba(5, 5, 5, 0.5);
+    box-shadow: 2px 2px 10px 1px rgba(5, 5, 5, 0.5);
+    /*border: none;*/
+    /*z-index: 9999;*/
+    position: relative;
 }
 
 .coursebox {
-  > .info > .coursename a {
-    padding-left: 10px !important;
-  }
-
-  .content {
-    padding-left: 10px;
-    padding-right: 10px;
-
-    .summary {
-      width: 65%;
-      font-weight: 300;
-      font-size: 13px;
+    > .info > .coursename a {
+        padding-left: 10px !important;
     }
 
-    .teachers, .courseimage, .coursefile {
-      width: 30%;
-    }
+    .content {
+        padding-left: 10px;
+        padding-right: 10px;
 
-    .courseimage {
-      img {
-        height: 100%;
-        width: 100%;
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover;
-      }
+        .summary {
+            width: 65%;
+            font-weight: 300;
+            font-size: 13px;
+        }
 
-      height: 170px;
+        .teachers, .courseimage, .coursefile {
+            width: 30%;
+        }
+
+        .courseimage {
+            img {
+                height: 100%;
+                width: 100%;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+            }
+
+            height: 170px;
+        }
     }
-  }
 }
 
 /*.coursebox .content .summary, .coursebox .content .coursecat*/
 
 .course_category_tree .collapsible-actions {
-  .collapseexpand {
-    .fa-compress, &.collapse-all .fa-expand {
-      display: none;
+    .collapseexpand {
+        .fa-compress, &.collapse-all .fa-expand {
+            display: none;
+        }
+
+        background: none !important;
+        line-height: 0 !important;
+        font-size: 0 !important;
+        text-decoration: none;
     }
 
-    background: none !important;
-    line-height: 0 !important;
-    font-size: 0 !important;
-    text-decoration: none;
-  }
+    padding-bottom: 15px;
+    margin-top: -36px;
+    margin-left: 90%;
+    position: relative;
 
-  padding-bottom: 15px;
-  margin-top: -36px;
-  margin-left: 90%;
-  position: relative;
+    .collapse-all {
+        background: none !important;
+    }
 
-  .collapse-all {
-    background: none !important;
-  }
+    .collapseexpand:before {
+        font-family: FontAwesome;
+        cursor: pointer;
+        content: '\f065';
+        font-style: normal;
+        font-weight: normal;
+        padding-right: 5px;
+        font-size: 15px;
+        color: white;
+    }
 
-  .collapseexpand:before {
-    font-family: FontAwesome;
-    cursor: pointer;
-    content: '\f065';
-    font-style: normal;
-    font-weight: normal;
-    padding-right: 5px;
-    font-size: 15px;
-    color: white;
-  }
-
-  .collapse-all:before {
-    font-family: FontAwesome;
-    cursor: pointer;
-    content: '\f066';
-    font-style: normal;
-    font-weight: normal;
-    padding-right: 5px;
-    font-size: 15px;
-    color: white;
-  }
+    .collapse-all:before {
+        font-family: FontAwesome;
+        cursor: pointer;
+        content: '\f066';
+        font-style: normal;
+        font-weight: normal;
+        padding-right: 5px;
+        font-size: 15px;
+        color: white;
+    }
 }
 
 .searchhelp {
-  text-align: left;
+    text-align: left;
 }
 
 .search-bar {
-  margin-left: -10px;
-  margin-right: -10px;
-  margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
 }
 
 .generalbox .search-bar {
-  margin-top: -25px;
+    margin-top: -25px;
 }
 
 .subcategories .pagination .page-item.active {
-  background-color: unset;
-  border-color: unset;
+    background-color: unset;
+    border-color: unset;
 
-  .page-link {
-    background-color: $sectionheadercolor;
-    color: #FFFFFF;
-    border-color: $sectionheadercolor;
-  }
+    .page-link {
+        background-color: $sectionheadercolor;
+        color: #FFFFFF;
+        border-color: $sectionheadercolor;
+    }
 }
 
 .singlebutton #new-course-form .btn-secondary {
-  &:before {
-    font-family: FontAwesome;
-    cursor: pointer;
-    content: '\f067';
-    font-style: normal;
-    font-weight: normal;
-    padding-right: 5px;
-    font-size: 15px;
-    /*color:white;*/
-  }
+    &:before {
+        font-family: FontAwesome;
+        cursor: pointer;
+        content: '\f067';
+        font-style: normal;
+        font-weight: normal;
+        padding-right: 5px;
+        font-size: 15px;
+        /*color:white;*/
+    }
 }
 
 
 .hidden-xs-down {
-  display: block;
+    display: block;
 }
 
 .hidden-sm-up {
-  display: none;
+    display: none;
 }
 
 // LB Program section.
 
 #program-container, #program-wizard-container, #skills-form-container, #skill-list-container, #reports-container, #ou-container, #enrolment-request-container, #roles-list-container, #role-container, #ou-upload-container, #program-list-container, #access-request-container, #store-list-container, .k-window, .k-popup {
-  .background-colour {
-    background-color: $headercolor !important;
-  }
-
-  .text-colour {
-    color: $headertextcolor !important;
-  }
-
-  .btn-radio {
-    background-color: $headercolor !important;
-    color: $headertextcolor !important;
-    border-color: $headertextcolor !important;
-
-    &.active {
-      color: $headercolor !important;
-      background-color: $headertextcolor !important;
-      border-color: $headertextcolor !important;
+    .background-colour {
+        background-color: $headercolor !important;
     }
-  }
 
-  .btn-primary {
-    color: $headercolor !important;
-    background-color: $headertextcolor !important;
-    border-color: $headertextcolor !important;
-  }
-
-  .btn-secondary {
-    border-color: $headertextcolor !important;
-  }
-
-  .fixed-header {
-    background-color: $headercolor !important;
-  }
-
-  .form-control, .k-textbox {
-    border: 1px solid $headertextcolor !important;
-  }
-
-  .inverse-background-colour {
-    background-color: $headertextcolor !important;
-  }
-
-  .inverse-text-colour {
-    color: $headercolor !important;
-  }
-
-  .k-button {
-    &.k-primary, &:focus, &:active {
-      color: $headercolor !important;
-      background-color: $headertextcolor !important;
-      border-color: $headertextcolor !important;
+    .text-colour {
+        color: $headertextcolor !important;
     }
-  }
 
-  .k-filtercell .k-button-icon {
-    color: $headercolor !important;
-  }
+    .btn-radio {
+        background-color: $headercolor !important;
+        color: $headertextcolor !important;
+        border-color: $headertextcolor !important;
 
-  .k-pager-nav {
-    background-color: $headercolor !important;
-    color: $headertextcolor !important;
-  }
-
-  .k-pager-wrap {
-    color: $headertextcolor !important;
-  }
-
-  .custom-date-picker {
-    .k-picker-wrap {
-      &.k-state-default {
-        border: 1px solid $headertextcolor !important;
-      }
-    }
-  }
-
-  .k-slider-horizontal {
-    .k-draghandle {
-      background-color: rgba($headertextcolor, 0.5) !important;
-    }
-  }
-
-  .k-state-selected {
-    color: $headercolor !important;
-    background-color: $headertextcolor !important;
-
-    .k-link {
-      border-color: $headertextcolor !important;
-      color: $headercolor !important;
-      background-color: $headertextcolor !important;
-    }
-  }
-
-  .k-tick, .k-nav-today {
-    color: $headertextcolor !important;
-  }
-
-  .k-today {
-    .k-link {
-      color: $headertextcolor !important;
-      box-shadow: inset 0 0 0 1px $headertextcolor !important;
-    }
-  }
-
-  .page-link {
-    &:hover {
-      color: $headercolor !important;
-      background-color: $headertextcolor !important;
-    }
-  }
-
-  .program-active {
-    color: $headercolor !important;
-    background-color: $headertextcolor !important;
-  }
-
-  .sw-theme-default > ul.step-anchor > li > a::after {
-    background-color: $headertextcolor !important;
-  }
-
-  table {
-    th {
-      a.k-link {
-        color: $headercolor !important;
-      }
-    }
-  }
-
-  .table {
-    tbody {
-
-      tr {
-        &:not(.program-active):not(.k-state-selected) {
-          color: $headertextcolor !important;
-          background-color: $headercolor !important;
-          //&:hover {
-          //    color: $headertextcolor !important;
-          //    background-color: $headercolor !important;
-          //}
-        }
-
-        &.program-active, &.k-state-selected {
-          .delete-row-button, .edit-row-button, .duplicate-row-button, i.fa {
+        &.active {
             color: $headercolor !important;
             background-color: $headertextcolor !important;
-          }
+            border-color: $headertextcolor !important;
         }
-      }
     }
-  }
 
-  .upload-drop-zone {
-    border: 1px solid $headertextcolor !important;
-  }
+    .btn-primary {
+        color: $headercolor !important;
+        background-color: $headertextcolor !important;
+        border-color: $headertextcolor !important;
+    }
 
-  #user-reports-nav li {
-    a {
-      color: $headertextcolor !important;
+    .btn-secondary {
+        border-color: $headertextcolor !important;
+    }
 
-      &.active {
-        border-bottom: 2px solid $headertextcolor !important;
+    .fixed-header {
         background-color: $headercolor !important;
-      }
-    }
-  }
-
-  #wizard {
-    .sw-btn-next {
-      &:not(.disabled) {
-        background-color: $headertextcolor !important;
-        color: $headercolor !important;
-        border-color: $headertextcolor !important;
-      }
     }
 
-    .sw-btn-prev {
-      &:not(.disabled) {
-        background-color: $headertextcolor !important;
-        color: $headercolor !important;
-        border-color: $headertextcolor !important;
-        border-right-color: $headercolor !important;
-      }
+    .form-control, .k-textbox {
+        border: 1px solid $headertextcolor !important;
     }
-  }
+
+    .inverse-background-colour {
+        background-color: $headertextcolor !important;
+    }
+
+    .inverse-text-colour {
+        color: $headercolor !important;
+    }
+
+    .k-button {
+        &.k-primary, &:focus, &:active {
+            color: $headercolor !important;
+            background-color: $headertextcolor !important;
+            border-color: $headertextcolor !important;
+        }
+    }
+
+    .k-filtercell .k-button-icon {
+        color: $headercolor !important;
+    }
+
+    .k-pager-nav {
+        background-color: $headercolor !important;
+        color: $headertextcolor !important;
+    }
+
+    .k-pager-wrap {
+        color: $headertextcolor !important;
+    }
+
+    .custom-date-picker {
+        .k-picker-wrap {
+            &.k-state-default {
+                border: 1px solid $headertextcolor !important;
+            }
+        }
+    }
+
+    .k-slider-horizontal {
+        .k-draghandle {
+            background-color: rgba($headertextcolor, 0.5) !important;
+        }
+    }
+
+    .k-state-selected {
+        color: $headercolor !important;
+        background-color: $headertextcolor !important;
+
+        .k-link {
+            border-color: $headertextcolor !important;
+            color: $headercolor !important;
+            background-color: $headertextcolor !important;
+        }
+    }
+
+    .k-tick, .k-nav-today {
+        color: $headertextcolor !important;
+    }
+
+    .k-today {
+        .k-link {
+            color: $headertextcolor !important;
+            box-shadow: inset 0 0 0 1px $headertextcolor !important;
+        }
+    }
+
+    .page-link {
+        &:hover {
+            color: $headercolor !important;
+            background-color: $headertextcolor !important;
+        }
+    }
+
+    .program-active {
+        color: $headercolor !important;
+        background-color: $headertextcolor !important;
+    }
+
+    .sw-theme-default > ul.step-anchor > li > a::after {
+        background-color: $headertextcolor !important;
+    }
+
+    table {
+        th {
+            a.k-link {
+                color: $headercolor !important;
+            }
+        }
+    }
+
+    .table {
+        tbody {
+
+            tr {
+                &:not(.program-active):not(.k-state-selected) {
+                    color: $headertextcolor !important;
+                    background-color: $headercolor !important;
+                    //&:hover {
+                    //    color: $headertextcolor !important;
+                    //    background-color: $headercolor !important;
+                    //}
+                }
+
+                &.program-active, &.k-state-selected {
+                    .delete-row-button, .edit-row-button, .duplicate-row-button, i.fa {
+                        color: $headercolor !important;
+                        background-color: $headertextcolor !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .upload-drop-zone {
+        border: 1px solid $headertextcolor !important;
+    }
+
+    #user-reports-nav li {
+        a {
+            color: $headertextcolor !important;
+
+            &.active {
+                border-bottom: 2px solid $headertextcolor !important;
+                background-color: $headercolor !important;
+            }
+        }
+    }
+
+    #wizard {
+        .sw-btn-next {
+            &:not(.disabled) {
+                background-color: $headertextcolor !important;
+                color: $headercolor !important;
+                border-color: $headertextcolor !important;
+            }
+        }
+
+        .sw-btn-prev {
+            &:not(.disabled) {
+                background-color: $headertextcolor !important;
+                color: $headercolor !important;
+                border-color: $headertextcolor !important;
+                border-right-color: $headercolor !important;
+            }
+        }
+    }
 }
 
 // Org Unit section
 #page-local-ou-index, #page-local-ou-role {
-  .background-colour {
-    background-color: $headercolor !important;
-    border-color: $headertextcolor !important;
-  }
+    .background-colour {
+        background-color: $headercolor !important;
+        border-color: $headertextcolor !important;
+    }
 
-  .inverse-background-colour {
-    background-color: $headertextcolor !important;
-    border-color: $headercolor !important;
-  }
+    .inverse-background-colour {
+        background-color: $headertextcolor !important;
+        border-color: $headercolor !important;
+    }
 
-  .inverse-text-colour {
-    color: $headercolor !important;
-    border-color: $headercolor !important;
-  }
+    .inverse-text-colour {
+        color: $headercolor !important;
+        border-color: $headercolor !important;
+    }
 
-  .text-colour {
-    color: $headertextcolor !important;
-    border-color: $headertextcolor !important;
-  }
+    .text-colour {
+        color: $headertextcolor !important;
+        border-color: $headertextcolor !important;
+    }
 }
 
 #ou-container {
-  .orgchart {
-    .node .content {
-      border-color: $headertextcolor !important;
-    }
+    .orgchart {
+        .node .content {
+            border-color: $headertextcolor !important;
+        }
 
-    .lines {
-      .downLine {
-        background-color: $headertextcolor !important;
-      }
+        .lines {
+            .downLine {
+                background-color: $headertextcolor !important;
+            }
 
-      td {
-        border-color: $headertextcolor !important;
-      }
+            td {
+                border-color: $headertextcolor !important;
+            }
+        }
     }
-  }
 }
 
 .fstChoiceItem {
-  border: 1px solid $headertextcolor !important;
-  color: $headercolor !important;
-  background-color: $headertextcolor !important;
+    border: 1px solid $headertextcolor !important;
+    color: $headercolor !important;
+    background-color: $headertextcolor !important;
 }
 
 .fstMultipleMode .fstControls {
-  color: $headercolor !important;
-  background-color: $headercolor !important;
-  border: 1px solid $headertextcolor !important;
+    color: $headercolor !important;
+    background-color: $headercolor !important;
+    border: 1px solid $headertextcolor !important;
 }
 
 .fstResultItem {
-  border-top: 1px solid #fff;
+    border-top: 1px solid #fff;
 }
 
 //can be removed if scrolling in dropdown needed
 .fstMultipleMode.fstActive .fstResults {
-  border-top: 1px solid #D7D7D7;
+    border-top: 1px solid #D7D7D7;
 }
 
 .fstElement {
-  border: 1px solid #D7D7D7;
-  color: $headertextcolor !important;
-  background-color: $headercolor !important;
+    border: 1px solid #D7D7D7;
+    color: $headertextcolor !important;
+    background-color: $headercolor !important;
 }
 
 .fstResultItem.fstSelected {
-  color: $headercolor !important;
-  background-color: $headertextcolor !important;
-  border-color: $headercolor !important;
+    color: $headercolor !important;
+    background-color: $headertextcolor !important;
+    border-color: $headercolor !important;
 }
 
 .fstResultItem.fstFocused {
-  color: $headercolor !important;
-  background-color: $headertextcolor !important;
-  border-color: $headercolor !important;
+    color: $headercolor !important;
+    background-color: $headertextcolor !important;
+    border-color: $headercolor !important;
 }
 
 //block_lb_profile section
 .block_lb_profile {
-  #lb-profile-tabs-courses, #lb-profile-tabs-programs, #lb-profile-tabs-skills, #lb-profile-tabs-certs {
-    background-color: $headertextcolor !important;
-    color: $headercolor !important;
-  }
-
-  #myprofile-coursestable-container, #myprofile-programtable-container,
-  #myprofile-skilltable-container, #myprofile-certificatetable-container {
-    tr:hover:not(.lb_user_report_header) {
-      background-color: lighten($headertextcolor, 60%) !important;
+    #lb-profile-tabs-courses, #lb-profile-tabs-programs, #lb-profile-tabs-skills, #lb-profile-tabs-certs {
+        background-color: $headertextcolor !important;
+        color: $headercolor !important;
     }
-  }
-  .tab-label {
-    background: lighten($headertextcolor, 6%) !important;
-    color: $headercolor !important;
-  }
 
-  //.tab-label:hover {
-  //  background: $headertextcolor;
-  //}
-
-  .tab-switch:checked + .tab-label {
-    background: $headertextcolor !important;
-    color: $headercolor !important;
-    border-right: 0.125rem solid $headertextcolor !important;
-  }
-
-  .sectionheadercolor {
-    background: $headertextcolor !important;
-    color: $headercolor !important;
-  }
-
-  .card-body .card-text {
-    margin-top: 0 !important;
-  }
-  .block_lb_profile.card{
-    height: 650px !important;
-  }
-  //export pdf button
-  #lb-profile-tabs {
-    #export-pdf {
-      color: $headertextcolor !important;
+    #myprofile-coursestable-container, #myprofile-programtable-container,
+    #myprofile-skilltable-container, #myprofile-certificatetable-container {
+        tr:hover:not(.lb_user_report_header) {
+            background-color: lighten($headertextcolor, 60%) !important;
+        }
     }
-  }
+
+    .tab-label {
+        background: lighten($headertextcolor, 6%) !important;
+        color: $headercolor !important;
+    }
+
+    //.tab-label:hover {
+    //  background: $headertextcolor;
+    //}
+
+    .tab-switch:checked + .tab-label {
+        background: $headertextcolor !important;
+        color: $headercolor !important;
+        border-right: 0.125rem solid $headertextcolor !important;
+    }
+
+    .sectionheadercolor {
+        background: $headertextcolor !important;
+        color: $headercolor !important;
+    }
+
+    .card-body .card-text {
+        margin-top: 0 !important;
+    }
+
+    .block_lb_profile.card {
+        height: 650px !important;
+    }
+
+    //export pdf button
+    #lb-profile-tabs {
+        #export-pdf {
+            color: $headertextcolor !important;
+        }
+    }
 }
 
 //block_lb_user_profile section
 .block_lb_user_profile {
-  //profile options icon color, theme will have this
-  .lb-user-profile-info-icon {
-    color: $headertextcolor !important;
-  }
+    //profile options icon color, theme will have this
+    .lb-user-profile-info-icon {
+        color: $headertextcolor !important;
+    }
 }
 
 
 @media only screen and (max-width: 420.99px) {
-  .coursebox {
-    .content {
-      .summary {
-        width: 50%;
-      }
+    .coursebox {
+        .content {
+            .summary {
+                width: 50%;
+            }
 
-      .teachers, .courseimage, .coursefile {
-        width: 40%;
-      }
+            .teachers, .courseimage, .coursefile {
+                width: 40%;
+            }
 
-      .coursecat, .summary, .courseimage, .coursefile, .teachers {
-        margin: 0;
-      }
+            .coursecat, .summary, .courseimage, .coursefile, .teachers {
+                margin: 0;
+            }
+        }
+
+        &.remotecoursebox .remotecourseinfo {
+            margin: 0;
+        }
+
+        .content .courseimage {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            height: 100px;
+        }
+
+        > .info > .coursename a {
+            padding-left: 5px !important;
+        }
+    }
+    .login-form-body {
+        width: 100% !important;
+    }
+    //block lb_user_report section
+    .block_lb_profile.card {
+        height: 550px !important;
+    }
+    //right menu
+    //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
+    //  display: inline-block;
+    //  width: 100%;
+    //  border-right: none;
+    //  padding-right: 0;
+    //}
+
+    #right-menu-right-icon {
+        display: none;
     }
 
-    &.remotecoursebox .remotecourseinfo {
-      margin: 0;
+    #region-right-menu {
+        border-left: none;
+        padding-left: 0;
+        height: auto;
     }
+    //#region-right-menu {
+    //  display: none;
+    //}
 
-    .content .courseimage {
-      img {
-        width: 100%;
-        height: 100%;
-      }
-
-      height: 100px;
+    .learner-dashboard-content-section {
+        padding-left: 0;
+        padding-right: 0;
     }
-
-    > .info > .coursename a {
-      padding-left: 5px !important;
-    }
-  }
-  .login-form-body {
-    width: 100% !important;
-  }
-  //block lb_user_report section
-  .block_lb_profile.card{
-    height: 550px !important;
-  }
-  //right menu
-  //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
-  //  display: inline-block;
-  //  width: 100%;
-  //  border-right: none;
-  //  padding-right: 0;
-  //}
-
-  #right-menu-right-icon {
-    display: none;
-  }
-
-  #region-right-menu {
-    border-left: none;
-    padding-left: 0;
-    height: auto;
-  }
-  //#region-right-menu {
-  //  display: none;
-  //}
-
-  .learner-dashboard-content-section {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
 }
 
 @media only screen and (min-width: 421px) and (max-width: 575px) {
-  .login-form-body {
-    width: 100% !important;
-  }
-  .hidden-xs-down {
-    display: none;
-  }
-  .hidden-sm-up {
-    display: block;
-  }
-  #page-user-profile {
-    .userprofile > .card.card-block {
-      border: 0;
+    .login-form-body {
+        width: 100% !important;
     }
-  }
-  .block_lb_courses .grid-list-icons {
-    margin-top: 15px;
-  }
-  //block lb_user_report section
-  .block_lb_profile.card{
-    height: 550px !important;
-  }
-  //right menu
-  //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
-  //  display: inline-block;
-  //  width: 100%;
-  //  border-right: none;
-  //  padding-right: 0;
-  //}
+    .hidden-xs-down {
+        display: none;
+    }
+    .hidden-sm-up {
+        display: block;
+    }
+    #page-user-profile {
+        .userprofile > .card.card-block {
+            border: 0;
+        }
+    }
+    .block_lb_courses .grid-list-icons {
+        margin-top: 15px;
+    }
+    //block lb_user_report section
+    .block_lb_profile.card {
+        height: 550px !important;
+    }
+    //right menu
+    //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
+    //  display: inline-block;
+    //  width: 100%;
+    //  border-right: none;
+    //  padding-right: 0;
+    //}
 
-  #right-menu-right-icon {
-    display: none;
-  }
-  #right-menu-left-icon {
-    display: none;
-  }
-  #region-right-menu {
-    border-left: none;
-    padding-left: 0;
-    height: auto;
-  }
-  //#region-right-menu {
-  //  display: none;
-  //}
-  .learner-dashboard-content-section {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    #right-menu-right-icon {
+        display: none;
+    }
+    #right-menu-left-icon {
+        display: none;
+    }
+    #region-right-menu {
+        border-left: none;
+        padding-left: 0;
+        height: auto;
+    }
+    //#region-right-menu {
+    //  display: none;
+    //}
+    .learner-dashboard-content-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
-  .block_lb_courses #coursetimeline-col {
-    margin-top: 76px !important;
-  }
-  //block lb_user_report section
-  .block_lb_profile.card{
-    height: 700px !important;
-  }
-  .block_lb_user_profile.card {
-    min-height: 700px !important;
-  }
-  //right menu
-  //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
-  //  display: inline-block;
-  //  width: 100%;
-  //  border-right: none;
-  //  padding-right: 0;
-  //}
-
-  #right-menu-right-icon {
-    display: none;
-  }
-  #right-menu-left-icon {
-    display: none;
-  }
-  #region-right-menu {
-    border-left: none;
-    padding-left: 0;
-    height: auto;
-  }
-  //#region-right-menu {
-  //  display: none;
-  //}
-  .learner-dashboard-content-section {
-    padding-left: 0;
-    padding-right: 0;
-    .card-body {
-      padding-left: 0 !important;
+    .block_lb_courses #coursetimeline-col {
+        margin-top: 76px !important;
     }
-  }
+    //block lb_user_report section
+    .block_lb_profile.card {
+        height: 700px !important;
+    }
+    .block_lb_user_profile.card {
+        min-height: 700px !important;
+    }
+    //right menu
+    //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
+    //  display: inline-block;
+    //  width: 100%;
+    //  border-right: none;
+    //  padding-right: 0;
+    //}
+
+    #right-menu-right-icon {
+        display: none;
+    }
+    #right-menu-left-icon {
+        display: none;
+    }
+    #region-right-menu {
+        border-left: none;
+        padding-left: 0;
+        height: auto;
+    }
+    //#region-right-menu {
+    //  display: none;
+    //}
+    .learner-dashboard-content-section {
+        padding-left: 0;
+        padding-right: 0;
+
+        .card-body {
+            padding-left: 0 !important;
+        }
+    }
 
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  #page-local-learnbook-report-index {
-    #filter-block span.select2-selection.select2-selection--multiple {
-      width: 100% !important;
+    #page-local-learnbook-report-index {
+        #filter-block span.select2-selection.select2-selection--multiple {
+            width: 100% !important;
+        }
     }
-  }
-  //block lb_user_report section
-  .block_lb_profile.card{
-    height: 550px !important;
-  }
-  .block_lb_user_profile.card {
-    min-height: 550px !important;
-  }
-  //right menu
-  //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
-  //  display: inline-block;
-  //  width: 100%;
-  //  border-right: none;
-  //  padding-right: 0;
-  //}
+    //block lb_user_report section
+    .block_lb_profile.card {
+        height: 550px !important;
+    }
+    .block_lb_user_profile.card {
+        min-height: 550px !important;
+    }
+    //right menu
+    //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
+    //  display: inline-block;
+    //  width: 100%;
+    //  border-right: none;
+    //  padding-right: 0;
+    //}
 
-  #right-menu-right-icon {
-    display: none;
-  }
-  #right-menu-left-icon {
-    display: none;
-  }
-  #region-right-menu {
-    border-left: none;
-    padding-left: 0;
-    height: auto;
-  }
-  //#region-right-menu {
-  //  display: none;
-  //}
-  .learner-dashboard-content-section {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    #right-menu-right-icon {
+        display: none;
+    }
+    #right-menu-left-icon {
+        display: none;
+    }
+    #region-right-menu {
+        border-left: none;
+        padding-left: 0;
+        height: auto;
+    }
+    //#region-right-menu {
+    //  display: none;
+    //}
+    .learner-dashboard-content-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1449px) {
-  //block lb_user_report section
-  .block_lb_profile.card{
-    height: 550px !important;
-  }
-  .block_lb_user_profile.card {
-    min-height: 550px !important;
-  }
-  //options text size, as it cant accomodate the texts while menu open
-  #lb-user-profile-info {
-    .lb-user-profile-info-text {
-      font-size: 0.70em !important;
+    //block lb_user_report section
+    .block_lb_profile.card {
+        height: 550px !important;
     }
-  }
+    .block_lb_user_profile.card {
+        min-height: 550px !important;
+    }
+    //options text size, as it cant accomodate the texts while menu open
+    #lb-user-profile-info {
+        .lb-user-profile-info-text {
+            font-size: 0.70em !important;
+        }
+    }
 }
 
 @media only screen and (min-width: 1450px) and (max-width: 1649px) {
-  //block lb_user_report section
-  .block_lb_profile.card{
-    height: 620px !important;
-  }
-  .block_lb_user_profile.card {
-    min-height: 620px !important;
-  }
+    //block lb_user_report section
+    .block_lb_profile.card {
+        height: 620px !important;
+    }
+    .block_lb_user_profile.card {
+        min-height: 620px !important;
+    }
 }
 
 @media only screen and (min-width: 1650px) and (max-width: 1949px) {
-  //block lb_user_report section
-  .block_lb_profile.card{
-    height: 620px !important;
-  }
-  .block_lb_user_profile.card {
-    min-height: 620px !important;
-  }
+    //block lb_user_report section
+    .block_lb_profile.card {
+        height: 620px !important;
+    }
+    .block_lb_user_profile.card {
+        min-height: 620px !important;
+    }
 }
 
 @media only screen and (min-width: 1950px) {
-  .block_lb_profile.card{
-    height: 720px !important;
-  }
-  .block_lb_user_profile.card {
-    min-height: 720px !important;
-  }
+    .block_lb_profile.card {
+        height: 720px !important;
+    }
+    .block_lb_user_profile.card {
+        min-height: 720px !important;
+    }
 }
 
 
 .popover-region-toggle::before {
-  display: none;
+    display: none;
 }
 
 .popover-region-toggle::after {
-  display: none;
+    display: none;
 }
 
 .popover-region-footer-container {
-  height: 30px;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  background-color: #fff;
-  padding-top: 3px;
-  border-bottom: 1px solid #ddd;
+    height: 30px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    padding-top: 3px;
+    border-bottom: 1px solid #ddd;
 }

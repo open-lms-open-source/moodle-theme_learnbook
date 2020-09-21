@@ -114,7 +114,8 @@ function theme_learnbook_get_pre_scss($theme) {
  * @return setting_file_serve
  */
 function theme_learnbook_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
-    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage' || $filearea === 'favicon') || $filearea === 'slideshow' || $filearea === 'welcomeimg') {
+    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage' || $filearea === 'favicon')
+        || $filearea === 'slideshow' || $filearea === 'welcomeimg' || $filearea === 'learnbookmarketingimages') {
         $theme = theme_config::load('learnbook');
         if (!array_key_exists('cacheability', $options)) {
             $options['cacheability'] = 'public';
