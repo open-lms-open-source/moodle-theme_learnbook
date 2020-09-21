@@ -236,10 +236,12 @@ $footercolor: #00bada !default;
   background-size: cover;
 }
 
-.btn-primary {
-  color: #fff !important;
-  background-color: $headertextcolor !important;
-  border-color: $headertextcolor !important;
+#page-login-index {
+  .btn-primary {
+    color: $headercolor !important;
+    background-color: $headertextcolor !important;
+    border-color: $headertextcolor !important;
+  }
 }
 
 //.curved svg {
