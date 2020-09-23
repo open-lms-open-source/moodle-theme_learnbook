@@ -218,6 +218,12 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     }
 }
 
+//theme search icon fix
+.navbar-light .navbar-nav .nav-link{
+    color: $headertextcolor !important;
+}
+
+
 //.navbar-expand {
 //  .navbar-nav {
 //    .dropdown-menu {
@@ -929,10 +935,20 @@ ul.pagination {
         color: $headercolor !important;
         background-color: $headertextcolor !important;
         border-color: $headertextcolor !important;
+        &:hover {
+            color: $headertextcolor !important;
+            background-color: $headercolor !important;
+        }
+
     }
 
     .btn-secondary {
         border-color: $headertextcolor !important;
+        &:hover {
+            color: $headercolor !important;
+            background-color: $headertextcolor !important;
+        }
+
     }
 
     .fixed-header {
@@ -1496,3 +1512,8 @@ ul.pagination {
     padding-top: 3px;
     border-bottom: 1px solid #ddd;
 }
+
+.path-mod-quiz #mod_quiz_navblock .qnbutton {
+    color: #000;
+}
+
