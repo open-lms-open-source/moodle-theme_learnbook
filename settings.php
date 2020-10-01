@@ -178,12 +178,12 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    $name = 'theme_learnbook/coursetiletextcolor';
-    $title = get_string('coursetiletextcolor', 'theme_learnbook');
-    $description = get_string('coursetiletextcolor_desc', 'theme_learnbook');
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
+//    $name = 'theme_learnbook/coursetiletextcolor';
+//    $title = get_string('coursetiletextcolor', 'theme_learnbook');
+//    $description = get_string('coursetiletextcolor_desc', 'theme_learnbook');
+//    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+//    $setting->set_updatedcallback('theme_reset_all_caches');
+//    $page->add($setting);
 
     $name = 'theme_learnbook/coursebtncolor';
     $title = get_string('coursebtncolor', 'theme_learnbook');
@@ -192,12 +192,12 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    $name = 'theme_learnbook/coursebtnhovercolor';
-    $title = get_string('coursebtnhovercolor', 'theme_learnbook');
-    $description = get_string('coursebtnhovercolor_desc', 'theme_learnbook');
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
+//    $name = 'theme_learnbook/coursebtnhovercolor';
+//    $title = get_string('coursebtnhovercolor', 'theme_learnbook');
+//    $description = get_string('coursebtnhovercolor_desc', 'theme_learnbook');
+//    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+//    $setting->set_updatedcallback('theme_reset_all_caches');
+//    $page->add($setting);
 
 
     $settings->add($page);
