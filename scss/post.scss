@@ -1080,6 +1080,21 @@ ul.pagination {
         color: $headercolor !important;
         background-color: $headertextcolor !important;
     }
+    
+    .role-skill-match {
+        .fa {
+            color: $headertextcolor !important;;
+        }
+        a {
+            &.active, &:hover {
+                color: $headercolor !important;
+                background-color: $headertextcolor !important;
+                .fa {
+                    color: $headercolor !important;;
+                }
+            }
+        }
+    }
 
     .sw-theme-default > ul.step-anchor > li > a::after {
         background-color: $headertextcolor !important;
