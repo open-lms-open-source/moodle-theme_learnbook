@@ -11,7 +11,7 @@ $sectionheadercolor: #00bada !default;
 $sectionhovercolor: #00b8dc !default;
 $coursebtncolor: #00bada !default;
 //$coursebtnhovercolor: #2a6a97 !default;
-$coursetilecolor: #e1ecf5 !default;
+//$coursetilecolor: #e1ecf5 !default;
 //$coursetiletextcolor: #727477 !default;
 $footercolor: #00bada !default;
 
@@ -29,15 +29,6 @@ body {
         }
     }
 }
-
-//body.drawer-open-left {
-//  margin-left: 0;
-//}
-//
-//body:not(.drawer-open-left) {
-//  margin-left: 0 !important;
-//}
-
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .path-calendar .maincalendar .calendar-controls .current, .h3, .h4, .h5, .h6 {
     margin-bottom: .5rem;
@@ -57,6 +48,7 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     overflow-y: visible;
 }
 
+//hide right menu start
 #region-main-settings-menu.has-blocks, #region-main.has-blocks {
     display: inline-block;
     width: 100%;
@@ -96,6 +88,8 @@ h2, .h2, .path-calendar .maincalendar .calendar-controls .current {
     transform: translateY(-55%);
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 }
+
+//hide right menu end
 
 //navbar brand logo
 .navbar-brand {
@@ -147,15 +141,6 @@ nav.navbar .logo img {
     display: block;
     right: -320px;
 }
-
-//.message-app.drawer.hidden{
-//  z-index: 1020;
-//  position: fixed;
-//  top: 63px;
-//  height: calc(100% - 63px);
-//  width: 320px;
-//  box-shadow: -2px 2px 4px rgba(0,0,0,.08);
-//}
 
 //Hack added to cater for weird spacing on the calendar export page inherited from Boost.
 body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
@@ -229,60 +214,63 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     color: $headertextcolor !important;
 }
 
-
-//.navbar-expand {
-//  .navbar-nav {
-//    .dropdown-menu {
-//      //left: 26px;
-//    }
-//  }
-//}
-
 .btn-primary, .btn-secondary {
     color: #fff;
     background-color: $sectionheadercolor;
     border-color: $sectionheadercolor;
 }
 
-//.lb_courses_list_item {
-//    background-color: $coursetilecolor !important;
-//
-//    .course-description {
-//        color: $coursetiletextcolor !important;
-//    }
-//}
+//lb myteams rebuiid start
 
-#myteam-userscontainer {
-    .usercard {
-        &.grid-group-item {
-            .inner {
-                background-color: $coursetilecolor !important;
-            }
-        }
-
-        &.list-group-item {
-            .inner {
-                background-color: $coursetilecolor !important;
-            }
-        }
-    }
+.lbmyteam-slider {
+    background-color: $coursebtncolor !important;
 }
 
-#local-myteam-container .btn-default {
-    background-color: $sectionheadercolor !important;
-
-    .grid-icon.icon-selected, .list-icon.icon-selected, .cal-icon.icon-selected, .grid-icon:hover, .list-icon:hover, .cal-icon:hover {
-        background-color: #fff !important;
-        color: $sectionheadercolor !important;
-    }
+#lbmyteam-view-role-button {
+    background-color: inherit;
+    color: $coursebtncolor !important;
 }
 
-#local-myteam-container .sectionheadercolor {
-    color: $headercolor !important;
-    background: $headertextcolor !important;
+.myteams-searchButton {
+    background: #ffffff;
+    color: $coursebtncolor !important;
 }
 
-//lb courses rebuild
+.lbmyteam_list .grid .lbmyteam-title {
+    background: $coursebtncolor !important;
+}
+
+.myteams-navigation-tab {
+    background-color: $coursebtncolor !important;
+    color: #ffffff;
+}
+
+.block_lbmyteam .progress-bar {
+    background-color: $coursebtncolor !important;
+}
+
+.block_lbmyteam .progress {
+    background-color: lighten($coursebtncolor, 50%) !important;
+}
+
+.block_lbmyteam .lbmyteam-progress-info-perc {
+    color: $coursebtncolor !important;
+}
+
+.block_lbmyteam .lbmyteam-active-pagination {
+    background-color: $coursebtncolor !important;
+    color: #ffffff !important;
+}
+
+.block_lbmyteam .dropdown-item.active, .block_lbmyteam .dropdown-item:active {
+    color: #ffffff !important;
+    text-decoration: none;
+    background-color: $coursebtncolor !important;
+}
+
+//lb myteams rebuild end
+
+//lb courses rebuild start
 
 .block_lb_courses .nav-pills .nav-link.active, .block_lb_courses .nav-pills .show>.nav-link {
     color: #fff;
@@ -454,7 +442,7 @@ ul.pagination {
     }
 }
 
-.block_lb_courses .sectionheadercolor, .block_lbmyteam .sectionheadercolor, .sectionheadercolor-class, .ticket-btn, .myprofile-coursestable .sectionheadercolor {
+.block_lb_courses .sectionheadercolor, .sectionheadercolor-class, .ticket-btn, .myprofile-coursestable .sectionheadercolor {
     background-color: $sectionheadercolor !important;
     color: #fff;
 }
