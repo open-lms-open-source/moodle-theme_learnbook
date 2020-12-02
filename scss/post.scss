@@ -955,7 +955,7 @@ ul.pagination {
 
 // LB Program section.
 
-#program-container, #program-wizard-container, #skills-form-container, #skill-list-container, #reports-container, #ou-container, #enrolment-request-container, #roles-list-container, #role-container, #ou-upload-container, #program-list-container, #access-request-container, #store-list-container, .k-window, .k-popup {
+#program-container, #program-wizard-container, #skills-form-container, #skill-list-container, #reports-container, #ou-container, #enrolment-request-container, #roles-list-container, #role-container, #ou-upload-container, #program-list-container, #access-request-container, #store-list-container, #skill-match-container, #role-match-container, #user-role-match-container, .k-window, .k-popup {
     .background-colour {
         background-color: $headercolor !important;
     }
@@ -1066,6 +1066,14 @@ ul.pagination {
         .k-link {
             color: $headertextcolor !important;
             box-shadow: inset 0 0 0 1px $headertextcolor !important;
+        }
+    }
+
+    .orgchart-switch {
+        .custom-control-input:checked~.custom-control-label::before {
+            color: $headercolor !important;
+            border-color: $headertextcolor !important;
+            background-color: $headertextcolor !important;
         }
     }
 
@@ -1305,7 +1313,7 @@ ul.pagination {
 }
 
 
-@media only screen and (max-width: 420.99px) {
+@media only screen and (max-width: 420px) {
     .coursebox {
         .content {
             .summary {
