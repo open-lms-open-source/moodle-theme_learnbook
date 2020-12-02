@@ -171,12 +171,12 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
     */
 
-    $name = 'theme_learnbook/coursetilecolor';
-    $title = get_string('coursetilecolor', 'theme_learnbook');
-    $description = get_string('coursetilecolor_desc', 'theme_learnbook');
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
+//    $name = 'theme_learnbook/coursetilecolor';
+//    $title = get_string('coursetilecolor', 'theme_learnbook');
+//    $description = get_string('coursetilecolor_desc', 'theme_learnbook');
+//    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+//    $setting->set_updatedcallback('theme_reset_all_caches');
+//    $page->add($setting);
 
 //    $name = 'theme_learnbook/coursetiletextcolor';
 //    $title = get_string('coursetiletextcolor', 'theme_learnbook');

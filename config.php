@@ -109,7 +109,14 @@ $THEME->layouts = [
         'file' => 'columns2.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
+    ),
+    //myteams page
+    'lb_myteams' => array(
+        'file' => 'lb_myteams.php',
+        'regions' => array('top-center'),
+        'defaultregion' => 'top-center',
     )
+
 ];
 
 $THEME->enable_dock = false;
