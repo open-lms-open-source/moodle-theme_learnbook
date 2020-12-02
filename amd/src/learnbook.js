@@ -76,6 +76,12 @@ define(['jquery', 'core/ajax', 'core/str', 'core/config', 'core/templates', 'cor
                 //         }
                 //     }
                 // });
+            //    Disgusting hack to insert some warning text into the customcert plugin.
+                str.get_strings([
+                    {'key': 'customcert_help_text', component: 'local_prgm'}
+                ]).done(function (s) {
+                    $('#page-mod-customcert-edit #fgroup_id_elementgroup').append('<div id = "customcert_help_text" class="col-md-9 offset-md-3 my-2">' + s[0] + '</div>');
+                });
             }
         };
         return learnbook;
