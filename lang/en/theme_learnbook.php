@@ -38,6 +38,9 @@ $string['presetfiles'] = 'Additional theme preset files';
 $string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme. See <a href=https://docs.moodle.org/dev/Boost_Presets>Boost presets</a> for information on creating and sharing your own preset files, and see the <a href=http://moodle.net/boost>Presets repository</a> for presets that others have shared.';
 $string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
+// Alternative home page for learnbook.
+$string['use_alternate_home_page'] = 'Use alternate home page';
+$string['use_alternate_home_page_desc'] = 'This will redirect users to the ecommerce store home page if ecommerce is enabled and SSO is disabled.';
 
 // Common settings
 $string['commonsettings'] = 'Common settings';
