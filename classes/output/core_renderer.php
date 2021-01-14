@@ -186,8 +186,18 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * Returns the url of the custom favicon.
      */
     public function favicon() {
+        global $CFG;
         // Allow customized favicon from settings.
         $url = $this->page->theme->setting_file_url('favicon', 'favicon');
+        if (!empty($url) && strpos($url, '//') === 0) {
+            $replace = 'http://';
+            if (strpos($CFG->wwwroot, 'https://') === 0) {
+                $replace = 'https://';
+            }
+            $fullurl = preg_replace('/\/\//', $replace, $url, 1);
+            $url = new moodle_url($fullurl);
+
+        }
         return empty($url) ? parent::favicon() : $url;
     }
 
