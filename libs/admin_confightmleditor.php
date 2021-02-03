@@ -61,7 +61,7 @@ class learnbook_setting_confightmleditor extends admin_setting_configtext {
 
         $default = array();
         $default['noclean'] = false;
-        $default['context'] = context_user::instance($USER->id);
+        $default['context'] = context_user::instance($USER->id, IGNORE_MISSING);
         $default['maxbytes'] = 0;
         $default['maxfiles'] = -1;
         $default['forcehttps'] = false;
