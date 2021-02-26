@@ -105,10 +105,6 @@ $footercolor: #00bada !default;
     padding-left: 1em;
   }
 
-  //.login-form-alternative-methods {
-  //  text-align: center;
-  //}
-
   #login-form-or {
     font-size: 0.8em;
   }
@@ -145,7 +141,6 @@ $footercolor: #00bada !default;
 
   input[type="text"], input[type="password"] {
     background-color: #fff;
-    //border-radius: 17px;
 
     &:focus {
       background-color: #fff;

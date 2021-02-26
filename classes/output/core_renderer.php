@@ -18,7 +18,12 @@
  * Theme Learnbook - version file
  *
  * @package    theme_learnbook
+ * @copyright  2019 eCreators PTY LTD
  * @author     2019 Chris Megahan, eCreators <chris@ecreators.com.au>
+ * @author     2021 Fouad Saikali, eCreators <fouad.saikali@ecreators.com.au>
+ * @author     2021 Lupiya Mujala, eCreators <lupiya.mujala@ecreators.com.au>
+ * @author     2021 Rob Hunt, eCreators <rob.hunt@ecreators.com.au>
+ * @author     2021 Safat Shahin, eCreators <safat.shahin@ecreators.com.au>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -173,12 +178,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $header->navbar = $this->navbar();
         $header->courseheader = $this->course_header();
         $header->pageheadingbutton = $this->page_heading_button();
-//        if (empty($PAGE->layout_options['nonavbar'])) {
-//            $html .= html_writer::start_div('clearfix w-100 pull-xs-left', array('id' => 'page-navbar'));
-//            $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
-//            $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button pull-xs-right');
-//            $html .= html_writer::end_div();
-//        }
         return $this->render_from_template('core/full_header', $header);
     }
 

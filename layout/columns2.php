@@ -18,7 +18,8 @@
  * A two column layout for the learnbook theme.
  *
  * @package   theme_learnbook
- * @copyright 2020 safat shahin <safat@ecreators.com.au>
+ * @copyright 2016 Damyon Wiese
+ * @author    2020 safat shahin <safat@ecreators.com.au>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

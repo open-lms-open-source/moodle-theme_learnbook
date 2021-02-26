@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<libraries>
+    <library>
+        <location>/javascript/jquery.backstretch.js</location>
+        <name>Backstretch</name>
+        <version>2.1.17</version>
+        <license>MIT License</license>
+    </library>
+</libraries>
