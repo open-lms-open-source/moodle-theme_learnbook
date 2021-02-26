@@ -17,7 +17,9 @@
  *
  * @package    theme
  * @subpackage learnbook
- * @copyright  2020 eCreators Safat
+ * @copyright  2020 eCreators PTY LTD
+ * @author     2020 Rob Hunt, eCreators <rob.hunt@ecreators.com.au>
+ * @author     2020 Safat Shahin, eCreators <safat.shahin@ecreators.com.au>
  */
 
 define(['jquery', 'core/ajax', 'core/str', 'core/config', 'core/templates', 'core/notification'],
@@ -62,21 +64,7 @@ define(['jquery', 'core/ajax', 'core/str', 'core/config', 'core/templates', 'cor
                 var size = window.matchMedia("(max-width: 1200px)");
                 rightMenu(size);
                 size.addListener(rightMenu);
-                // REMOVE NAV-BAR IN CLICK IN PAGE
-                // var body = $('body');
-                // $('#page').click(function () {
-                //     if (body.hasClass('drawer-open-left')) {
-                //         body.removeClass('drawer-open-left');
-                //         if (!$('#nav-drawer').hasClass('closed')) {
-                //             $('#nav-drawer').addClass('closed');
-                //             $('#nav-drawer').attr('aria-expanded', 'false');
-                //             $('#nav-drawer').attr('aria-hidden', 'true');
-                //             $('.list-group').css('text-align', 'center');
-                //             $('.nav-link').attr('aria-expanded', 'false');
-                //         }
-                //     }
-                // });
-            //    Disgusting hack to insert some warning text into the customcert plugin.
+                //Trick to insert some warning text into the customcert plugin.
                 str.get_strings([
                     {'key': 'customcert_help_text', component: 'local_prgm'}
                 ]).done(function (s) {

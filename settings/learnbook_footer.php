@@ -18,7 +18,10 @@
  * Theme Learnbook - settings file
  *
  * @package    theme_learnbook
- * @author     2020 Safat Shahin, eCreators <safat@ecreators.com.au>
+ * @copyright  2015-2019 Jeremy Hopkins (Coventry University)
+ * @copyright  2015-2019 Fernando Acedo (3-bits.com)
+ * @copyright  2017-2019 Manoj Solanki (Coventry University)
+ * @author     2020 Safat Shahin, eCreators <safat.shahin@ecreators.com.au>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

@@ -1,8 +1,6 @@
 $brandcolor: #e1ecf5 !default;
 $headercolor: #ffffff !default;
 $headertextcolor: #00bada !default;
-//$leftmenuheadercolor: #fff !default;
-//$leftmenuheadertextcolor: #00bada !default;
 $leftmenumainitemcolor: #ffffff !default;
 $leftmenuitemhovercolor: #f4f4f4 !default;
 $leftmenuitemstextcolor: #060100 !default;
@@ -10,9 +8,6 @@ $leftmenusubitemcolor: #ffffff !default;
 $sectionheadercolor: #00bada !default;
 $sectionhovercolor: #00b8dc !default;
 $coursebtncolor: #00bada !default;
-//$coursebtnhovercolor: #2a6a97 !default;
-//$coursetilecolor: #e1ecf5 !default;
-//$coursetiletextcolor: #727477 !default;
 $footercolor: #00bada !default;
 
 body {
@@ -357,8 +352,6 @@ body#page-calendar-export .maincalendar #mform1 .form-group .felement br {
     top: 63px;
     width: 285px;
     background-color: #eceeef;
-    //box-shadow: 5px 10px 8px #888888;
-    //transition: width 0.7s ease;
 }
 
 footer#page-footer {
@@ -518,11 +511,6 @@ ul.pagination {
         margin-top: 0 !important;
     }
 
-    //.btn-cus:hover, .grid-icon.icon-selected, .list-icon.icon-selected, .cal-icon.icon-selected, .grid-icon:hover, .list-icon:hover, .cal-icon:hover {
-    //    background-color: #fff !important;
-    //    color: $sectionheadercolor !important;
-    //}
-
     #courses-row .header-bar {
         height: 100% !important;
         padding-bottom: 15px;
@@ -622,10 +610,6 @@ ul.pagination {
             color: $leftmenuitemstextcolor !important;
         }
 
-        //&[data-key="learnbookpanel"] {
-        //    background-color: $leftmenuheadercolor !important;
-        //    color: $leftmenuheadertextcolor !important;
-        //}
         &[data-isexpandable="1"] {
             &:hover {
                 background-color: $leftmenuitemhovercolor !important;
@@ -1076,7 +1060,7 @@ ul.pagination {
         color: $headercolor !important;
         background-color: $headertextcolor !important;
     }
-    
+
     .role-skill-match {
         .fa {
             color: $headertextcolor !important;;
@@ -1261,9 +1245,6 @@ ul.pagination {
         color: $headercolor !important;
     }
 
-    //.tab-label:hover {
-    //  background: $headertextcolor;
-    //}
 
     .tab-switch:checked + .tab-label {
         background: $headertextcolor !important;
@@ -1341,13 +1322,6 @@ ul.pagination {
     .block_lb_profile.card {
         height: 550px !important;
     }
-    //right menu
-    //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
-    //  display: inline-block;
-    //  width: 100%;
-    //  border-right: none;
-    //  padding-right: 0;
-    //}
 
     #right-menu-right-icon {
         display: none;
@@ -1358,9 +1332,6 @@ ul.pagination {
         padding-left: 0;
         height: auto;
     }
-    //#region-right-menu {
-    //  display: none;
-    //}
 
     .learner-dashboard-content-section {
         padding-left: 0;
@@ -1391,13 +1362,6 @@ ul.pagination {
     .block_lb_profile.card {
         height: 550px !important;
     }
-    //right menu
-    //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
-    //  display: inline-block;
-    //  width: 100%;
-    //  border-right: none;
-    //  padding-right: 0;
-    //}
 
     #right-menu-right-icon {
         display: none;
@@ -1410,9 +1374,7 @@ ul.pagination {
         padding-left: 0;
         height: auto;
     }
-    //#region-right-menu {
-    //  display: none;
-    //}
+
     .learner-dashboard-content-section {
         padding-left: 0;
         padding-right: 0;
@@ -1431,13 +1393,6 @@ ul.pagination {
     .block_lb_user_profile.card {
         min-height: 700px !important;
     }
-    //right menu
-    //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
-    //  display: inline-block;
-    //  width: 100%;
-    //  border-right: none;
-    //  padding-right: 0;
-    //}
 
     #right-menu-right-icon {
         display: none;
@@ -1450,9 +1405,7 @@ ul.pagination {
         padding-left: 0;
         height: auto;
     }
-    //#region-right-menu {
-    //  display: none;
-    //}
+
     .learner-dashboard-content-section {
         padding-left: 0;
         padding-right: 0;
@@ -1477,13 +1430,6 @@ ul.pagination {
     .block_lb_user_profile.card {
         min-height: 550px !important;
     }
-    //right menu
-    //#region-main-settings-menu.has-blocks, #region-main.has-blocks {
-    //  display: inline-block;
-    //  width: 100%;
-    //  border-right: none;
-    //  padding-right: 0;
-    //}
 
     #right-menu-right-icon {
         display: none;
@@ -1496,9 +1442,7 @@ ul.pagination {
         padding-left: 0;
         height: auto;
     }
-    //#region-right-menu {
-    //  display: none;
-    //}
+
     .learner-dashboard-content-section {
         padding-left: 0;
         padding-right: 0;

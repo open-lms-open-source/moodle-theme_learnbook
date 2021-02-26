@@ -18,6 +18,7 @@
  * Theme Learnbook - learnerdashboard layout file
  *
  * @package    theme_learnbook
+ * @copyright  2019 eCreators PTY LTD
  * @author     2020 Safat Shahin <safat@ecreators.com.au>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
-//$navdraweropen = false;
+
 $extraclasses = [];
 if ($navdraweropen) {
     $extraclasses[] = 'drawer-open-left';

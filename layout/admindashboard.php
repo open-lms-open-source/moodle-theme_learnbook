@@ -18,6 +18,7 @@
  * Theme Learnbook - admindashboard layout file
  *
  * @package    theme_learnbook
+ * @copyright  2019 eCreators PTY LTD
  * @author     2019 Chris Megahan, eCreators <chris@ecreators.com.au>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -32,7 +33,6 @@ if (isloggedin()) {
 } else {
     $navdraweropen = false;
 }
-//$navdraweropen = false;
 $extraclasses = [];
 if ($navdraweropen) {
     $extraclasses[] = 'drawer-open-left';
