@@ -131,8 +131,8 @@ $string['learnbook_user_profile_desc'] = 'Toggle to turn on/off learnbook user p
 
 //footer settings
 $string['disabled'] = 'Disable';
-$string['moodledocs'] = 'Moodle Docs link';
-$string['moodledocsdesc'] = 'Display the Moodle Docs link in the footer.';
+$string['moodledocs'] = 'Moodle ™ Docs link';
+$string['moodledocsdesc'] = 'Display the Moodle ™ Docs link in the footer.';
 $string['layoutcheck'] = 'Check your layout';
 $string['layoutcheckdesc'] = 'Use the tool below to check the number of blocks you have used and see a representation of your new layout.';
 $string['layoutcount1'] = 'You can set a maximum of ';
@@ -144,9 +144,9 @@ $string['footersettings'] = 'Footer';
 $string['footersettingsheading'] = 'Set the content that should appear in the footer.';
 $string['footerdesc'] = 'Control the content that appears in the 4 footer sections of the page.';
 $string['showfooterblocks'] = 'Show Footnote Block';
-$string['showfooterblocksdesc'] = 'Show / hide the lower footerblock used for footnote / Moodle docs region';
-$string['moodlefooterinfo'] = 'Moodle Standard links';
-$string['moodlefooterinfodesc'] = 'Display the moodle standard links in the footer.';
+$string['showfooterblocksdesc'] = 'Show / hide the lower footerblock used for footnote / Moodle ™ docs region';
+$string['moodlefooterinfo'] = 'Moodle ™ Standard links';
+$string['moodlefooterinfodesc'] = 'Display the Moodle ™ standard links in the footer.';
 $string['footerlayoutrow'] = 'Footer Layout Builder';
 $string['footerlayoutrowdesc'] = 'Design your layout for footer block regions.';
 $string['footnote'] = 'Footnote';
