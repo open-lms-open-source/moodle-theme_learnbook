@@ -131,8 +131,8 @@ $string['learnbook_user_profile_desc'] = 'Alternar para activar/desactivar la re
 
 //footer settings
 $string['disabled'] = 'Desactivar';
-$string['moodledocs'] = 'Enlace de Moodle Docs';
-$string['moodledocsdesc'] = 'Mostrar el enlace de Moodle Docs en el pie de página.';
+$string['moodledocs'] = 'Enlace de Moodle ™ Docs';
+$string['moodledocsdesc'] = 'Mostrar el enlace de Moodle ™ Docs en el pie de página.';
 $string['layoutcheck'] = 'Verifique su diseño';
 $string['layoutcheckdesc'] = 'Utilice la herramienta a continuación para comprobar el número de bloques que ha utilizado y ver una representación de su nuevo diseño.';
 $string['layoutcount1'] = 'Puede establecer un máximo de ';
@@ -144,9 +144,9 @@ $string['footersettings'] = 'Pie de página';
 $string['footersettingsheading'] = 'Establecer el contenido que debe aparecer en el pie de página.';
 $string['footerdesc'] = 'Controla el contenido que aparece en las secciones de 4 pies de página de la página.';
 $string['showfooterblocks'] = 'Mostrar bloque de pie de página';
-$string['showfooterblocksdesc'] = 'Mostrar / ocultar el bloque de pie de página inferior utilizado para notas de pie de página / región de documentación de Moodle';
-$string['moodlefooterinfo'] = 'Enlaces estándar de Moodle';
-$string['moodlefooterinfodesc'] = 'Mostrar los enlaces estándar de moodle en el pie de página.';
+$string['showfooterblocksdesc'] = 'Mostrar / ocultar el bloque de pie de página inferior utilizado para notas de pie de página / región de documentación de Moodle ™ ';
+$string['moodlefooterinfo'] = 'Enlaces estándar de Moodle ™ ';
+$string['moodlefooterinfodesc'] = 'Mostrar los enlaces estándar de Moodle ™ en el pie de página.';
 $string['footerlayoutrow'] = 'Creador de diseño de pie de página';
 $string['footerlayoutrowdesc'] = 'Cree su diseño para regiones de bloques de pie de página.';
 $string['footnote'] = 'Nota de Pie de página';
