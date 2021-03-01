@@ -34,4 +34,7 @@ $plugin->version = 2021022600;
 $plugin->release = 'Learnbook';
 $plugin->requires = 2018120300;
 $plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = array('theme_boost' => 2018120300);
+$plugin->dependencies = array(
+    'theme_boost' => 2018120300,
+    'local_menumanagement' => 2019092601
+);
