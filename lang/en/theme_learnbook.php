@@ -80,6 +80,10 @@ $string['coursebtncolor_desc'] = 'The branding color for My Courses & My teams b
 $string['coursebtnhovercolor'] = 'Enter Course button hover color';
 $string['coursebtnhovercolor_desc'] = 'The color will be applied when hover on Enter Course button';
 $string['login_page_template'] = 'Select login page template';
+$string['use_menumanagement'] = 'Use Learnbook menu management';
+$string['use_menumanagement_desc'] = 'You can either use Learnbook menu management or boost menu from moodle core, 
+please make sure you have local_menumanagement installed in your platform you want to use Learnbook menu management. 
+Alternatively you can use any plugin available in the community, in that case please unselect this setting.';
 
 // Logo Settings
 $string['logosettings'] = 'Logo settings';

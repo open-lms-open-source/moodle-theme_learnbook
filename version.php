@@ -30,11 +30,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_learnbook';
-$plugin->version = 2021022600;
+$plugin->version = 2021033000;
 $plugin->release = 'Learnbook';
 $plugin->requires = 2018120300;
 $plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = array(
-    'theme_boost' => 2018120300,
-    'local_menumanagement' => 2019092601
+    'theme_boost' => 2018120300
 );
