@@ -93,6 +93,14 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    //use learnbook menu
+    $name = 'local_menumanagement/use_menumanagement';
+    $title = get_string('use_menumanagement', 'theme_learnbook');
+    $description = get_string('use_menumanagement_desc', 'theme_learnbook');
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Alternate home page settings
     $setting = new admin_setting_configcheckbox('theme_learnbook/use_alternate_home_page', get_string('use_alternate_home_page', 'theme_learnbook'),
         get_string('use_alternate_home_page_desc', 'theme_learnbook'), 0);
