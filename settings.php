@@ -94,7 +94,7 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     //use learnbook menu
-    $name = 'local_menumanagement/use_menumanagement';
+    $name = 'theme_learnbook/use_menumanagement';
     $title = get_string('use_menumanagement', 'theme_learnbook');
     $description = get_string('use_menumanagement_desc', 'theme_learnbook');
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
