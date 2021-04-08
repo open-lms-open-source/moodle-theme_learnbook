@@ -30,7 +30,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_learnbook';
-$plugin->version = 2021033000;
+$plugin->version = 2021040700;
 $plugin->release = 'Learnbook';
 $plugin->requires = 2018120300;
 $plugin->maturity = MATURITY_STABLE;

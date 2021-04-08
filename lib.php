@@ -94,6 +94,7 @@ function theme_learnbook_get_pre_scss($theme) {
         'coursebtncolor' => ['coursebtncolor'],
         'coursebtnhovercolor' => ['coursebtnhovercolor'],
         'footercolor' => ['footercolor'],
+        'use_menumanagement' => ['use_menumanagement'],
     ];
 
     foreach ($configurable as $configkey => $targets) {

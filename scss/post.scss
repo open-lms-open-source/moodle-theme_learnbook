@@ -9,6 +9,17 @@ $sectionheadercolor: #00bada !default;
 $sectionhovercolor: #00b8dc !default;
 $coursebtncolor: #00bada !default;
 $footercolor: #00bada !default;
+$use_menumanagement: 0 !default;
+
+@if $use_menumanagement == 0 {
+    #nav-drawer .list-group .media-left {
+        display: block !important;
+    }
+} @else if $use_menumanagement == 1 {
+    #nav-drawer .list-group .media-left {
+        display: none !important;
+    }
+}
 
 body {
     background-color: #f4f4f4;
@@ -600,9 +611,9 @@ ul.pagination {
         transition: .4s;
     }
 
-    .list-group .media-left {
-        display: none !important;
-    }
+    //.list-group .media-left {
+    //    display: none !important;
+    //}
 
     .list-group-item {
         &:not([data-parent-key="myhome"]), &[data-key="sitesettings"] {
